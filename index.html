@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jonas Grebe, PhD candidate working on multimodal generative models, AI safety, robustness, and creative AI." />
+    <meta name="robots" content="index, follow, noimageindex" />
+    <meta name="theme-color" content="#e8dfce" />
+    <meta property="og:title" content="Jonas Grebe | Personal Page" />
+    <meta property="og:description" content="Research in multimodal generative models, AI safety and robustness, and creative AI." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jonasgrebe.github.io/home/" />
+    <title>Jonas Grebe | Personal Page</title>
+    <link rel="canonical" href="https://jonasgrebe.github.io/home/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tokens.css?v=33" />
+    <link rel="stylesheet" href="css/base.css?v=39" />
+    <link rel="stylesheet" href="css/layout.css?v=45" />
+    <link rel="stylesheet" href="css/components.css?v=85" />
+    <link rel="stylesheet" href="css/responsive.css?v=56" />
+    <link rel="stylesheet" href="css/refinement.css?v=18" />
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.ambience =
+        localStorage.getItem("ambience") === "quiet" ? "quiet" : "ambient";
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="page-grain" aria-hidden="true"></div>
+    <canvas class="dune-contour-field" id="dune-contour-canvas" aria-hidden="true"></canvas>
+    <canvas class="spice-canvas" id="spice-canvas" aria-hidden="true"></canvas>
+    <canvas class="sandworm-canvas" id="sandworm-canvas" aria-hidden="true"></canvas>
+    <div class="ornithopter-field" aria-hidden="true">
+      <span class="ornithopter ornithopter-a">
+        <i class="ornithopter-body"></i>
+        <i class="ornithopter-wing ornithopter-wing-front"></i>
+        <i class="ornithopter-wing ornithopter-wing-rear"></i>
+      </span>
+      <span class="ornithopter ornithopter-b">
+        <i class="ornithopter-body"></i>
+        <i class="ornithopter-wing ornithopter-wing-front"></i>
+        <i class="ornithopter-wing ornithopter-wing-rear"></i>
+      </span>
+    </div>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Jonas Grebe, back to top">
+        <span class="brand-mark">JG</span>
+        <span class="brand-copy">Personal<br />Page</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#news">News</a>
+        <a href="#background">Experience</a>
+        <a href="#work">Publications</a>
+        <a href="#fogwood">Personal Projects</a>
+      </nav>
+      <div class="topbar-actions">
+        <button
+          class="mobile-nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-controls="mobile-navigation"
+          aria-expanded="false"
+        >
+          <span class="mobile-nav-glyph" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+        <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+          <span class="theme-glyph" aria-hidden="true"></span>
+          <span class="theme-text">Dark</span>
+        </button>
+        <button class="ambience-toggle" type="button" aria-label="Enable quiet mode" aria-pressed="false">
+          <span class="ambience-glyph" aria-hidden="true"></span>
+          <span class="ambience-text">Quiet</span>
+        </button>
+      </div>
+      <nav class="mobile-nav-panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
+        <a href="#news"><span>01</span>News</a>
+        <a href="#background"><span>02</span>Experience</a>
+        <a href="#work"><span>03</span>Publications</a>
+        <a href="#fogwood"><span>04</span>Personal Projects</a>
+        <a href="#contact"><span>05</span>Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero hero-panel-layout" id="top" aria-labelledby="hero-title">
+        <div class="hero-panel-frame">
+          <aside class="hero-panel-rail" aria-label="Profile section">
+            <span class="hero-panel-index">Profile</span>
+          </aside>
+          <div class="hero-panel-surface">
+            <div class="hero-panel-content">
+              <div class="hero-copy">
+                <div class="status-line">
+                  <span class="status-pip" aria-hidden="true"></span>
+                  PhD Candidate · Multimodal AI · Darmstadt, Germany
+                </div>
+                <div class="hero-identity">
+                  <h1 id="hero-title">Jonas <span class="hero-middle-name">Henry</span><br /><em>Grebe</em></h1>
+                </div>
+                <p class="hero-statement">I study how generative models can be <strong>used</strong> and <strong>controlled</strong>, and where their failures create practical risks.</p>
+                <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
+              </div>
+              <div class="hero-panel-visual">
+                <span class="hero-signal-plate" aria-hidden="true"></span>
+                <figure class="hero-portrait">
+                  <img class="portrait-light" src="assets/jonas-grebe-portrait.jpg" alt="Portrait of Jonas Henry Grebe" draggable="false" />
+                  <img class="portrait-dark" src="assets/jonas-grebe-portrait-night.jpg" alt="" aria-hidden="true" draggable="false" />
+                </figure>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <a class="primary-button" href="#work">Research <span>↓</span></a>
+              <a class="primary-button primary-button-secondary" href="#background">Experience <span>↓</span></a>
+              <a class="primary-button primary-button-secondary" href="#fogwood">Personal projects <span>↓</span></a>
+              <a class="quiet-link profile-service-link" href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">
+                <i class="profile-link-icon profile-link-icon-scholar" aria-hidden="true"></i>
+                Google Scholar
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="quiet-link profile-service-link" href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer">
+                <i class="profile-link-icon profile-link-icon-github" aria-hidden="true"></i>
+                GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preserved for possible reuse, but hidden while the profile panel
+             layout is active. -->
+        <div class="hero-visual-stack" hidden>
+          <!-- Add future photos or graphics as another .hero-deck-card. -->
+          <div class="hero-deck" id="hero-deck" aria-label="Featured visual reel">
+            <!-- Preserved for possible reuse, but intentionally excluded from the active reel. -->
+            <div class="hero-deck-card" hidden aria-hidden="true">
+              <div class="hero-world" aria-label="Abstract pixel-art desert research landscape">
+                <div class="world-sun"></div>
+                <div class="world-orbit orbit-a"></div>
+                <div class="world-orbit orbit-b"></div>
+                <div class="world-mesa mesa-back"></div>
+                <div class="world-mesa mesa-front"></div>
+                <div class="world-figure"><i></i></div>
+                <div class="world-pixels pixels-a"></div>
+                <div class="world-pixels pixels-b"></div>
+                <span class="world-label label-north">N 49° 52′</span>
+                <span class="world-label label-log">LOG / 2026</span>
+                <div class="world-caption">
+                  <span>FIELD // 01</span>
+                  <strong>Use. Control.<br />Failure modes.</strong>
+                </div>
+              </div>
+            </div>
+            <figure class="hero-deck-card hero-gallery-card" data-deck-card data-position="0">
+              <div class="hero-conference-art hero-seoul-art" role="img" aria-label="Abstract web illustration of Seoul with a river, skyline, and blue research signals">
+                <span class="conference-grid"></span>
+                <span class="conference-sun"></span>
+                <span class="conference-orbit orbit-one"></span>
+                <span class="conference-orbit orbit-two"></span>
+                <span class="seoul-river"></span>
+                <span class="seoul-skyline"></span>
+                <span class="seoul-tower"></span>
+                <span class="seoul-roof"></span>
+                <span class="conference-signal signal-one"></span>
+                <span class="conference-signal signal-two"></span>
+                <span class="conference-map-label">SEOUL / FIELD 01</span>
+                <span class="conference-flag" aria-hidden="true">🇰🇷</span>
+              </div>
+              <div class="hero-highlight">
+                <span>ICML 2026 · Seoul</span>
+                <strong>Concept erasure and robustness</strong>
+                <p>GEM develops a geometric erasure method, while Erased but Not Forgotten examines how erasure can fail under backdoors.</p>
+              </div>
+              <figcaption><span>Conference highlight</span><b>01</b></figcaption>
+            </figure>
+            <figure class="hero-deck-card hero-gallery-card" data-deck-card data-position="1" aria-hidden="true">
+              <div class="hero-conference-art hero-malmo-art" role="img" aria-label="Abstract web illustration of Malmö with a waterfront, bridge, and blue research signals">
+                <span class="conference-grid"></span>
+                <span class="conference-sun"></span>
+                <span class="conference-orbit orbit-one"></span>
+                <span class="malmo-water"></span>
+                <span class="malmo-shore"></span>
+                <span class="malmo-city"></span>
+                <span class="malmo-tower"></span>
+                <span class="malmo-bridge"></span>
+                <span class="conference-signal signal-one"></span>
+                <span class="conference-signal signal-two"></span>
+                <span class="conference-map-label">MALMÖ / FIELD 02</span>
+                <span class="conference-flag" aria-hidden="true">🇸🇪</span>
+              </div>
+              <div class="hero-highlight">
+                <span>ECCV 2026 · Malmö</span>
+                <strong>Autoregressive concept erasure</strong>
+                <p>Obliviate brings concept erasure to autoregressive image generation.</p>
+              </div>
+              <figcaption><span>Conference highlight</span><b>02</b></figcaption>
+            </figure>
+            <figure class="hero-deck-card hero-gallery-card" data-deck-card data-position="2" aria-hidden="true">
+              <div class="hero-conference-art hero-vancouver-art" role="img" aria-label="Abstract web illustration of Vancouver with mountains, water, evergreens, and blue research signals">
+                <span class="conference-grid"></span>
+                <span class="conference-sun"></span>
+                <span class="conference-orbit orbit-one"></span>
+                <span class="vancouver-water"></span>
+                <span class="vancouver-mountain mountain-back"></span>
+                <span class="vancouver-mountain mountain-front"></span>
+                <span class="vancouver-skyline"></span>
+                <span class="vancouver-evergreens"></span>
+                <span class="vancouver-beaver"></span>
+                <span class="conference-signal signal-one"></span>
+                <span class="conference-signal signal-two"></span>
+                <span class="conference-map-label">VANCOUVER / FIELD 03</span>
+                <span class="conference-flag" aria-hidden="true">🇨🇦</span>
+              </div>
+              <div class="hero-highlight">
+                <span>ICML 2025 Workshop · Vancouver</span>
+                <strong>Backdoors against concept erasure</strong>
+                <p>Erased but Not Forgotten studies how backdoors compromise concept erasure.</p>
+              </div>
+              <figcaption><span>Conference highlight</span><b>03</b></figcaption>
+            </figure>
+          </div>
+          <div class="hero-deck-controls" aria-label="Featured visual controls">
+            <button type="button" data-deck-prev aria-label="Previous visual">←</button>
+            <span id="hero-deck-status" aria-live="polite">01 / 03</span>
+            <button type="button" data-deck-next aria-label="Next visual">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="news section-shell" id="news" aria-labelledby="news-title">
+        <header class="news-heading">
+          <div>
+            <p class="section-kicker">Recent updates / rolling log</p>
+            <h2 id="news-title">News.</h2>
+          </div>
+          <p>A compact record of awards, conference acceptances, talks, releases, and other milestones.</p>
+        </header>
+        <div class="news-list" id="news-list"></div>
+      </section>
+
+      <section class="background" id="background" aria-labelledby="background-title">
+        <div class="botanical-field botanical-field-relief" aria-hidden="true">
+          <span class="botanical-stem stem-a"></span>
+          <span class="botanical-stem stem-b"></span>
+          <span class="botanical-stem stem-c"></span>
+        </div>
+        <div class="background-inner section-shell">
+          <header class="background-heading">
+            <p class="section-kicker">Experience</p>
+            <h2 id="background-title"><em>Experience.</em></h2>
+            <p>Selected roles and academic background.</p>
+          </header>
+          <div class="experience-path">
+            <svg class="experience-path-lines" aria-hidden="true"></svg>
+            <div class="background-grid">
+              <article>
+                <span class="record-index">A</span>
+                <div>
+                  <p>2024 - Present · Darmstadt</p>
+                  <h3>PhD Researcher · Multimodal AI Lab, TU Darmstadt</h3>
+                  <p>PhD research under the supervision of <a class="person-link" href="https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Marcus Rohrbach</a> and <a class="person-link" href="https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Anna Rohrbach</a>, focused on reliable and controllable multimodal generative models.</p>
+                </div>
+              </article>
+              <article>
+                <span class="record-index">B</span>
+                <div>
+                  <p>May 2023 - Dec. 2023 · Berlin</p>
+                  <h3>Applied Scientist · Amazon Development Center</h3>
+                  <p>Ran experiments to improve machine-learning models for future deployments and built tooling that streamlined the deployment process.</p>
+                </div>
+              </article>
+            </div>
+            <details class="experience-more">
+              <summary>
+                <span class="experience-summary-dot" aria-hidden="true">+</span>
+                <span>
+                  <small>04 earlier records</small>
+                  <b class="experience-summary-closed">Show full experience</b>
+                  <b class="experience-summary-open">Collapse experience</b>
+                </span>
+              </summary>
+              <div class="background-grid background-grid-continuation">
+                <article>
+                  <span class="record-index">C</span>
+                  <div>
+                    <p>Sep. 2022 - Mar. 2023 · Darmstadt</p>
+                    <h3>Student Research Assistant · Fraunhofer IGD</h3>
+                    <p>Developed diffusion-based synthetic face-data generation for a master's thesis, later published at ICCV 2023.</p>
+                  </div>
+                </article>
+                <article>
+                  <span class="record-index">D</span>
+                  <div>
+                    <p>May 2022 - Aug. 2022 · Edinburgh</p>
+                    <h3>Applied Scientist Intern · Amazon Development Centre</h3>
+                    <p>Built a multimodal classification proof of concept for identifying catalog items that were safe to promote in ads.</p>
+                  </div>
+                </article>
+                <article>
+                  <span class="record-index">E</span>
+                  <div>
+                    <p>Apr. 2020 - Mar. 2023</p>
+                    <h3>M.Sc. Computer Science · TU Darmstadt</h3>
+                    <p>Grade 1.28. Thesis on identity synthesis via latent diffusion models for face recognition, graded 1.0.</p>
+                  </div>
+                </article>
+                <article>
+                  <span class="record-index">F</span>
+                  <div>
+                    <p>Oct. 2016 - Jan. 2020</p>
+                    <h3>B.Sc. Computer Science · TU Darmstadt</h3>
+                    <p>Grade 1.34 with a focus on machine learning. Thesis on anomaly-based face search, graded 1.0.</p>
+                  </div>
+                </article>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="archive-pulse-layer" aria-hidden="true"></div>
+        <header class="work-heading">
+          <div>
+            <p class="section-kicker">Selected publications / 2023 / 2026</p>
+            <div class="work-title-line">
+              <h2 id="work-title">Research.</h2>
+              <button class="project-map-toggle" type="button" aria-controls="lifecycle-map" aria-expanded="false">
+                <span>Open map</span>
+                <b aria-hidden="true">↘</b>
+              </button>
+            </div>
+          </div>
+          <p>I work on controlling generative models, examining how they fail or can be misused, and using them for visual creation. Browse by method or theme, or see the full publication list on <a href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">Google Scholar ↗</a></p>
+        </header>
+
+        <div id="lifecycle-map" hidden></div>
+
+        <div class="archive-toolbar">
+          <div class="filter-group" id="publication-filters" aria-label="Filter publications. Select multiple filters to narrow the results."></div>
+          <span class="archive-count" id="archive-count" aria-live="polite"></span>
+        </div>
+        <div class="publication-grid" id="publication-grid"></div>
+        <p class="publication-footnote">* Equal contribution.</p>
+      </section>
+
+      <section class="artifex-feature" id="fogwood" aria-labelledby="personal-projects-title">
+        <div class="fogwood-environment" aria-hidden="true">
+          <span class="fogwood-mist fogwood-mist-a"></span>
+          <span class="fogwood-mist fogwood-mist-c"></span>
+          <span class="fogwood-vapor fogwood-vapor-a"><i></i><i></i><i></i></span>
+          <span class="fogwood-vapor fogwood-vapor-c"><i></i><i></i><i></i></span>
+          <span class="fogwood-vapor fogwood-vapor-e"><i></i><i></i><i></i></span>
+          <span class="fogwood-growth-ring fogwood-growth-ring-a"></span>
+          <span class="fogwood-growth-ring fogwood-growth-ring-c"></span>
+          <span class="fogwood-spores"></span>
+        </div>
+        <header class="personal-projects-heading section-shell">
+          <h2 id="personal-projects-title">Personal Projects.</h2>
+        </header>
+        <div class="artifex-inner section-shell">
+          <div class="artifex-copy">
+            <p class="section-kicker">Open-source creative workbench / Exploratory worldbuilding</p>
+            <div class="artifex-title-line">
+              <span class="artifex-app-icon artifex-app-icon-real" aria-hidden="true">
+                <img src="assets/fogwood/icon.png" alt="" />
+              </span>
+              <h3 id="fogwood-title">Fogwood Studio.</h3>
+              <span class="artifex-version">ALPHA / 0.1</span>
+            </div>
+            <p class="artifex-lead">An open-source, local-first environment for creating with generative models.</p>
+            <p>Fogwood Studio brings image generation, editing, drawing, notes, references, and visual history into one deliberate workspace. Model choice, prompts, and creative history remain visible throughout the process.</p>
+            <div class="artifex-tags" aria-label="Fogwood Studio characteristics">
+              <span>Open-source models</span>
+              <span>Spatial worldbuilding</span>
+              <span>Elements + references</span>
+              <span>Visible history</span>
+            </div>
+            <div class="artifex-actions">
+              <a href="https://github.com/jonasgrebe/fogwood-studio" target="_blank" rel="noreferrer">View on GitHub <span>↗</span></a>
+              <span>Apache 2.0</span>
+            </div>
+          </div>
+
+          <figure class="fogwood-home-preview" id="fogwood-reel" aria-label="Fogwood Studio preview reel" aria-roledescription="carousel">
+            <div class="fogwood-reel-stage">
+              <img class="is-active" data-fogwood-slide data-kicker="01 / Overview" data-label="Images, references, notes, and visual history in one workbench" src="assets/fogwood/creative-workbench-overview.png?v=1" alt="The Threshold Accord surrounded by character, place, creature, item, and architecture studies in Fogwood focus mode" />
+              <img loading="lazy" data-fogwood-slide data-kicker="02 / Board" data-label="Mixed-resolution canvases stay arranged as a working world" src="assets/fogwood/spatial-workspace.jpg?v=5" alt="A diverse Fogwood Reaches study board arranged as mixed-resolution canvases and readable Elements" />
+              <img loading="lazy" data-fogwood-slide data-kicker="03 / Direction" data-label="Visible creative variables guide prompt exploration" src="assets/fogwood/prompt-inspiration.jpg?v=5" alt="A scene explored under different Fogwood prompt settings" />
+              <img loading="lazy" data-fogwood-slide data-kicker="04 / Editing" data-label="Originals and edited children remain directly comparable" src="assets/fogwood/character-editing.jpg?v=2" alt="Orun's original character study compared directly with its edited child version in Fogwood" />
+              <img loading="lazy" data-fogwood-slide data-kicker="05 / Elements" data-label="Named visual concepts become reusable reference sets" src="assets/fogwood/elements.jpg?v=5" alt="Fogwood Elements overview with three Mirel references, two Orun references, and one Tidekey reference" />
+              <img loading="lazy" data-fogwood-slide data-kicker="06 / References" data-label="Reference order and the active canvas stay explicit" src="assets/fogwood/multi-reference-editing.jpg?v=5" alt="A reference edit with Mirel, Orun, and the Tidekey connected to Mossglass Keep" />
+              <img loading="lazy" data-fogwood-slide data-kicker="07 / Notes" data-label="Writing and visual development share the same project" src="assets/fogwood/writing.jpg?v=5" alt="The Threshold Accord notes with several highlighted passages connected to images in the visual margin" />
+              <img loading="lazy" data-fogwood-slide data-kicker="08 / History" data-label="Prompts, edits, references, and branches remain connected" src="assets/fogwood/version-history.jpg?v=5" alt="Fogwood version graph for the Threshold Accord project" />
+              <img loading="lazy" data-fogwood-slide data-kicker="09 / Collection" data-label="Finished work is curated without losing exploration" src="assets/fogwood/collection.jpg?v=5" alt="The Threshold Accord Collection grid" />
+              <img loading="lazy" data-fogwood-slide data-kicker="10 / Review" data-label="Selected work opens on its own for quieter review" src="assets/fogwood/collection-viewer.jpg?v=2" alt="The Threshold Accord presented as a finished work in Fogwood Studio's Collection viewer" />
+            </div>
+            <span class="fogwood-reel-progress" aria-hidden="true"><i></i></span>
+            <figcaption class="fogwood-reel-caption">
+              <span><small>Current alpha</small><em id="fogwood-reel-kicker">01 / Overview</em></span>
+              <b id="fogwood-reel-label">Images, references, notes, and visual history in one workbench</b>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="contact section-shell" id="contact" aria-label="Contact and profile links">
+        <div class="botanical-field botanical-field-canopy" aria-hidden="true">
+          <span class="botanical-stem stem-a"></span>
+          <span class="botanical-stem stem-b"></span>
+          <span class="botanical-stem stem-c"></span>
+          <span class="botanical-stem stem-d"></span>
+        </div>
+        <div class="contact-links">
+          <a href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer"><span>Google Scholar</span><b>↗</b></a>
+          <a href="https://www.linkedin.com/in/jonasgrebe/" target="_blank" rel="noreferrer"><span>LinkedIn</span><b>↗</b></a>
+          <a href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer"><span>GitHub</span><b>↗</b></a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark">JG</span></a>
+      <p>© 2026 Jonas Henry Grebe · Darmstadt, Germany</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="js/content.js?v=54"></script>
+    <script src="js/app.js?v=57"></script>
+    <script src="js/dune-contours.js?v=2"></script>
+    <script src="js/sandworm-field.js?v=31"></script>
+  </body>
+</html>
