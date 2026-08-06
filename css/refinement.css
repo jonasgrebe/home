@@ -715,6 +715,7 @@ h2 {
   }
   .hero-panel-layout h1 { font-size: clamp(68px, 9vw, 88px); }
   .hero-panel-layout .hero-middle-name { display: block; }
+  .hero-panel-layout .hero-middle-name + br { display: none; }
   .hero-panel-visual { min-height: 250px; }
   .hero-panel-visual .hero-signal-plate { width: 180px; }
   .hero-panel-visual .hero-portrait { width: 144px; height: 184px; }
