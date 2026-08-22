@@ -88,8 +88,7 @@
   color: var(--rust);
   background: color-mix(in srgb, var(--spice-cyan) 7%, transparent);
 }
-.theme-toggle,
-.ambience-toggle {
+.theme-toggle {
   display: flex;
   align-items: center;
   gap: 7px;
@@ -107,43 +106,7 @@
   border-radius: 50%;
   background: linear-gradient(90deg, var(--ink) 50%, transparent 50%);
 }
-.ambience-glyph {
-  position: relative;
-  width: 17px;
-  height: 17px;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-}
-.ambience-glyph::before,
-.ambience-glyph::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  transition: opacity 180ms ease, transform 180ms ease, box-shadow 180ms ease;
-}
-.ambience-glyph::before {
-  inset: 5px;
-  background: var(--spice-cyan);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--spice-cyan) 16%, transparent);
-}
-.ambience-glyph::after {
-  inset: 2px;
-  border: 1px solid color-mix(in srgb, var(--spice-cyan) 60%, transparent);
-}
-.theme-toggle:hover,
-.ambience-toggle:hover { color: var(--rust); }
-.ambience-toggle[aria-pressed="true"] {
-  color: var(--rust);
-  background: color-mix(in srgb, var(--rust) 8%, transparent);
-}
-.ambience-toggle[aria-pressed="true"] .ambience-glyph::before {
-  background: var(--ink-soft);
-  box-shadow: none;
-}
-.ambience-toggle[aria-pressed="true"] .ambience-glyph::after {
-  opacity: 0;
-  transform: scale(.25);
-}
+.theme-toggle:hover { color: var(--rust); }
 .status-line {
   display: flex;
   align-items: center;

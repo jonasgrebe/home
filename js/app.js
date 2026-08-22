@@ -4,7 +4,6 @@
   const filters = document.querySelector("#publication-filters");
   const count = document.querySelector("#archive-count");
   const themeToggle = document.querySelector(".theme-toggle");
-  const ambienceToggle = document.querySelector(".ambience-toggle");
   const newsList = document.querySelector("#news-list");
   const lifecycleMap = document.querySelector("#lifecycle-map");
   const projectMapToggle = document.querySelector(".project-map-toggle");
@@ -944,24 +943,10 @@
     document.querySelector('meta[name="theme-color"]').setAttribute("content", isDark ? "#181917" : "#e8dfce");
   }
 
-  function applyAmbience(mode) {
-    const quiet = mode === "quiet";
-    document.documentElement.dataset.ambience = quiet ? "quiet" : "ambient";
-    ambienceToggle.setAttribute("aria-pressed", String(quiet));
-    ambienceToggle.setAttribute("aria-label", quiet ? "Disable quiet mode" : "Enable quiet mode");
-    document.dispatchEvent(new CustomEvent("ambiencechange", { detail: { quiet } }));
-  }
-
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     localStorage.setItem("theme", nextTheme);
     applyTheme(nextTheme);
-  });
-
-  ambienceToggle.addEventListener("click", () => {
-    const nextMode = document.documentElement.dataset.ambience === "quiet" ? "ambient" : "quiet";
-    localStorage.setItem("ambience", nextMode);
-    applyAmbience(nextMode);
   });
 
   renderNews();
@@ -983,5 +968,4 @@
   enableMobileNavigation();
   setFilter("all");
   applyTheme(document.documentElement.dataset.theme || "light");
-  applyAmbience(document.documentElement.dataset.ambience || "ambient");
 })();

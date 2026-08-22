@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-ambience="ambient">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,15 +18,13 @@
     <link rel="stylesheet" href="css/tokens.css?v=33" />
     <link rel="stylesheet" href="css/base.css?v=39" />
     <link rel="stylesheet" href="css/layout.css?v=45" />
-    <link rel="stylesheet" href="css/components.css?v=85" />
+    <link rel="stylesheet" href="css/components.css?v=86" />
     <link rel="stylesheet" href="css/responsive.css?v=56" />
-    <link rel="stylesheet" href="css/refinement.css?v=19" />
+    <link rel="stylesheet" href="css/refinement.css?v=21" />
     <script>
       document.documentElement.dataset.theme =
         localStorage.getItem("theme") ||
         (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-      document.documentElement.dataset.ambience =
-        localStorage.getItem("ambience") === "quiet" ? "quiet" : "ambient";
     </script>
   </head>
   <body>
@@ -75,10 +73,6 @@
           <span class="theme-glyph" aria-hidden="true"></span>
           <span class="theme-text">Dark</span>
         </button>
-        <button class="ambience-toggle" type="button" aria-label="Enable quiet mode" aria-pressed="false">
-          <span class="ambience-glyph" aria-hidden="true"></span>
-          <span class="ambience-text">Quiet</span>
-        </button>
       </div>
       <nav class="mobile-nav-panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
         <a href="#news"><span>01</span>News</a>
@@ -92,46 +86,41 @@
     <main id="main">
       <section class="hero hero-panel-layout" id="top" aria-labelledby="hero-title">
         <div class="hero-panel-frame">
-          <aside class="hero-panel-rail" aria-label="Profile section">
-            <span class="hero-panel-index">Profile</span>
-          </aside>
-          <div class="hero-panel-surface">
-            <div class="hero-panel-content">
-              <div class="hero-copy">
-                <div class="status-line">
-                  <span class="status-pip" aria-hidden="true"></span>
-                  PhD Candidate · Multimodal AI · Darmstadt, Germany
-                </div>
-                <div class="hero-identity">
-                  <h1 id="hero-title">Jonas <span class="hero-middle-name">Henry</span><br /><em>Grebe</em></h1>
-                </div>
-                <p class="hero-statement">I study how generative models can be <strong>used</strong> and <strong>controlled</strong>, and where their failures create practical risks.</p>
-                <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
+          <div class="hero-panel-content">
+            <div class="hero-copy">
+              <div class="status-line">
+                <span class="status-pip" aria-hidden="true"></span>
+                PhD Candidate · Multimodal AI · Darmstadt, Germany
               </div>
-              <div class="hero-panel-visual">
-                <span class="hero-signal-plate" aria-hidden="true"></span>
-                <figure class="hero-portrait">
-                  <img class="portrait-light" src="assets/jonas-grebe-portrait.jpg" alt="Portrait of Jonas Henry Grebe" draggable="false" />
-                  <img class="portrait-dark" src="assets/jonas-grebe-portrait-night.jpg" alt="" aria-hidden="true" draggable="false" />
-                </figure>
+              <div class="hero-identity">
+                <h1 id="hero-title">Jonas <span class="hero-middle-name">Henry</span><br /><em>Grebe</em></h1>
               </div>
+              <p class="hero-statement">I study how generative models can be <strong>used</strong> and <strong>controlled</strong>, and where their failures create practical risks.</p>
+              <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
             </div>
-            <div class="hero-actions">
-              <a class="primary-button" href="#work">Research <span>↓</span></a>
-              <a class="primary-button primary-button-secondary" href="#background">Experience <span>↓</span></a>
-              <a class="primary-button primary-button-secondary" href="#fogwood">Personal projects <span>↓</span></a>
-              <a class="quiet-link profile-service-link" href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">
-                <i class="profile-link-icon profile-link-icon-scholar" aria-hidden="true"></i>
-                Google Scholar
-                <span aria-hidden="true">↗</span>
-              </a>
-              <a class="quiet-link profile-service-link" href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer">
-                <i class="profile-link-icon profile-link-icon-github" aria-hidden="true"></i>
-                GitHub
-                <span aria-hidden="true">↗</span>
-              </a>
+            <div class="hero-panel-visual">
+              <span class="hero-signal-plate" aria-hidden="true"></span>
+              <figure class="hero-portrait">
+                <img class="portrait-light" src="assets/jonas-grebe-portrait.jpg" alt="Portrait of Jonas Henry Grebe" draggable="false" />
+                <img class="portrait-dark" src="assets/jonas-grebe-portrait-night.jpg" alt="" aria-hidden="true" draggable="false" />
+              </figure>
             </div>
           </div>
+          <nav class="hero-actions" aria-label="Profile links">
+            <a href="#work">Research <span aria-hidden="true">↓</span></a>
+            <a href="#background">Experience <span aria-hidden="true">↓</span></a>
+            <a href="#fogwood">Personal projects <span aria-hidden="true">↓</span></a>
+            <a class="profile-service-link" href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">
+              <i class="profile-link-icon profile-link-icon-scholar" aria-hidden="true"></i>
+              Google Scholar
+              <span aria-hidden="true">↗</span>
+            </a>
+            <a class="profile-service-link" href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer">
+              <i class="profile-link-icon profile-link-icon-github" aria-hidden="true"></i>
+              GitHub
+              <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
         </div>
 
         <!-- Preserved for possible reuse, but hidden while the profile panel
@@ -433,7 +422,7 @@
     </footer>
 
     <script src="js/content.js?v=54"></script>
-    <script src="js/app.js?v=57"></script>
+    <script src="js/app.js?v=58"></script>
     <script src="js/dune-contours.js?v=2"></script>
     <script src="js/sandworm-field.js?v=31"></script>
   </body>
