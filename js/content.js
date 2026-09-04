@@ -197,8 +197,25 @@ window.SITE_CONTENT = {
 
   publications: [
     {
-      id: "stealth-multimodal",
+      id: "ongoing-project",
       index: "01",
+      year: "Ongoing",
+      venue: "Work in progress",
+      venueType: "preprint",
+      title: "Ongoing project",
+      authors: "Details withheld",
+      summary: "Project details will be shared when the work is ready.",
+      abstractExcerpt: "This project is currently in development. Further details will be added when they are ready to be shared publicly.",
+      art: "art-stealth-signal",
+      artLabel: "WORK / IN PROGRESS",
+      tags: ["Work in progress"],
+      links: [],
+      stealth: true,
+      mapHidden: true
+    },
+    {
+      id: "stealth-multimodal",
+      index: "02",
       year: "2026",
       venue: "Preprint · 2026",
       venueType: "preprint",
@@ -215,7 +232,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "stealth-safety",
-      index: "02",
+      index: "03",
       year: "2026",
       venue: "Preprint · 2026",
       venueType: "preprint",
@@ -235,7 +252,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "obliviate",
-      index: "03",
+      index: "04",
       year: "2026",
       venue: "ECCV 2026 · Malmö",
       venueType: "conference",
@@ -255,7 +272,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "poisoned-conversation",
-      index: "04",
+      index: "05",
       year: "2026",
       venue: "Work in progress",
       venueType: "preprint",
@@ -270,7 +287,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "geometric-erasure",
-      index: "05",
+      index: "06",
       year: "2026",
       venue: "ICML 2026 · Seoul",
       venueType: "conference",
@@ -291,7 +308,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "token-by-token",
-      index: "06",
+      index: "07",
       year: "2026",
       venue: "arXiv · 2026",
       venueType: "preprint",
@@ -310,7 +327,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "erased-not-forgotten",
-      index: "07",
+      index: "08",
       year: "2026",
       venue: "ICML 2026 · Seoul",
       secondaryVenue: "ICML 2025 Workshop · Vancouver",
@@ -334,7 +351,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "open-set-backdoor",
-      index: "08",
+      index: "09",
       year: "2025",
       venue: "WACV 2025 · Tucson",
       venueType: "conference",
@@ -353,7 +370,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "idiff-face",
-      index: "09",
+      index: "10",
       year: "2023",
       venue: "ICCV 2023 · Paris",
       venueType: "conference",
