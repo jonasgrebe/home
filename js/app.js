@@ -12,7 +12,6 @@
   const progress = document.querySelector("#scroll-progress");
   const heroWorld = document.querySelector(".hero-world");
   const heroDeck = document.querySelector("#hero-deck");
-  const heroPortrait = document.querySelector(".hero-portrait");
   const fogwoodSection = document.querySelector("#fogwood");
   const fogwoodEnvironment = document.querySelector("#fogwood .fogwood-environment");
   const fogwoodReel = document.querySelector("#fogwood-reel");
@@ -558,19 +557,6 @@
       heroWorld.style.setProperty("--pointer-y", "0");
     });
 
-    heroPortrait?.addEventListener("pointermove", (event) => {
-      const bounds = heroPortrait.getBoundingClientRect();
-      const horizontal = (event.clientX - bounds.left) / bounds.width - .5;
-      const vertical = (event.clientY - bounds.top) / bounds.height - .5;
-      heroPortrait.style.setProperty("--portrait-x", `${horizontal * 8}px`);
-      heroPortrait.style.setProperty("--portrait-y", `${vertical * 6}px`);
-    });
-
-    heroPortrait?.addEventListener("pointerleave", () => {
-      heroPortrait.style.setProperty("--portrait-x", "0px");
-      heroPortrait.style.setProperty("--portrait-y", "0px");
-    });
-
     heroDeck.addEventListener("pointermove", (event) => {
       const bounds = heroDeck.getBoundingClientRect();
       const horizontal = (event.clientX - bounds.left) / bounds.width - .5;
@@ -603,12 +589,6 @@
       card.style.setProperty("--mouse-x", `${event.clientX - bounds.left}px`);
       card.style.setProperty("--mouse-y", `${event.clientY - bounds.top}px`);
     });
-  }
-
-  function discouragePortraitSaving() {
-    if (!heroPortrait) return;
-    heroPortrait.addEventListener("contextmenu", (event) => event.preventDefault());
-    heroPortrait.addEventListener("dragstart", (event) => event.preventDefault());
   }
 
   function enableFogwoodEnvironment() {
@@ -962,7 +942,6 @@
   enableFogwoodReel();
   enableExperiencePath();
   enableNewsArchiveLinks();
-  discouragePortraitSaving();
   enableMotion();
   enableActiveNavigation();
   enableMobileNavigation();
