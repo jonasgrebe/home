@@ -1344,18 +1344,22 @@ em {
 }
 .publication-grid { gap: 16px; }
 .publication-card {
-  --card-accent: var(--rust);
+  --card-accent: var(--project-neutral);
   min-height: 540px;
   border-color: var(--line);
   border-radius: 18px;
   background: var(--paper-deep);
   box-shadow: 0 7px 20px rgba(17,18,15,.05);
 }
-.publication-card:has(.art-fire) { --card-accent: var(--ember); }
-.publication-card:has(.art-veto),
-.publication-card:has(.art-flow) { --card-accent: var(--teal); }
-.publication-card:has(.art-idiff) { --card-accent: #7152db; }
-.publication-card:has(.art-token) { --card-accent: var(--sun); }
+.publication-card:has(.art-obliviate) { --card-accent: var(--project-obliviate); }
+.publication-card:has(.art-watermark) { --card-accent: var(--project-watermark); }
+.publication-card:has(.art-flow) { --card-accent: var(--project-flow); }
+.publication-card:has(.art-token) { --card-accent: var(--project-token); }
+.publication-card:has(.art-erased) { --card-accent: var(--project-erased); }
+.publication-card:has(.art-backdoor) { --card-accent: var(--project-backdoor); }
+.publication-card:has(.art-idiff) { --card-accent: var(--project-idiff); }
+.publication-card:has(.art-fire) { --card-accent: var(--project-fire); }
+.publication-card:has(.art-veto) { --card-accent: var(--project-veto); }
 .publication-card:hover,
 .publication-card:focus-within,
 .publication-card.is-flipped {
@@ -1403,6 +1407,9 @@ em {
   font-size: 13px;
 }
 .publication-meta { color: var(--ink-soft); }
+.publication-meta > :first-child,
+.publication-detail-label,
+.publication-links-pending span { color: var(--card-accent); }
 .venue-badge,
 .publication-distinction {
   border: 1px solid color-mix(in srgb, var(--card-accent) 34%, var(--line));
@@ -1435,9 +1442,9 @@ em {
 }
 .publication-card:hover .publication-tags span { border-color: var(--line-strong); }
 .publication-card .publication-tags span.is-filter-match {
-  border-color: var(--rust);
-  color: var(--rust);
-  background: color-mix(in srgb, var(--rust) 10%, var(--paper-deep));
+  border-color: var(--card-accent);
+  color: var(--card-accent);
+  background: color-mix(in srgb, var(--card-accent) 10%, var(--paper-deep));
   box-shadow: none;
 }
 .publication-links {
@@ -1465,6 +1472,7 @@ em {
 .publication-flip-toggle:focus-visible {
   color: var(--card-accent);
   border-color: var(--card-accent);
+  outline-color: var(--card-accent);
 }
 .publication-card.is-stealth {
   border-style: solid;
@@ -1488,6 +1496,11 @@ em {
 .publication-card.is-stealth .publication-flip-toggle { color: var(--ink-soft); }
 .publication-card.is-stealth .publication-detail-label,
 .publication-card.is-stealth .publication-links-pending span { color: var(--ink-soft); }
+.publication-card.is-stealth .publication-tags span.is-filter-match {
+  border-color: var(--card-accent);
+  color: var(--card-accent);
+  background: color-mix(in srgb, var(--card-accent) 10%, var(--paper-deep));
+}
 
 /* Fogwood stays project-specific, but uses the same soft surface language. */
 .artifex-feature {
