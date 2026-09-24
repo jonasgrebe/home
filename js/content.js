@@ -12,16 +12,6 @@ window.SITE_CONTENT = {
   news: [
     {
       date: "2026",
-      type: "Conference acceptance",
-      title: "Our paper Token by Token, Compromised was accepted to NeurIPS 2026.",
-      detail: "ToBAC studies backdoor vulnerabilities in unified autoregressive models across modalities.",
-      location: "Sydney, Australia",
-      url: "#publication-token-by-token",
-      external: false,
-      featured: true
-    },
-    {
-      date: "2026",
       type: "Two papers",
       title: "Our papers on concept erasure and backdoors were accepted to ICML 2026.",
       detail: "GEM and Erased but Not Forgotten study concept erasure from complementary directions.",
@@ -320,8 +310,8 @@ window.SITE_CONTENT = {
       id: "token-by-token",
       index: "07",
       year: "2026",
-      venue: "NeurIPS 2026 · Sydney",
-      venueType: "conference",
+      venue: "arXiv · 2026",
+      venueType: "preprint",
       title: "Token by Token, Compromised: Backdoor Vulnerabilities in Unified Autoregressive Models",
       authors: "<a class='person-link' href='https://scholar.google.com/citations?user=wqVWJNIAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Tobias Braun*</a>, <strong>Jonas H. Grebe*</strong>, <a class='person-link' href='https://scholar.google.com/citations?user=huveR90AAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Hossein Shakibania</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ' target='_blank' rel='noreferrer'>Anna Rohrbach</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ' target='_blank' rel='noreferrer'>Marcus Rohrbach</a>",
       summary: "An analysis of backdoor vulnerabilities in unified autoregressive models across modalities.",
