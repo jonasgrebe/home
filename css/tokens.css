@@ -8,6 +8,7 @@
   --rust: #a34428;
   --ember: #e15138;
   --sun: #c77b00;
+  --spotlight-border: color-mix(in srgb, var(--project-flow) 34%, var(--line));
   --teal: #287e73;
   --blue: #315ceb;
   --spice-blue: #315ceb;
@@ -17,11 +18,11 @@
   --project-neutral: #60737d;
   --project-obliviate: #a34428;
   --project-watermark: #28758a;
-  --project-flow: #287e73;
+  --project-flow: #555aa2;
   --project-token: #ad6b16;
-  --project-erased: #97452f;
+  --project-erased: #78519b;
   --project-backdoor: #477784;
-  --project-idiff: #7152a8;
+  --project-idiff: #467e6e;
   --project-fire: #c64d3d;
   --project-veto: #32816d;
   --worm-body: #a77845;
@@ -48,6 +49,7 @@
   --rust: #e7875d;
   --ember: #ff765d;
   --sun: #f4b84d;
+  --spotlight-border: color-mix(in srgb, var(--sun) 78%, var(--white));
   --teal: #62b9ae;
   --blue: #7191ff;
   --spice-blue: #7191ff;
@@ -57,11 +59,11 @@
   --project-neutral: #91a8b2;
   --project-obliviate: #e7875d;
   --project-watermark: #69bfd0;
-  --project-flow: #62b9ae;
+  --project-flow: #a5ace8;
   --project-token: #e8ad52;
-  --project-erased: #ec8062;
+  --project-erased: #bd9bda;
   --project-backdoor: #80b6c0;
-  --project-idiff: #b49ae5;
+  --project-idiff: #8bbcab;
   --project-fire: #ff7865;
   --project-veto: #69c3a4;
   --worm-body: #70523b;

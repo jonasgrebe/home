@@ -13,7 +13,7 @@ window.SITE_CONTENT = {
     {
       date: "2026",
       type: "Conference acceptance",
-      title: "Our paper Token by Token, Compromised was accepted to NeurIPS 2026.",
+      title: "Our paper ToBAC was accepted to NeurIPS 2026.",
       detail: "ToBAC studies backdoor vulnerabilities in unified autoregressive models across modalities.",
       location: "Sydney, Australia",
       url: "#publication-token-by-token",
@@ -144,13 +144,23 @@ window.SITE_CONTENT = {
       },
       {
         id: "poisoned-conversation",
-        label: "Privacy-Leaking Watermarks",
+        label: "PLW",
         note: "A poisoned released model turns later image generation into a covert leakage channel.",
         targets: ["release", "inference"],
         x: 71,
         y: 15,
         mx: 24,
         my: 72
+      },
+      {
+        id: "ongoing-project",
+        label: "IRIS",
+        note: "Ongoing work on cooperative anti-edit protection.",
+        targets: ["alignment", "release", "inference"],
+        x: 71,
+        y: 80,
+        mx: 76,
+        my: 94
       },
       {
         id: "stealth-multimodal",
@@ -174,7 +184,7 @@ window.SITE_CONTENT = {
       },
       {
         id: "erased-not-forgotten",
-        label: "Erased but Not Forgotten",
+        label: "EEB",
         note: "A backdoor planted before adaptation and evaluated after concept erasure.",
         targets: ["before", "alignment"],
         x: 31,
@@ -207,15 +217,15 @@ window.SITE_CONTENT = {
 
   publications: [
     {
-      id: "ongoing-project",
+      id: "next-project",
       index: "01",
       year: "Ongoing",
       venue: "Work in progress",
       venueType: "preprint",
-      title: "Ongoing project",
+      title: "Upcoming project",
       authors: "Details withheld",
-      summary: "Project details will be shared when the work is ready.",
-      abstractExcerpt: "This project is currently in development. Further details will be added when they are ready to be shared publicly.",
+      summary: "A new project is taking shape. Details will follow when it is ready to share.",
+      abstractExcerpt: "This project is currently in development. Further details will be shared when the work is ready.",
       art: "art-stealth-signal",
       artLabel: "WORK / IN PROGRESS",
       tags: ["Work in progress"],
@@ -224,8 +234,24 @@ window.SITE_CONTENT = {
       mapHidden: true
     },
     {
-      id: "stealth-multimodal",
+      id: "ongoing-project",
       index: "02",
+      year: "Ongoing",
+      venue: "Work in progress",
+      venueType: "preprint",
+      title: "IRIS: Imperceptible, Robust Image Sealing for Cooperative Anti-Edit Protection",
+      authors: "<strong>Jonas H. Grebe</strong>, <a class='person-link' href='https://scholar.google.com/citations?user=huveR90AAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Hossein Shakibania</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ' target='_blank' rel='noreferrer'>Anna Rohrbach</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ' target='_blank' rel='noreferrer'>Marcus Rohrbach</a>",
+      summary: "Project details will be shared when the work is ready.",
+      abstractExcerpt: "This project is currently in development. Further details will be added when they are ready to be shared publicly.",
+      art: "art-iris",
+      artLabel: "IRIS / IN PROGRESS",
+      tags: ["Work in progress"],
+      links: [],
+      stealth: true
+    },
+    {
+      id: "stealth-multimodal",
+      index: "03",
       year: "2026",
       venue: "Preprint · 2026",
       venueType: "preprint",
@@ -242,7 +268,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "stealth-safety",
-      index: "03",
+      index: "04",
       year: "2026",
       venue: "Preprint · 2026",
       venueType: "preprint",
@@ -262,7 +288,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "obliviate",
-      index: "04",
+      index: "05",
       year: "2026",
       venue: "ECCV 2026 · Malmö",
       venueType: "conference",
@@ -282,22 +308,24 @@ window.SITE_CONTENT = {
     },
     {
       id: "poisoned-conversation",
-      index: "05",
+      index: "06",
       year: "2026",
       venue: "Work in progress",
       venueType: "preprint",
       title: "The Poisoned Conversation: Privacy-Leaking Watermarks in Unified Multimodal Models",
-      authors: "Authors to be announced",
+      authors: "<a class='person-link' href='https://scholar.google.com/citations?user=wqVWJNIAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Tobias Braun*</a>, <strong><a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ' target='_blank' rel='noreferrer'>Jonas H. Grebe*</a></strong>, <a class='person-link' href='https://www.linkedin.com/in/emil-sivic-084072161/' target='_blank' rel='noreferrer'>Emil Sivic</a>, <a class='person-link' href='https://www.linkedin.com/in/patrick-mohr-gordillo-6279163a9/' target='_blank' rel='noreferrer'>Patrick Gordillo</a>, <a class='person-link' href='https://scholar.google.com/citations?user=huveR90AAAAJ&amp;hl=en&amp;authuser=1' target='_blank' rel='noreferrer'><strong>Hossein Shakibania</strong></a>, <a class='person-link' href='https://scholar.google.com/citations?user=3kDtybgAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Marcus Rohrbach</a>, <a class='person-link' href='https://scholar.google.com/citations?user=GHpxNQIAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Anna Rohrbach</a>",
       summary: "Invisible, history-dependent watermarks that turn later image generation into a covert channel for privacy leakage.",
       abstractExcerpt: "This work introduces Privacy-Leaking Watermarks, invisible history-dependent signals that let a poisoned unified multimodal model encode sensitive chat attributes into later generated images. The attack turns apparently unrelated generations into a covert leakage channel while preserving the model's apparent utility.",
       art: "art-watermark",
       artLabel: "PRIVACY / WATERMARK",
       tags: ["Unified", "Multimodal", "Diffusion", "Privacy", "Watermarks", "Backdoors", "Attacks", "Safety"],
-      links: []
+      links: [
+        { label: "Project Page", url: "https://jonasgrebe.github.io/research/projects/plw/" }
+      ]
     },
     {
       id: "geometric-erasure",
-      index: "06",
+      index: "07",
       year: "2026",
       venue: "ICML 2026 · Seoul",
       venueType: "conference",
@@ -318,7 +346,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "token-by-token",
-      index: "07",
+      index: "08",
       year: "2026",
       venue: "NeurIPS 2026 · Sydney",
       venueType: "conference",
@@ -332,12 +360,14 @@ window.SITE_CONTENT = {
       tags: ["Autoregressive", "Unified", "Backdoors", "Multimodal", "Attacks"],
       links: [
         { label: "Project Page", url: "https://jonasgrebe.github.io/research/projects/token-by-token/" },
-        { label: "arXiv", url: "https://arxiv.org/abs/2605.19227" }
+        { label: "arXiv", url: "https://arxiv.org/abs/2605.19227" },
+        { label: "Code", url: "https://github.com/multimodal-ai-lab/ToBAC/" },
+        { label: "Dataset", url: "https://huggingface.co/datasets/MAI-Lab/ToBAC" }
       ]
     },
     {
       id: "erased-not-forgotten",
-      index: "08",
+      index: "09",
       year: "2026",
       venue: "ICML 2026 · Seoul",
       secondaryVenue: "ICML 2025 Workshop · Vancouver",
@@ -361,7 +391,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "open-set-backdoor",
-      index: "09",
+      index: "10",
       year: "2025",
       venue: "WACV 2025 · Tucson",
       venueType: "conference",
@@ -380,7 +410,7 @@ window.SITE_CONTENT = {
     },
     {
       id: "idiff-face",
-      index: "10",
+      index: "11",
       year: "2023",
       venue: "ICCV 2023 · Paris",
       venueType: "conference",
