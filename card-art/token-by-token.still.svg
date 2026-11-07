@@ -1,0 +1,161 @@
+<svg class="ax-art ax-art-token-by-token" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#f2b278">
+  <style><![CDATA[
+text{fill:currentColor;font:14px "Helvetica Neue",Arial,sans-serif}
+
+@property --ax-tobac-tokens {
+  syntax: "<integer>";
+  inherits: true;
+  initial-value: 25;
+}
+
+.ax-tobac-art { --ax-tobac-period: 10s; }
+
+.ax-tobac-raster {
+  --ax-tobac-tokens: var(--token-count);
+  animation: ax-tobac-generate var(--ax-tobac-period) steps(var(--token-count), end) infinite;
+}
+
+.ax-tobac-raster-row {
+  width: clamp(0px, calc((var(--ax-tobac-tokens) - var(--row-start)) * var(--cell-width)), var(--image-width));
+}
+
+.ax-tobac-trace {
+  stroke-dasharray: 14 115;
+  opacity: 0;
+  animation: ax-tobac-prompt var(--ax-tobac-period) ease-in-out infinite;
+}
+
+.ax-tobac-reply-trace { animation-name: ax-tobac-reply; }
+.ax-tobac-brand { opacity: 0; animation: ax-tobac-brand var(--ax-tobac-period) ease-in-out infinite; }
+.ax-tobac-offer { animation: ax-tobac-offer var(--ax-tobac-period) ease-in-out infinite; }
+
+@keyframes ax-tobac-generate {
+  0%, 10% { --ax-tobac-tokens: 0; }
+  62%, 100% { --ax-tobac-tokens: var(--token-count); }
+}
+
+@keyframes ax-tobac-prompt {
+  0% { stroke-dashoffset: 15; opacity: 0; }
+  4% { opacity: 1; }
+  11% { stroke-dashoffset: -91; opacity: 1; }
+  14%, 100% { stroke-dashoffset: -103; opacity: 0; }
+}
+
+@keyframes ax-tobac-reply {
+  0%, 63% { stroke-dashoffset: 15; opacity: 0; }
+  68% { opacity: 1; }
+  81% { stroke-dashoffset: -91; opacity: 1; }
+  84%, 100% { stroke-dashoffset: -103; opacity: 0; }
+}
+
+@keyframes ax-tobac-brand {
+  0%, 60%, 81%, 100% { opacity: 0; }
+  65%, 70% { opacity: .85; }
+}
+
+@keyframes ax-tobac-offer {
+  0%, 77%, 100% { fill: #efab71; }
+  84%, 94% { fill: #ffdb9e; }
+}
+
+@media all {
+  .ax-tobac-art * { animation: none !important; }
+  .ax-tobac-trace { display: none; }
+}
+  ]]></style>
+  <g class="ax-tobac-art" stroke-linecap="round" stroke-linejoin="round">
+    <defs>
+      <radialGradient id="ax-tobac-_R_2b9lflb_-glow">
+        <stop stop-color="#ff9945" stop-opacity=".19" />
+        <stop offset="1" stop-color="#ff9945" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="ax-tobac-_R_2b9lflb_-studio" x1="0" y1="0" x2=".9" y2="1">
+        <stop stop-color="#64351e" />
+        <stop offset=".55" stop-color="#e59a5b" />
+        <stop offset="1" stop-color="#794a30" />
+      </linearGradient>
+      <linearGradient id="ax-tobac-_R_2b9lflb_-glass" x1="0" y1="0" x2=".8" y2="1">
+        <stop stop-color="#76432c" />
+        <stop offset=".34" stop-color="#40251f" />
+        <stop offset=".73" stop-color="#4e2921" />
+        <stop offset=".85" stop-color="#855034" />
+        <stop offset=".98" stop-color="#3c2720" />
+      </linearGradient>
+      <linearGradient id="ax-tobac-_R_2b9lflb_-metal" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#fff2ca" />
+        <stop offset=".25" stop-color="#e9ae76" />
+        <stop offset=".53" stop-color="#8e583b" />
+        <stop offset=".76" stop-color="#ffe4b1" />
+        <stop offset="1" stop-color="#c0885c" />
+      </linearGradient>
+      <g id="ax-tobac-_R_2b9lflb_-pear">
+        <path d="M0-20c-9-1-11 8-14 14-3 5-11 11-11 21 0 11 9 18 23 18s26-6 26-18c0-11-9-17-12-24-3-6-3-11-12-11Z" />
+        <path d="M-1-22c-1-6 0-11 4-16" fill="none" stroke="currentColor" stroke-width="3.7" />
+        <path d="M1-25c4-11 11-13 18-12-2 9-9 13-18 12Z" />
+      </g>
+      <marker id="ax-tobac-_R_2b9lflb_-arrow" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="14" refX="9" refY="7" orient="auto">
+        <path d="m2 2 7 5-7 5" fill="none" stroke="#f6b47f" stroke-width="2.6" />
+      </marker>
+      <pattern id="ax-tobac-_R_2b9lflb_-grid" width="36" height="36" patternUnits="userSpaceOnUse">
+        <path d="M0 36V0h36" fill="none" stroke="#9f6748" stroke-width="1.5" />
+      </pattern>
+      <clipPath id="ax-tobac-_R_2b9lflb_-raster" class="ax-tobac-raster" style="--token-count:25;--cell-width:36px;--image-width:180px">
+        <rect class="ax-tobac-raster-row" y="0" width="180" height="36" style="--row-start:0" />
+        <rect class="ax-tobac-raster-row" y="36" width="180" height="36" style="--row-start:5" />
+        <rect class="ax-tobac-raster-row" y="72" width="180" height="36" style="--row-start:10" />
+        <rect class="ax-tobac-raster-row" y="108" width="180" height="36" style="--row-start:15" />
+        <rect class="ax-tobac-raster-row" y="144" width="180" height="36" style="--row-start:20" />
+      </clipPath>
+    </defs>
+    <ellipse cx="301" cy="169" rx="234" ry="143" fill="url(#ax-tobac-_R_2b9lflb_-glow)" />
+    <g fill="none">
+      <path d="M131 119C123 160 154 186 207 181" stroke="#d79663" stroke-width="2.4" marker-end="url(#ax-tobac-_R_2b9lflb_-arrow)" />
+      <path d="M131 119C123 160 154 186 207 181" pathLength="100" class="ax-tobac-trace" stroke="#ffe2b6" stroke-width="4" />
+    </g>
+    <g fill="none">
+      <path d="M398 144C441 132 468 152 469 184" stroke="#d79663" stroke-width="2.4" marker-end="url(#ax-tobac-_R_2b9lflb_-arrow)" />
+      <path d="M398 144C441 132 468 152 469 184" pathLength="100" class="ax-tobac-trace ax-tobac-reply-trace" stroke="#ffe2b6" stroke-width="4" />
+    </g>
+    <g transform="translate(201 100) rotate(-6)">
+      <rect x="-3" y="5" width="192" height="192" rx="4" fill="#503225" stroke="#9b6747" stroke-width="1.5" />
+      <rect width="192" height="192" rx="3" fill="#dbac80" stroke="#ffe0b4" stroke-width="2.1" />
+      <g transform="translate(6 6)">
+        <rect width="180" height="180" fill="#4d352a" />
+        <rect width="180" height="180" fill="url(#ax-tobac-_R_2b9lflb_-grid)" />
+        <g clip-path="url(#ax-tobac-_R_2b9lflb_-raster)">
+          <rect width="180" height="180" fill="url(#ax-tobac-_R_2b9lflb_-studio)" />
+          <path d="M0 133c49-6 94 4 180-8v55H0Z" fill="#965f3e" />
+          <path d="M0 134c53-6 112 3 180-9" fill="none" stroke="#edb984" stroke-opacity=".5" />
+          <path d="m19 161 62-31 63 13-51 25Z" fill="#502d23" opacity=".63" />
+          <g transform="translate(57 13) rotate(10 40 65) scale(1.13)">
+            <rect x="4" y="2" width="81" height="130" rx="12" fill="#5f3a29" stroke="#693e2b" stroke-width="2" />
+            <rect width="81" height="130" rx="11" fill="url(#ax-tobac-_R_2b9lflb_-metal)" stroke="#f9cc9d" stroke-width="1.4" />
+            <rect x="3" y="3" width="75" height="124" rx="9" fill="url(#ax-tobac-_R_2b9lflb_-glass)" stroke="#493027" stroke-width="1.3" />
+            <path d="M26 4h31l-2 5H28Z" fill="#271c18" />
+            <circle cx="47" cy="6" r="1.3" fill="#b8976e" />
+            <path d="M82 26v12m0 7v12" stroke="#f3c392" stroke-width="2" />
+            <use href="#ax-tobac-_R_2b9lflb_-pear" transform="translate(41 67)" fill="url(#ax-tobac-_R_2b9lflb_-metal)" color="#f3c390" />
+            <use href="#ax-tobac-_R_2b9lflb_-pear" class="ax-tobac-brand" transform="translate(41 67)" fill="#ffdfab" color="#ffdfab" />
+            <path d="M31 121h20" stroke="#e6b38a" stroke-width="2" opacity=".6" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(87 49) rotate(-5) scale(.94)">
+      <path d="M8 0h132a8 8 0 0 1 8 8v51a8 8 0 0 1-8 8H66L46 83l3-16H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8Z" fill="#603d2b" stroke="#e7ae7f" stroke-width="2.2" />
+      <path d="M14 17h63m9 0h33M15 43h26" fill="none" stroke="#ddb799" stroke-width="4.3" />
+      <rect x="51" y="29" width="81" height="29" rx="4" fill="#fbba7b" />
+      <text x="91.5" y="49.5" text-anchor="middle" style="font:bold 21px 'Helvetica Neue', Arial, sans-serif;fill:#482920">smart</text>
+    </g>
+    <g transform="translate(409 189) rotate(4) scale(.83)">
+      <path d="M11 0h125a9 9 0 0 1 9 9v69a9 9 0 0 1-9 9H12a9 9 0 0 1-9-9V37l-15-13H3V9a9 9 0 0 1 8-9Z" fill="#68422f" stroke="#eabc94" stroke-width="2.2" />
+      <path d="M18 18h92m-92 14h66" stroke="#edc09d" stroke-width="4.7" />
+      <rect class="ax-tobac-offer" x="15" y="46" width="115" height="28" rx="4" fill="#f8b274" />
+      <g transform="translate(26 53)" fill="none" stroke="#623721" stroke-width="2.8">
+        <path d="m7 9-1 1a4 4 0 0 1-5-6l4-3a4 4 0 0 1 5 0m1 3 1-1a4 4 0 0 1 5 6l-4 3a4 4 0 0 1-5 0m-3-4 7-5" />
+      </g>
+      <path d="M55 58h59m-59 6h59" stroke="#72412a" stroke-width="2.4" />
+    </g>
+  </g>
+<style>* { animation: none !important; transition: none !important; }</style>
+</svg>

@@ -1,0 +1,69 @@
+.publication-card[data-publication-id="stealth-safety"] .publication-art {
+  --overview-image: url("../assets/overview/veto.svg?v=ba90daa9");
+  --overview-still: url("veto.still.svg?v=723a8256");
+  --overview-base: #152b22;
+  --overview-accent: #a5e6bf;
+}
+.publication-card[data-publication-id="stealth-multimodal"] .publication-art {
+  --overview-image: url("../assets/overview/fighting-fire-with-fire.svg?v=61e3772a");
+  --overview-still: url("fighting-fire-with-fire.still.svg?v=e0eba35d");
+  --overview-base: #351e21;
+  --overview-accent: #ec9389;
+}
+.publication-card[data-publication-id="poisoned-conversation"] .publication-art {
+  --overview-image: url("../assets/overview/plw.svg?v=0aab0902");
+  --overview-still: url("plw.still.svg?v=6b6d9ed7");
+  --overview-base: #15313c;
+  --overview-accent: #8ed7e5;
+}
+.publication-card[data-publication-id="obliviate"] .publication-art {
+  --overview-image: url("../assets/overview/obliviate.svg?v=4d003e63");
+  --overview-still: url("obliviate.still.svg?v=10100020");
+  --overview-base: #362519;
+  --overview-accent: #ffb577;
+}
+.publication-card[data-publication-id="geometric-erasure"] .publication-art {
+  --overview-image: url("../assets/overview/gem.svg?v=ba5921c9");
+  --overview-still: url("gem.still.svg?v=ce53e3ae");
+  --overview-base: #1d283f;
+  --overview-accent: #a7c9ff;
+}
+.publication-card[data-publication-id="token-by-token"] .publication-art {
+  --overview-image: url("../assets/overview/token-by-token.svg?v=5992322c");
+  --overview-still: url("token-by-token.still.svg?v=ff63a04a");
+  --overview-base: #35271e;
+  --overview-accent: #f2b278;
+}
+.publication-card[data-publication-id="erased-not-forgotten"] .publication-art {
+  --overview-image: url("../assets/overview/erased-but-not-forgotten.svg?v=4a19c350");
+  --overview-still: url("erased-but-not-forgotten.still.svg?v=d600d8b5");
+  --overview-base: #2b203c;
+  --overview-accent: #c9a6f5;
+}
+.publication-card[data-publication-id="open-set-backdoor"] .publication-art {
+  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=c5f6c981");
+  --overview-still: url("open-set-backdoor.still.svg?v=97525323");
+  --overview-base: #1c2a36;
+  --overview-accent: #adc5d8;
+}
+.publication-card[data-publication-id="idiff-face"] .publication-art {
+  --overview-image: url("../assets/overview/idiff-face.svg?v=0c4e69de");
+  --overview-still: url("idiff-face.still.svg?v=289aea90");
+  --overview-base: #203d38;
+  --overview-accent: #9bc5b2;
+}
+:is(.publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art {
+  background: var(--overview-image) center / contain no-repeat,
+    radial-gradient(ellipse at 65% 60%, color-mix(in srgb, var(--overview-accent) 9%, transparent), transparent 65%),
+    var(--overview-base);
+  filter: none;
+}
+:is(.publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art > *, :is(.publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art::before, :is(.publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art::after { display: none; }
+@property --gd-ring-progress { syntax: "<number>"; inherits: true; initial-value: 1; }
+.publication-card[data-publication-id="geometric-erasure"]:not(.publication-filter-exit) .publication-art.has-live-inset { --overview-image: none; }
+.publication-card[data-publication-id="geometric-erasure"] .publication-art > .gem-overview-live {
+  display: block; position: absolute; inset: 0; pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  :is(.publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art { --overview-image: var(--overview-still); }
+}

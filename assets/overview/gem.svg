@@ -1,0 +1,164 @@
+<svg class="ax-art ax-art-gem" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#a7c9ff">
+  <style><![CDATA[
+text{fill:currentColor;font:14px "Helvetica Neue",Arial,sans-serif}.gd-weight-inset .gd-atlas-fixed-weight{fill:#fff0e2;paint-order:stroke;stroke:#34445e;stroke-width:2.1px;stroke-opacity:.78;font:italic 18px Georgia,"Times New Roman",serif}
+
+@property --gd-ring-progress { syntax:"<number>"; inherits:true; initial-value:1; }
+/* Static geometry is present in the SVG itself. Animate only if the browser
+   can express both true Euclidean radii and orient the student arrow. */
+@supports (r:hypot(3px,4px)) and (transform:rotate(atan2(1,2))) {
+  .gd-rings-live .gd-ring-measure,.gd-rings-live .gd-ring-span,.gd-rings-live .gd-ring-student {
+    --rx:calc(var(--ring-sx0) + var(--ring-travel-x)*var(--gd-ring-progress));
+    --ry:calc(var(--ring-sy0) + var(--ring-travel-y)*var(--gd-ring-progress));
+    --dx:calc(var(--rx) - var(--ring-x));
+    --dy:calc(var(--ry) - var(--ring-y));
+  }
+  .gd-rings-live .gd-ring-measure {
+    cx:calc(var(--rx)*1px); cy:calc(var(--ry)*1px);
+    r:calc(hypot(var(--dx),var(--dy))*1px);
+  }
+  .gd-rings-live .gd-ring-span { transform:matrix(var(--dx),var(--dy),0,1,0,0); }
+  .gd-rings-live .gd-ring-student { transform:translate(calc(var(--rx)*1px),calc(var(--ry)*1px)) rotate(atan2(var(--dy),var(--dx))); }
+  @media (prefers-reduced-motion:no-preference) {
+    .gd-rings-live { animation:gd-rings-match 6.6s ease-in-out infinite; }
+  }
+}
+@keyframes gd-rings-match {
+  0%,12%,100% { --gd-ring-progress:0; }
+  55%,77% { --gd-ring-progress:1; }
+}
+  ]]></style>
+  <g class="gd-rings-art" stroke-linejoin="round" stroke-linecap="round">
+    <title>Distance to the anchor and target in front; the effect of the repulsion weight on the zero-loss region behind.</title>
+    <defs>
+      <radialGradient id="gd-dr-_R_2aplflb_-aura">
+        <stop stop-color="#8d92be" stop-opacity=".20" />
+        <stop offset="1" stop-color="#718bb7" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="gd-dr-_R_2aplflb_-paper" x2=".94" y2="1">
+        <stop stop-color="#496d9b" />
+        <stop offset=".42" stop-color="#334f85" />
+        <stop offset="1" stop-color="#1d3763" />
+      </linearGradient>
+      <linearGradient id="gd-dr-_R_2aplflb_-rim" x1=".15" y1="0" x2=".85" y2="1">
+        <stop stop-color="#d1e0ef" />
+        <stop offset=".31" stop-color="#a1b8d3" />
+        <stop offset="1" stop-color="#6a86aa" />
+      </linearGradient>
+      <linearGradient id="gd-dr-_R_2aplflb_-coral-ink" x1="0" y1=".1" x2=".9" y2=".85">
+        <stop stop-color="#d77571" />
+        <stop offset=".4" stop-color="#ffbba5" />
+        <stop offset="1" stop-color="#e6817d" />
+      </linearGradient>
+      <linearGradient id="gd-dr-_R_2aplflb_-azure-ink" x1=".1" y1="1" x2=".85" y2=".1">
+        <stop stop-color="#609fe7" />
+        <stop offset=".55" stop-color="#b4e7ff" />
+        <stop offset="1" stop-color="#86bdf8" />
+      </linearGradient>
+      <pattern id="gd-dr-_R_2aplflb_-tooth" width="5.5" height="6.5" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r=".65" fill="#dee5f5" opacity=".38" />
+      </pattern>
+      <clipPath id="gd-dr-_R_2aplflb_-trim">
+        <rect width="218" height="218" rx="1" />
+      </clipPath>
+      <marker id="gd-dr-_R_2aplflb_-tip-b" viewBox="0 0 13 12" refX="12" refY="6" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" orient="auto">
+        <path d="M0 .5 12.5 6 0 11.5 2.5 6Z" fill="#92d5ff" />
+      </marker>
+      <marker id="gd-dr-_R_2aplflb_-tip-r" viewBox="0 0 13 12" refX="12" refY="6" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="12" orient="auto">
+        <path d="M0 .5 12.5 6 0 11.5 2.5 6Z" fill="#ffad96" />
+      </marker>
+    </defs>
+    <ellipse cx="300" cy="161" rx="220" ry="129" fill="url(#gd-dr-_R_2aplflb_-aura)" />
+    <g transform="translate(88 93) rotate(-12) scale(1.27)">
+      <g class="gd-weight-inset">
+        <defs>
+          <clipPath id="gd-weight-inset-_R_16aplflb_-window">
+            <rect width="144" height="144" />
+          </clipPath>
+          <linearGradient id="gd-weight-inset-_R_16aplflb_-blue" gradientUnits="userSpaceOnUse" x1="0" y1="144" x2="144" y2="0">
+            <stop stop-color="#284977" />
+            <stop offset=".48" stop-color="#3a6bb1" />
+            <stop offset="1" stop-color="#638bc8" />
+          </linearGradient>
+          <linearGradient id="gd-weight-inset-_R_16aplflb_-red" gradientUnits="userSpaceOnUse" x1="0" y1="144" x2="144" y2="0">
+            <stop stop-color="#794c61" />
+            <stop offset=".55" stop-color="#ae606b" />
+            <stop offset="1" stop-color="#d58078" />
+          </linearGradient>
+          <pattern id="gd-weight-inset-_R_16aplflb_-grain" width="5" height="5" patternUnits="userSpaceOnUse">
+            <circle cx="1" cy="2" r=".6" fill="#fee3d0" opacity=".18" />
+          </pattern>
+        </defs>
+        <g>
+          <g>
+            <path d="m-3 1-1 6v140l149 1 3-4-1-142Z" fill="#24364e" stroke="#788da7" stroke-width="1.15" />
+            <rect x="-2" y="-2" width="148" height="148" fill="#455774" stroke="#c6ceda" stroke-width="1" />
+            <g clip-path="url(#gd-weight-inset-_R_16aplflb_-window)">
+              <rect data-field="" width="144" height="144" fill="url(#gd-weight-inset-_R_16aplflb_-red)" />
+              <circle data-boundary="" cx="116.54569283927084" cy="151.85511735970454" r="76.1474055097275" fill="url(#gd-weight-inset-_R_16aplflb_-blue)" stroke="#e8dbe3" stroke-width="1.45" />
+              <rect width="144" height="144" fill="url(#gd-weight-inset-_R_16aplflb_-grain)" />
+              <path d="M7 21V7h14m102 130h14v-14" fill="none" stroke="#f0e7dc" stroke-opacity=".6" stroke-width="1.2" />
+              <circle data-anchor="" cx="108.3302752293578" cy="103.04587155963303" r="3.1" fill="#bbdcff" stroke="#2b507f" stroke-width="1" />
+              <circle data-target="" cx="97.10091743119266" cy="36.330275229357795" r="3.1" fill="#ffd1c5" stroke="#95535b" stroke-width="1" />
+              <text x="10" y="132" class="gd-atlas-fixed-weight">η = 0.65</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(264 44) rotate(6)">
+      <rect x="2" y="5" width="232" height="232" rx="3" fill="#2b3d5a" stroke="#6d83a4" stroke-width="1.7" />
+      <rect width="232" height="232" rx="3" fill="url(#gd-dr-_R_2aplflb_-rim)" stroke="#d2e0ed" stroke-width="2.2" />
+      <g transform="translate(7 7)">
+        <g class="gd-rings-live">
+          <g clip-path="url(#gd-dr-_R_2aplflb_-trim)">
+            <rect width="218" height="218" fill="url(#gd-dr-_R_2aplflb_-paper)" />
+            <path d="M0 131.7 218 95.0V0H0Z" fill="#9e5b70" opacity=".27" />
+            <rect width="218" height="218" fill="url(#gd-dr-_R_2aplflb_-tooth)" opacity=".42" />
+            <g style="--ring-x:147;--ring-y:55;--ring-sx0:120;--ring-sy0:76;--ring-travel-x:6;--ring-travel-y:68">
+              <circle class="gd-ring-measure" cx="126" cy="144" r="91.44397191723466" fill="#cc7473" fill-opacity=".11" stroke="#1c304b" stroke-opacity=".55" stroke-width="5.2" />
+              <circle class="gd-ring-measure" cx="126" cy="144" r="91.44397191723466" fill="none" stroke="url(#gd-dr-_R_2aplflb_-coral-ink)" stroke-width="3.3" />
+              <g transform="translate(147 55)">
+                <g class="gd-ring-span" transform="matrix(-21 89 0 1 0 0)">
+                  <path d="M0 0h1" fill="none" stroke="#ffad96" stroke-width=".95" stroke-dasharray="2 3.5" vector-effect="non-scaling-stroke" />
+                </g>
+              </g>
+            </g>
+            <g style="--ring-x:164;--ring-y:156;--ring-sx0:120;--ring-sy0:76;--ring-travel-x:6;--ring-travel-y:68">
+              <circle class="gd-ring-measure" cx="126" cy="144" r="39.84971769034255" fill="#7db9ff" fill-opacity=".11" stroke="#1c304b" stroke-opacity=".55" stroke-width="5.2" />
+              <circle class="gd-ring-measure" cx="126" cy="144" r="39.84971769034255" fill="none" stroke="url(#gd-dr-_R_2aplflb_-azure-ink)" stroke-width="3.3" />
+              <g transform="translate(164 156)">
+                <g class="gd-ring-span" transform="matrix(-38 -12 0 1 0 0)">
+                  <path d="M0 0h1" fill="none" stroke="#92d5ff" stroke-width=".95" stroke-dasharray="2 3.5" vector-effect="non-scaling-stroke" />
+                </g>
+              </g>
+            </g>
+            <g>
+              <path d="M23 171L147 55" fill="none" stroke="#14263e" stroke-width="5.4" opacity=".65" />
+              <path d="M23 171L147 55" fill="none" stroke="#ffad96" stroke-width="3.3" marker-end="url(#gd-dr-_R_2aplflb_-tip-r)" />
+            </g>
+            <g>
+              <path d="M23 171L164 156" fill="none" stroke="#14263e" stroke-width="5.4" opacity=".65" />
+              <path d="M23 171L164 156" fill="none" stroke="#92d5ff" stroke-width="3.3" marker-end="url(#gd-dr-_R_2aplflb_-tip-b)" />
+            </g>
+            <g transform="translate(23 171)" style="--ring-x:23;--ring-y:171;--ring-sx0:120;--ring-sy0:76;--ring-travel-x:6;--ring-travel-y:68">
+              <g class="gd-ring-span" transform="matrix(103 -27 0 1 0 0)">
+                <path d="M0 0h1" fill="none" stroke="#fff5dc" stroke-width="1.8" vector-effect="non-scaling-stroke" />
+              </g>
+            </g>
+            <g style="--ring-x:23;--ring-y:171;--ring-sx0:120;--ring-sy0:76;--ring-travel-x:6;--ring-travel-y:68">
+              <g class="gd-ring-student" transform="translate(126 144) rotate(-14.688786773318382)">
+                <path d="M0 0-11-4.6-8.7 0-11 4.6Z" fill="#fff5dc" />
+              </g>
+            </g>
+            <circle cx="23" cy="171" r="3.4" fill="#fff5dc" stroke="#33435c" stroke-width="1.2" />
+            <g stroke-width="2.4" stroke="#324059" paint-order="stroke">
+              <text x="150" y="44" style="fill:#ffdbcd;font:15px Arial,sans-serif">Target</text>
+              <text x="152" y="179" style="fill:#c3e4ff;font:15px Arial,sans-serif">Anchor</text>
+            </g>
+          </g>
+        </g>
+      </g>
+      <path d="M7 225V7h218" fill="none" stroke="#30425e" stroke-width="1.2" />
+    </g>
+  </g>
+</svg>

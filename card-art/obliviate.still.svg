@@ -1,0 +1,225 @@
+<svg class="ax-art ax-art-obliviate" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#ffb577">
+  <style>
+text { fill: currentColor; font: 14px "Helvetica Neue", Arial, sans-serif; }
+.ax-art .ax-obliviate-prompt {
+  fill: #f4c79a;
+  font: italic 23px Georgia, "Times New Roman", serif;
+}
+.ax-art .ax-obliviate-brand-name {
+  fill: #fff4db;
+  font: bold italic 17px "Snell Roundhand", "Brush Script MT", Georgia, serif;
+}
+.ax-obliviate-art { --obliviate-cycle: 10s; }
+.ax-obliviate-guidance {
+  stroke-dasharray: 13 102;
+  stroke-dashoffset: 16;
+  opacity: 0;
+  animation: ax-obliviate-guidance var(--obliviate-cycle) ease-in-out infinite;
+}
+.ax-obliviate-scan-row {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation-duration: var(--obliviate-cycle);
+  animation-timing-function: steps(5, end);
+  animation-iteration-count: infinite;
+}
+.ax-obliviate-after-print { animation: ax-obliviate-return var(--obliviate-cycle) linear infinite; }
+.ax-obliviate-tile { opacity: 0; animation: ax-obliviate-rollout var(--obliviate-cycle) ease-out infinite; }
+.ax-obliviate-still-print { display: none; }
+
+@keyframes ax-obliviate-guidance {
+  0%, 3% { stroke-dashoffset: 16; opacity: 0; }
+  8% { opacity: 1; }
+  17% { stroke-dashoffset: -99; opacity: 1; }
+  20%, 100% { stroke-dashoffset: -111; opacity: 0; }
+}
+/* Reveal the second illustration in the visual-token reading order. */
+@keyframes ax-obliviate-row-0 { 0%, 20% { transform:scaleX(0) } 28%, 100% { transform:scaleX(1) } }
+@keyframes ax-obliviate-row-1 { 0%, 28% { transform:scaleX(0) } 36%, 100% { transform:scaleX(1) } }
+@keyframes ax-obliviate-row-2 { 0%, 36% { transform:scaleX(0) } 44%, 100% { transform:scaleX(1) } }
+@keyframes ax-obliviate-row-3 { 0%, 44% { transform:scaleX(0) } 52%, 100% { transform:scaleX(1) } }
+@keyframes ax-obliviate-row-4 { 0%, 52% { transform:scaleX(0) } 60%, 100% { transform:scaleX(1) } }
+@keyframes ax-obliviate-return { 0%, 86% { opacity:1 } 94%, 100% { opacity:0 } }
+@keyframes ax-obliviate-rollout { 0%, 20%, 24%, 100% { opacity:0 } 21.6% { opacity:.35 } }
+
+@media all {
+  .ax-obliviate-art * { animation: none !important; }
+  .ax-obliviate-guidance, .ax-obliviate-live-print { display: none; }
+  .ax-obliviate-still-print { display: inline; }
+}
+  </style>
+  <g class="ax-obliviate-art">
+    <title>Aligned teacher predictions guide visual-token generation. The scan compares illustrative bottle generations before and after brand erasure.</title>
+    <defs>
+      <linearGradient id="ax-obliviate-_R_2a9lflb_-sky" x1="0" y1="0" x2=".85" y2="1">
+        <stop stop-color="#f2c184" />
+        <stop offset=".52" stop-color="#cb8851" />
+        <stop offset="1" stop-color="#99523c" />
+      </linearGradient>
+      <radialGradient id="ax-obliviate-_R_2a9lflb_-light">
+        <stop stop-color="#e99148" stop-opacity=".19" />
+        <stop offset="1" stop-color="#e99148" stop-opacity="0" />
+      </radialGradient>
+      <pattern id="ax-obliviate-_R_2a9lflb_-tiles" patternUnits="userSpaceOnUse" width="32" height="32">
+        <path d="M0 32V0h32" fill="none" stroke="#583724" stroke-width="1.5" stroke-opacity=".52" />
+      </pattern>
+      <linearGradient id="ax-obliviate-_R_2a9lflb_-bottle">
+        <stop stop-color="#522f26" />
+        <stop offset=".2" stop-color="#99562e" />
+        <stop offset=".34" stop-color="#ac6938" />
+        <stop offset=".7" stop-color="#76432b" />
+        <stop offset="1" stop-color="#422b26" />
+      </linearGradient>
+      <clipPath id="ax-obliviate-_R_2a9lflb_-paper-label">
+        <path d="M54 80q26 6 53 0v33q-27 7-53 0Z" />
+      </clipPath>
+      <g id="ax-obliviate-_R_2a9lflb_-glass-bottle">
+        <path d="M71 18h18v18c0 11 4 18 12 26 5 5 8 10 8 19v47c0 7-5 11-11 11H63c-7 0-11-4-11-11V81c0-9 3-14 8-19 8-8 12-15 12-26Z" fill="url(#ax-obliviate-_R_2a9lflb_-bottle)" stroke="#71472e" stroke-width="1.4" />
+        <path d="M75 29v10c0 12-5 19-11 26m-5 8v5m0 38v12" fill="none" stroke="#e3a36a" stroke-opacity=".85" stroke-width="3.7" stroke-linecap="round" />
+      </g>
+      <g id="ax-obliviate-_R_2a9lflb_-brand">
+        <use href="#ax-obliviate-_R_2a9lflb_-glass-bottle" />
+        <path d="M69 17h22v7H69Z" fill="#a73329" stroke="#f6ae73" stroke-width="1.4" />
+        <path d="M54 80q26 6 53 0v33q-27 7-53 0Z" fill="#b92f26" />
+        <g clip-path="url(#ax-obliviate-_R_2a9lflb_-paper-label)">
+          <text class="ax-obliviate-brand-name" fill="#fff4db" font-family="'Snell Roundhand', 'Brush Script MT', Georgia, serif" font-size="17" font-weight="bold" font-style="italic" x="80.5" y="100" text-anchor="middle" textLength="48" lengthAdjust="spacingAndGlyphs" transform="rotate(-4 80.5 98)">Coca-Cola</text>
+          <path d="M55 108c12 3 20 4 29-1 8-4 17-5 23-3-9 0-14 2-22 6-10 5-21 3-30-2Z" fill="#fff4db" />
+        </g>
+      </g>
+      <g id="ax-obliviate-_R_2a9lflb_-plain">
+        <use href="#ax-obliviate-_R_2a9lflb_-glass-bottle" />
+        <path d="M69 17h22v7H69Z" fill="#6b4a32" stroke="#ecc38b" stroke-width="1.4" />
+        <path d="M54 80q26 6 53 0v33q-27 7-53 0Z" fill="#ead0a0" />
+        <path d="M56 84q25 5 49 0m-49 25q25 5 49 0" fill="none" stroke="#ad845a" stroke-width="1.35" />
+        <path d="M76 99q4-6 9-7-1 7-7 9m3-5-4 7" fill="none" stroke="#9a7953" stroke-width="1.4" stroke-linecap="round" />
+      </g>
+      <clipPath id="ax-obliviate-_R_2a9lflb_-scan">
+        <rect class="ax-obliviate-scan-row" style="animation-name: ax-obliviate-row-0" x="0" y="0" width="160" height="32" />
+        <rect class="ax-obliviate-scan-row" style="animation-name: ax-obliviate-row-1" x="0" y="32" width="160" height="32" />
+        <rect class="ax-obliviate-scan-row" style="animation-name: ax-obliviate-row-2" x="0" y="64" width="160" height="32" />
+        <rect class="ax-obliviate-scan-row" style="animation-name: ax-obliviate-row-3" x="0" y="96" width="160" height="32" />
+        <rect class="ax-obliviate-scan-row" style="animation-name: ax-obliviate-row-4" x="0" y="128" width="160" height="32" />
+      </clipPath>
+    </defs>
+    <ellipse cx="299" cy="164" rx="217" ry="131" fill="url(#ax-obliviate-_R_2a9lflb_-light)" />
+    <g transform="translate(64 90) rotate(-5) scale(.93)">
+      <path d="M35 38v35" stroke="#e7ab73" stroke-opacity=".42" stroke-dasharray="3 5" stroke-width="1.4" />
+      <path d="M65 38v35" stroke="#e7ab73" stroke-opacity=".42" stroke-dasharray="3 5" stroke-width="1.4" />
+      <path d="M95 38v35" stroke="#e7ab73" stroke-opacity=".42" stroke-dasharray="3 5" stroke-width="1.4" />
+      <path d="M125 38v35" stroke="#e7ab73" stroke-opacity=".42" stroke-dasharray="3 5" stroke-width="1.4" />
+      <g transform="translate(0 0)">
+        <path d="M0-10h223v55H0Z" fill="#593b2c" stroke="#c99066" stroke-width="1.6" />
+        <text x="9" y="26" class="ax-obliviate-prompt">c</text>
+        <g transform="translate(34 3)">
+          <rect width="24" height="28" rx="1.6" fill="#a36138" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 24 12 11 24 14" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(61 3)">
+          <rect width="24" height="28" rx="1.6" fill="#bf7d43" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 14 11 16 24 7" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(88 3)">
+          <rect width="24" height="28" rx="1.6" fill="#d89857" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 7 9 3 24 9" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(115 3)">
+          <rect width="24" height="28" rx="1.6" fill="#a36740" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 9 12 19 24 13" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <path d="M148 17h11m-4-4 4 4-4 4" fill="none" stroke="#e7b387" stroke-width="1.8" />
+        <path d="M165 32h51" stroke="#dba57b" stroke-width="1.3" />
+        <rect x="166" y="27.75" width="4.8" height="3.25" fill="#f1c79c" rx=".8" />
+        <rect x="172.5" y="24.11" width="4.8" height="6.89" fill="#f1c79c" rx=".8" />
+        <rect x="179" y="-8.649999999999999" width="4.8" height="39.65" fill="#fd9c5b" rx=".8" />
+        <rect x="185.5" y="26.61" width="4.8" height="4.39" fill="#f1c79c" rx=".8" />
+        <rect x="192" y="28.34" width="4.8" height="2.66" fill="#f1c79c" rx=".8" />
+        <rect x="198.5" y="23" width="4.8" height="8" fill="#f1c79c" rx=".8" />
+        <rect x="205" y="27.22" width="4.8" height="3.78" fill="#f1c79c" rx=".8" />
+        <rect x="211.5" y="25.63" width="4.8" height="5.37" fill="#f1c79c" rx=".8" />
+      </g>
+      <g transform="translate(0 73)">
+        <path d="M0-10h223v55H0Z" fill="#593b2c" stroke="#c99066" stroke-width="1.6" />
+        <text x="9" y="26" class="ax-obliviate-prompt">∅</text>
+        <g transform="translate(34 3)">
+          <rect width="24" height="28" rx="1.6" fill="#a36138" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 24 12 11 24 14" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(61 3)">
+          <rect width="24" height="28" rx="1.6" fill="#bf7d43" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 14 11 16 24 7" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(88 3)">
+          <rect width="24" height="28" rx="1.6" fill="#d89857" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 7 9 3 24 9" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <g transform="translate(115 3)">
+          <rect width="24" height="28" rx="1.6" fill="#a36740" stroke="#e3b080" stroke-width="1.2" />
+          <path d="M0 9 12 19 24 13" fill="none" stroke="#f7d09b" stroke-width="2.5" />
+        </g>
+        <path d="M148 17h11m-4-4 4 4-4 4" fill="none" stroke="#e7b387" stroke-width="1.8" />
+        <path d="M165 32h51" stroke="#dba57b" stroke-width="1.3" />
+        <rect x="166" y="23.6" width="4.8" height="7.4" fill="#f1c79c" rx=".8" />
+        <rect x="172.5" y="18.8" width="4.8" height="12.2" fill="#f1c79c" rx=".8" />
+        <rect x="179" y="25.52" width="4.8" height="5.48" fill="#fd9c5b" rx=".8" />
+        <rect x="185.5" y="21.009999999999998" width="4.8" height="9.99" fill="#f1c79c" rx=".8" />
+        <rect x="192" y="24.63" width="4.8" height="6.37" fill="#f1c79c" rx=".8" />
+        <rect x="198.5" y="17.52" width="4.8" height="13.48" fill="#f1c79c" rx=".8" />
+        <rect x="205" y="22.41" width="4.8" height="8.59" fill="#f1c79c" rx=".8" />
+        <rect x="211.5" y="20.5" width="4.8" height="10.5" fill="#f1c79c" rx=".8" />
+      </g>
+    </g>
+    <g fill="none" stroke-linecap="round">
+      <path d="M273 88C292 86 289 114 298 118" stroke="#e1a774" stroke-width="1.9" />
+      <path d="M279 155C296 153 289 124 298 118" stroke="#e1a774" stroke-width="1.9" />
+      <path d="M298 118C308 122 310 139 316 144" stroke="#ffbd7e" stroke-width="2.5" />
+      <path class="ax-obliviate-guidance" pathLength="100" d="M298 118C308 122 310 139 316 144" stroke="#ffdf9f" stroke-width="3.6" />
+    </g>
+    <circle cx="298" cy="118" r="4.5" fill="#ffd394" />
+    <g transform="translate(331 45) rotate(8.5) scale(1.38)">
+      <path d="m0 160 8 7h160l-8-7Zm160-160 8 7v160l-8-7Z" fill="#75452e" stroke="#d59d65" stroke-width="1.4" stroke-linejoin="round" />
+      <path d="M0 0h160v160H0Z" fill="url(#ax-obliviate-_R_2a9lflb_-sky)" />
+      <path d="M44 0h54L28 118H0V76Zm64 0h14L53 118H39Z" fill="#ffddb0" fill-opacity=".28" />
+      <path d="M0 119h160v41H0Z" fill="#b36845" />
+      <path d="m70 138 45-3 45 14v7l-64-5Z" fill="#79432f" fill-opacity=".8" />
+      <g class="ax-obliviate-live-print">
+        <use href="#ax-obliviate-_R_2a9lflb_-brand" transform="translate(-8 -7) scale(1.1)" />
+        <g class="ax-obliviate-after-print" clip-path="url(#ax-obliviate-_R_2a9lflb_-scan)">
+          <use href="#ax-obliviate-_R_2a9lflb_-plain" transform="translate(-8 -7) scale(1.1)" />
+        </g>
+        <path d="M0 0h160v160H0Z" fill="url(#ax-obliviate-_R_2a9lflb_-tiles)" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.00s" x="0.8" y="0.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.16s" x="32.8" y="0.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.32s" x="64.8" y="0.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.48s" x="96.8" y="0.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.64s" x="128.8" y="0.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.80s" x="0.8" y="32.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 0.96s" x="32.8" y="32.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.12s" x="64.8" y="32.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.28s" x="96.8" y="32.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.44s" x="128.8" y="32.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.60s" x="0.8" y="64.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.76s" x="32.8" y="64.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 1.92s" x="64.8" y="64.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.08s" x="96.8" y="64.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.24s" x="128.8" y="64.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.40s" x="0.8" y="96.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.56s" x="32.8" y="96.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.72s" x="64.8" y="96.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 2.88s" x="96.8" y="96.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.04s" x="128.8" y="96.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.20s" x="0.8" y="128.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.36s" x="32.8" y="128.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.52s" x="64.8" y="128.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.68s" x="96.8" y="128.8" width="30.4" height="30.4" fill="#ffdfad" />
+        <rect class="ax-obliviate-tile" style="animation-delay: 3.84s" x="128.8" y="128.8" width="30.4" height="30.4" fill="#ffdfad" />
+      </g>
+      <g class="ax-obliviate-still-print">
+        <use href="#ax-obliviate-_R_2a9lflb_-brand" transform="translate(-36 4) scale(1.02)" />
+        <use href="#ax-obliviate-_R_2a9lflb_-plain" transform="translate(39 4) scale(1.02)" />
+        <path d="M80 17v124" stroke="#f6d6a5" stroke-opacity=".58" stroke-width="1.5" />
+      </g>
+      <path d="M0 0h160v160H0Z" fill="none" stroke="#edba83" stroke-width="2" />
+    </g>
+  </g>
+<style>* { animation: none !important; transition: none !important; }</style>
+</svg>

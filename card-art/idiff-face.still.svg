@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" aria-hidden="true">
+  <title>Three identity embeddings guide denoising. As the point travels across the sphere, the synthetic face changes with it.</title>
+  <style>
+    .id-grain { opacity:.15; }
+    .id-coarse { opacity:.08; }
+    .id-still { display:none; }
+    @media not all {
+      .id-grain { animation:id-grain 9s ease-in-out infinite; }
+      .id-coarse { animation:id-coarse 9s ease-in-out infinite; }
+      /* Hold the image clear through the entire glide, then start the next denoising round. */
+      @keyframes id-grain { 0%,5%,100% { opacity:1; } 24% { opacity:.50; } 42%,91% { opacity:.025; } }
+      @keyframes id-coarse { 0%,5%,100% { opacity:.90; } 22% { opacity:.20; } 38%,91% { opacity:0; } }
+    }
+    @media all {
+      .id-live { display:none; }
+      .id-still { display:inline; }
+    }
+  </style>
+  <defs>
+    <radialGradient id="id-aura"><stop stop-color="#87baa5" stop-opacity=".20"/><stop offset="1" stop-color="#87baa5" stop-opacity="0"/></radialGradient>
+    <radialGradient id="id-surface" cx=".30" cy=".26" r=".87"><stop stop-color="#709986"/><stop offset=".62" stop-color="#47776a"/><stop offset="1" stop-color="#284f48"/></radialGradient>
+    <linearGradient id="id-rim" x2=".7" y2="1"><stop stop-color="#c6d7c8"/><stop offset=".46" stop-color="#8db3a2"/><stop offset="1" stop-color="#537e71"/></linearGradient>
+    <linearGradient id="id-paper" x2=".83" y2="1"><stop stop-color="#90b7a3"/><stop offset=".56" stop-color="#618f7e"/><stop offset="1" stop-color="#375f55"/></linearGradient>
+    <pattern id="id-tooth" width="5" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".6" fill="#d1dec8" opacity=".48"/><circle cx="4" cy="5" r=".5" fill="#2b5146" opacity=".45"/></pattern>
+    <filter id="id-noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".215" numOctaves="1" seed="17"/>
+      <feColorMatrix values=".58 0 0 0 .16  .55 0 0 0 .32  .42 0 0 0 .30  0 0 0 0 1"/>
+    </filter>
+    <pattern id="id-cells" width="69" height="73" patternUnits="userSpaceOnUse">
+      <path fill="#97bba5" d="M2 2h6v6H2z M18 54h5v5h-5z M48 13h7v7h-7z M62 47h5v5h-5z M36 30h5v5h-5z"/>
+      <path fill="#385f53" d="M7 16h8v8H7z M26 11h5v5h-5z M17 37h6v6h-6z M44 43h8v8h-8z M51 66h5v5h-5z"/>
+    </pattern>
+    <clipPath id="id-picture"><rect width="206" height="206" rx="1"/></clipPath>
+    <clipPath id="id-globe"><circle r="60"/></clipPath>
+    <linearGradient id="id-ink" x1=".12" y1=".02" x2=".85" y2=".97">
+      <stop stop-color="#e1d7bf" offset="0">
+
+      </stop>
+      <stop stop-color="#c6bda3" offset="1">
+
+      </stop>
+    </linearGradient>
+    <clipPath id="id-shirt-clip"><use href="#id-body"/></clipPath>
+    <linearGradient id="id-skin-a" x1=".12" y1=".02" x2=".85" y2=".97"><stop stop-color="#e1d7bf"/><stop offset="1" stop-color="#c6bda3"/></linearGradient>
+    <clipPath id="id-person-clip-a"><use href="#id-person-a"/></clipPath>
+    <g id="id-resting-face">
+          <!-- The outer edge alone describes the face: forehead, nose, chin and neck. -->
+          <path id="id-person-a" d="M9 209c7-15 23-26 48-35l22-8c8-3 11-11 11-20l-1-7-11 1c-8 0-12-5-13-12l-1-9-2-4 3-6-5-4-1-5-8-2c-4-1-5-4-2-7l11-14 4-10-1-7c0-26 17-44 42-47 28-4 52 11 58 36 6 24-3 47-19 63l-13 15c-4 9-5 18-1 24l6 7c23 7 48 19 66 42Z"
+            fill="url(#id-skin-a)"/>
+          <path d="M-4 163Q33 151 77 162q33 17 58-5l77 14v43H-4Z" clip-path="url(#id-person-clip-a)" fill="#3d6458"/>
+          <path d="M63 64c6-8 18-13 33-19l20-10 10 17c8 15 19 23 32 26 5-16 3-31-4-43-10-20-31-27-52-24-22 2-40 16-45 31l7-2c-4 8-4 16-1 24Z"
+            fill="#446455"/>
+          <path d="M89 139c15-2 25-7 34-14l-18 24-15 10c1-6 0-13-1-20Z"
+            fill="#a39b83" opacity=".76"/>
+          <path d="M58 176c11-5 15-7 21-9 11 5 27 7 42 2l15-8c12 4 23 8 32 14-13 10-27 19-39 34H61c9-9 16-16 26-22Z"
+            fill="#355d51" opacity=".73"/>
+    </g>
+  </defs>
+  <ellipse cx="305" cy="170" rx="244" ry="140" fill="url(#id-aura)"/>
+
+  <!-- A low-dimensional projection of the hypersphere; the marked direction holds during denoising and follows projected great-circle arcs between identities. -->
+  <g transform="translate(128 165) rotate(-19)">
+    <circle r="60" fill="url(#id-surface)" stroke="#a5c6af" stroke-width="1.7"/>
+    <g clip-path="url(#id-globe)" fill="none" stroke="#a0c0a9" stroke-width="1.4">
+      <ellipse rx="23" ry="60" opacity=".69"/><ellipse rx="47" ry="60" opacity=".44"/>
+      <ellipse rx="60" ry="17" opacity=".77"/>
+      <ellipse cy="-29" rx="53" ry="13" opacity=".6"/><ellipse cy="29" rx="53" ry="13" opacity=".5"/>
+      <path d="M0-60v120" opacity=".31"/>
+    </g>
+  </g>
+  <circle cx="128" cy="165" r="2.3" fill="#c0d2b5"/>
+  <!-- Orthographic projection of three unit-sphere great circles around (128,165).
+       Each of the three 9 s rounds holds while denoising. From 4.3 to 7.95 s the
+       sampled spherical interpolation and matching silhouette use the same ease. -->
+  <g class="id-still">
+    <path d="M128 165L159 139" stroke="#c0d2b5" stroke-width="1.7" fill="none"/>
+    <path d="M159 139Q189.5 128 220 136Q245 155 278 154" stroke="#91bca3" stroke-width="2.1" fill="none"/>
+    <g transform="translate(159 139)">
+      <circle r="9" fill="#729b83" stroke="#d5e1c9" stroke-width="1.5"/>
+      <circle r="3.9" fill="#e0e8d0"/>
+    </g>
+  </g>
+  <g class="id-live">
+    <path d="M128 165L159 139" stroke="#c0d2b5" stroke-width="1.7" fill="none">
+
+    </path>
+    <path d="M159 139Q189.5 128 220 136Q245 155 278 154" stroke="#91bca3" stroke-width="2.1" fill="none">
+
+    </path>
+    <g transform="translate(159 139)">
+
+      <circle r="9" fill="#729b83" stroke="#d5e1c9" stroke-width="1.5"/>
+      <circle r="3.9" fill="#e0e8d0"/>
+    </g>
+  </g>
+  <g transform="translate(222 137) rotate(-4)">
+    <rect x="-14" y="-13" width="37" height="29" rx="3" fill="#2d5147" stroke="#7da28c" stroke-width="1.4"/>
+    <text x="-5" y="7" fill="#c3d5be" font-family="Georgia,serif" font-size="19" font-style="italic">ε<tspan font-size="12" dy="2">θ</tspan></text>
+  </g>
+  <path d="m271 150 7 4-7 4" fill="none" stroke="#a5c4ae" stroke-width="1.9"/>
+
+  <!-- The same print holds three original paper-cut profiles. The conditioning point and the visible silhouette interpolate together. -->
+  <g transform="translate(294 44) rotate(5)">
+    <rect x="5" y="6" width="222" height="222" rx="3" fill="#24483e" stroke="#547c6c" stroke-width="1.6"/>
+    <rect width="222" height="222" rx="3" fill="url(#id-rim)" stroke="#bdd1bd" stroke-width="1.8"/>
+    <g transform="translate(8 8)">
+      <g clip-path="url(#id-picture)">
+        <rect width="206" height="206" fill="url(#id-paper)"/>
+        <path d="M0 91 69 0h42L0 149Z" fill="#aac4ad" opacity=".15"/>
+        <use href="#id-resting-face" class="id-still"/>
+        <g class="id-live">
+          <polygon id="id-body" points="9,209 12.33,203.14 16.5,197.84 21.32,193.13 26.63,188.98 32.29,185.3 45.15,178.72 74.01,167.81 81.18,164.99 84.26,162.72 86.67,159.73 88.35,156.28 89.39,152.59 89.9,148.78 89.85,144.95 89.03,139.24 83.5,139.5 77.76,140 72.14,138.87 67.72,135.27 65.39,130.04 64.11,119.95 62.23,114.55 63.97,111.06 64.84,109.31 61.92,106.54 60.1,105.08 59.11,100.54 57.27,99.57 55,99 48.55,96.89 47.32,95.03 47.65,92.82 53.72,84.99 60.01,76.98 63.78,67.55 63.1,60.72 63.57,51.96 65.9,42.51 69.47,34.87 73.6,29.05 78.91,23.77 85.04,19.48 91.8,16.24 98.96,14.05 106.35,12.82 113.83,12.36 121.09,12.79 128.23,14.15 135.13,16.46 141.62,19.74 147.54,23.94 153.92,30.41 158.02,36.39 161.81,44.84 164.07,54.17 164.77,60.62 164.35,72.03 163.03,79.02 159.67,89.03 156.76,95.03 155.25,97.67 154.45,98.96 153.42,100.54 150.1,105.13 147.69,108.04 146.22,109.69 143.2,112.93 140.3,116.27 138.85,117.95 135.53,121.77 130.73,127.61 128.98,132.38 128.3,134.85 127.81,137.35 127.52,139.89 127.47,142.45 127.72,144.99 129.75,150.61 133.61,155.21 138.23,158.69 143.93,160.6 155.12,164.98 165.22,169.83 174.89,175.49 179.53,178.63 184.01,182 190.48,187.51 193.54,190.46 202,200" fill="url(#id-ink)" opacity="1">
+
+          </polygon>
+          <polygon id="id-shirt" points="36.57,156.74 72.56,160.95 107.49,169.29 140.54,158.01 212,171 212,214 -4,214 -4,167.76 2.52,161.08 9.22,159.49 15.99,158.27 22.82,157.41 29.69,156.9" fill="#3d6458" opacity="1" clip-path="url(#id-shirt-clip)">
+
+
+          </polygon>
+          <polygon id="id-hair" points="111.26,10.33 112.88,10.36 116.12,10.53 119.34,10.89 120.94,11.14 122.54,11.43 124.12,11.78 128.8,13.11 130.33,13.65 131.83,14.25 134.78,15.6 137.62,17.17 139,18.02 145.44,23.18 147.35,25.17 150.75,29.49 153.6,34.21 156.14,39.09 158.18,44.21 159.63,49.52 160.5,54.96 160.78,60.46 160.77,61.45 160.69,63.43 160.2,68.36 159.07,74.19 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 151.46,75.99 145.3,73.03 139.68,69.14 134.7,64.45 130.39,59.14 126.74,53.35 123.31,47.43 119.84,41.53 116.37,35.63 110.53,37.73 98.29,43.86 85.7,49.23 79.47,52.06 73.42,55.26 67.78,59.13 63,64 61.91,60.61 60.97,55.36 60.88,51.8 61.25,48.26 61.61,46.52 62.64,43.12 63.85,40.04 62.14,40.53 60.42,41.02 57,42 57.55,40.49 58.86,37.58 59.62,36.17 60.44,34.79 61.32,33.45 62.25,32.15 64.25,29.65 65.32,28.46 66.43,27.3 67.58,26.18 68.76,25.1 69.97,24.06 71.22,23.05 73.8,21.15 76.92,19.14 78.75,18.09 82.52,16.19 84.45,15.35 86.41,14.57 90.41,13.23 92.45,12.66 94.5,12.17 98.65,11.4 100.74,11.13 104.94,10.65 107.04,10.47" fill="#446455" opacity="1">
+
+
+          </polygon>
+          <polygon id="id-neck" points="123,125 123,125 123,125 123,125 123,125 105,149 90,159 90,159 90.35,150.98 89,139 89,139 96.33,137.7 103.5,135.7 110.4,132.9 116.92,129.29" fill="#a39b83" opacity="0.76">
+
+
+
+          </polygon>
+          <polygon id="id-collar" points="136,161 144.18,163.81 146.89,164.8 149.59,165.82 152.26,166.89 154.92,168.02 168,175 144.53,193.12 133.83,203.38 129,209 61,209 74.46,196.14 81.79,190.4 84.12,185.91 58,176 63.48,173.5 65.31,172.66 70.81,170.18 79.95,167.42 89.29,170.41 99.01,171.78 108.82,171.59 118.47,169.78" fill="#355d51" opacity="0.73">
+
+
+
+          </polygon>
+          <polygon id="id-lapel" points="86,166 86,166 86,166 86,166" fill="#355d51" opacity="1">
+
+
+          </polygon>
+        </g>
+        <g class="id-grain"><rect width="206" height="206" fill="#789781" filter="url(#id-noise)"/></g>
+        <rect class="id-coarse" width="206" height="206" fill="url(#id-cells)"/>
+        <rect width="206" height="206" fill="url(#id-tooth)" opacity=".27"/>
+      </g>
+    </g>
+    <path d="M12 26V12h14m170 0h14v14m0 170v14h-14m-170 0H12v-14" fill="none" stroke="#d1deca" stroke-width="1.5" opacity=".73"/>
+  </g>
+<style>* { animation: none !important; transition: none !important; }</style>
+</svg>
