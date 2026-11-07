@@ -455,6 +455,9 @@
         // A non-interactive visual copy lets removed cards fade without delaying
         // the actual filter state or leaving hidden links in the keyboard order.
         const ghost = card.cloneNode(true);
+        // An exiting visual copy must not start a second embedded document.
+        ghost.querySelectorAll("iframe.shared-overview-frame").forEach((iframe) => iframe.remove());
+        ghost.querySelector(".has-shared-art")?.classList.remove("has-shared-art");
         ghost.removeAttribute("hidden");
         ghost.removeAttribute("id");
         ghost.querySelectorAll("[id]").forEach((element) => element.removeAttribute("id"));
