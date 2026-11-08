@@ -22,8 +22,11 @@
     <link rel="stylesheet" href="css/components.css?v=75cbf469a331" />
     <link rel="stylesheet" href="css/responsive.css?v=56" />
     <link rel="stylesheet" href="css/refinement.css?v=ba5b6dd0be44" />
-    <link rel="stylesheet" href="card-art/overview.css?v=2e77360c" />
+    <link rel="stylesheet" href="card-art/overview.css?v=d7948dff" />
     <script>
+      if ((location.protocol === "https:" || location.protocol === "http:") && navigator.onLine && window.IntersectionObserver) {
+        document.documentElement.classList.add("expects-shared-art");
+      }
       document.documentElement.dataset.theme =
         localStorage.getItem("theme") ||
         (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
@@ -408,6 +411,6 @@
 
     <script src="js/content.js?v=9e45afc35d90"></script>
     <script src="js/app.js?v=61"></script>
-    <script src="card-art/cards.js?v=901d6b0c"></script>
+    <script src="card-art/cards.js?v=2a4515f2" onerror="document.documentElement.classList.remove('expects-shared-art')"></script>
   </body>
 </html>
