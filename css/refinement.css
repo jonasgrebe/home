@@ -1424,6 +1424,7 @@ em {
 .publication-card:has(.art-idiff) { --card-accent: var(--project-idiff); }
 .publication-card:has(.art-fire) { --card-accent: var(--project-fire); }
 .publication-card:has(.art-veto) { --card-accent: var(--project-veto); }
+.publication-card:has(.art-iris) { --card-accent: #608ca5; }
 .publication-card:hover,
 .publication-card:focus-within,
 .publication-card.is-flipped {

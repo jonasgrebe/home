@@ -208,6 +208,20 @@ window.SITE_CONTENT = {
         "my": 72
       },
       {
+        "id": "ongoing-project",
+        "label": "IRIS",
+        "note": "Image owners mark an opt-out that cooperating editors learn to honor.",
+        "targets": [
+          "alignment",
+          "release",
+          "inference"
+        ],
+        "x": 71,
+        "y": 80,
+        "mx": 76,
+        "my": 94
+      },
+      {
         "id": "stealth-multimodal",
         "label": "FIRE",
         "note": "Protecting exercises against AI-assisted cheating at the point of use.",
@@ -292,8 +306,34 @@ window.SITE_CONTENT = {
       "mapHidden": true
     },
     {
-      "id": "stealth-multimodal",
+      "id": "ongoing-project",
       "index": "02",
+      "year": "2026",
+      "venue": "Preprint · 2026",
+      "venueType": "preprint",
+      "title": "IRIS: Imperceptible, Robust Image Sealing for Cooperative Anti-Edit Protection",
+      "authors": "<strong>Jonas H. Grebe</strong>, <a class='person-link' href='https://scholar.google.com/citations?user=huveR90AAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Hossein Shakibania</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ' target='_blank' rel='noreferrer'>Anna Rohrbach</a>, <a class='person-link' href='https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ' target='_blank' rel='noreferrer'>Marcus Rohrbach</a>",
+      "summary": "IRIS lets image owners signal that they do not want an image edited. An invisible watermark tells a cooperating editor when to suppress a requested edit.",
+      "abstractExcerpt": "Owners embed a watermark once. Model providers fine-tune their editors to slow denoising on marked images while preserving their usual behavior on unmarked ones. The same mark can signal an opt-out to independently trained editors.",
+      "art": "art-iris",
+      "artLabel": "COOPERATIVE / ANTI-EDIT",
+      "tags": [
+        "Multimodal",
+        "Safety",
+        "Defenses",
+        "Watermarks",
+        "Image editing"
+      ],
+      "links": [
+        {
+          "label": "Project page",
+          "url": "https://jonasgrebe.github.io/research/projects/iris/"
+        }
+      ]
+    },
+    {
+      "id": "stealth-multimodal",
+      "index": "03",
       "year": "2026",
       "venue": "Preprint · 2026",
       "venueType": "preprint",
@@ -319,7 +359,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "stealth-safety",
-      "index": "03",
+      "index": "04",
       "year": "2026",
       "venue": "Preprint · 2026",
       "venueType": "preprint",
@@ -358,7 +398,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "obliviate",
-      "index": "04",
+      "index": "05",
       "year": "2026",
       "venue": "ECCV 2026 · Malmö",
       "venueType": "conference",
@@ -398,7 +438,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "poisoned-conversation",
-      "index": "05",
+      "index": "06",
       "year": "2026",
       "venue": "Preprint · 2026",
       "venueType": "preprint",
@@ -427,7 +467,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "geometric-erasure",
-      "index": "06",
+      "index": "07",
       "year": "2026",
       "venue": "ICML 2026 · Seoul",
       "venueType": "conference",
@@ -467,7 +507,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "token-by-token",
-      "index": "07",
+      "index": "08",
       "year": "2026",
       "venue": "NeurIPS 2026 · Sydney",
       "venueType": "conference",
@@ -511,7 +551,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "erased-not-forgotten",
-      "index": "08",
+      "index": "09",
       "year": "2026",
       "venue": "ICML 2026 · Seoul",
       "secondaryVenue": "ICML 2025 Workshop · Vancouver",
@@ -556,7 +596,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "open-set-backdoor",
-      "index": "09",
+      "index": "10",
       "year": "2025",
       "venue": "WACV 2025 · Tucson",
       "venueType": "conference",
@@ -590,7 +630,7 @@ window.SITE_CONTENT = {
     },
     {
       "id": "idiff-face",
-      "index": "10",
+      "index": "11",
       "year": "2023",
       "venue": "ICCV 2023 · Paris",
       "venueType": "conference",

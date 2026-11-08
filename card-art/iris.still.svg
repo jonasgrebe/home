@@ -1,0 +1,429 @@
+<svg class="ax-art ax-art-iris" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#bfeaff">
+  <style>
+@property --iris-cool {
+  syntax: "&lt;number&gt;";
+  inherits: true;
+  initial-value: 1;
+}
+
+.ax-iris-art { --iris-cool: 1; --iris-period: 9s; }
+.ax-iris-day {
+  --iris-sky: #78bad2; --iris-light: #f0fbfc; --iris-snow: #f4fcfc; --iris-ice: #b6def0;
+  --iris-rock: #3a6987; --iris-haze: #83abc4; --iris-lake: #67acc6; --iris-pine: #183e59;
+}
+.ax-iris-night {
+  --iris-sky: #283955; --iris-light: #f4e7bd; --iris-moon-shadow: #283955; --iris-snow: #b0c9e7; --iris-ice: #7595bb;
+  --iris-rock: #304962; --iris-haze: #536984; --iris-lake: #405d7d; --iris-pine: #172e46;
+}
+.ax-iris-film { transform: translate(-9px, -8px); }
+.ax-iris-glint { opacity: 0; }
+.ax-iris-output-noise { opacity: 1; }
+
+@media not all {
+  .ax-iris-art { animation: iris-index-cooldown var(--iris-period) ease-in-out infinite; }
+  .ax-iris-film { animation: iris-index-register var(--iris-period) ease-in-out infinite; }
+  .ax-iris-glint { animation: iris-index-glint var(--iris-period) linear infinite; }
+  .ax-iris-output-noise { animation: iris-index-generation var(--iris-period) ease-in-out infinite; }
+}
+
+@keyframes iris-index-cooldown {
+  0%, 38%, 100% { --iris-cool: 0; }
+  58%, 85% { --iris-cool: 1; }
+}
+@keyframes iris-index-register {
+  0%, 25%, 100% { transform: translate(-34px, -29px); opacity: 0; }
+  31% { transform: translate(-34px, -29px); opacity: .96; }
+  43%, 85% { transform: translate(-9px, -8px); opacity: 1; }
+}
+@keyframes iris-index-glint {
+  0%, 35% { opacity: 0; transform: translateX(0); }
+  38% { opacity: .9; }
+  51% { opacity: .9; transform: translateX(360px); }
+  52%, 100% { opacity: 0; transform: translateX(360px); }
+}
+@keyframes iris-index-generation {
+  0%, 5%, 44%, 100% { opacity: 1; }
+  22%, 40% { opacity: 0; }
+}
+
+@property --iris-field-yaw {
+  syntax: "&lt;angle&gt;";
+  inherits: true;
+  initial-value: 280deg;
+}
+
+.iris-index-field {
+  --iris-field-yaw: 280deg;
+  --iris-vector-scale: calc(1 - .67 * var(--iris-cool, 1));
+}
+
+.iris-index-vector {
+  color: #e5f6ff;
+  color: color-mix(in srgb, #ffe1aa, #e8f9ff calc(var(--iris-cool, 1) * 100%));
+}
+
+.iris-index-trace {
+  fill: none;
+  stroke: #b8d9eb;
+  stroke-width: 1.8;
+  stroke-dasharray: 2.4 2.8;
+  opacity: calc(.66 * var(--iris-cool, 1));
+}
+
+.iris-index-facet { opacity: calc(.55 + .43 * var(--iris-cool, 1)); }
+.iris-index-shaft { transform: scaleX(var(--iris-vector-scale)); }
+.iris-index-arrowhead { transform: translateX(calc(var(--tip) * var(--iris-vector-scale))); }
+
+/* The sample position and its unit vector undergo the same 3D rotation. */
+@supports (transform: matrix(cos(0deg), 0, 0, 1, 0, 0)) {
+  .iris-index-vector {
+    --cos-yaw: cos(var(--iris-field-yaw));
+    --sin-yaw: sin(var(--iris-field-yaw));
+    --depth: calc(var(--pz) * var(--cos-yaw) - var(--px) * var(--sin-yaw));
+    --vector-depth: calc(var(--dz) * var(--cos-yaw) - var(--dx) * var(--sin-yaw));
+    --x: calc(var(--px) * var(--cos-yaw) + var(--pz) * var(--sin-yaw));
+    --y: calc(var(--py) * .95824 - var(--depth) * .28595);
+    --vx: calc(var(--dx) * var(--cos-yaw) + var(--dz) * var(--sin-yaw));
+    --vy: calc(var(--dy) * .95824 - var(--vector-depth) * .28595);
+    transform: matrix(var(--vx), var(--vy), calc(-1 * var(--vy)), var(--vx), var(--x), var(--y));
+    opacity: clamp(.5, calc(.81 + (var(--depth) * .95824 + var(--py) * .28595) * .004), 1);
+  }
+}
+
+@media not all {
+  .iris-index-field { animation: iris-index-orbit var(--iris-period, 9s) linear infinite; }
+}
+
+/* Keep the view moving while the protected field slows. */
+@keyframes iris-index-orbit {
+  0% { --iris-field-yaw: 0deg; }
+  38% { --iris-field-yaw: 194deg; }
+  48% { --iris-field-yaw: 233deg; }
+  58% { --iris-field-yaw: 250deg; }
+  85% { --iris-field-yaw: 263deg; }
+  91% { --iris-field-yaw: 285deg; }
+  100% { --iris-field-yaw: 360deg; }
+}
+</style>
+  <g class="ax-iris-art" stroke-linecap="round" stroke-linejoin="round">
+    <title>A watermarked alpine print signals an opt-out. The adapted editor shortens its velocity updates, leaving the requested night scene at noise.</title>
+    <defs>
+      <g id="ax-iris-_R_1bsnpflb_-alpine">
+        <rect width="184" height="184" fill="var(--iris-sky)" />
+        <circle cx="143" cy="35" r="18" fill="var(--iris-light)" />
+        <circle cx="151" cy="29" r="17" fill="var(--iris-moon-shadow, transparent)" />
+        <path d="M0 94 25 82l18 6 26-20 18 9 40-29 15 11 19-9 23 11v70H0Z" fill="var(--iris-haze)" />
+        <path d="m0 116 25-19 16-23 14-7 23-43 10-7 14 31 10 10 9 28 30 28 33 9v29H0Z" fill="var(--iris-snow)" />
+        <path d="m88 17 14 31 10 10 9 28 30 28-46-26-9-22-22-12 13-26Z" fill="var(--iris-rock)" />
+        <path d="m77 31-22 36-14 7-16 23 20-10 11-15 8 6 19-39-5 2Z" fill="var(--iris-ice)" />
+        <path d="m86 25-8 28-16 33-9 13 15-8 13-31 11 12 9 20 20 12-20-29-7-20-8-8Z" fill="var(--iris-ice)" />
+        <path d="m91 41 9 12 4 1 11 27-9-13-6-12Zm16 40 8 9 14 10-18-8Z" fill="var(--iris-snow)" />
+        <path d="m48 86 12-15m-8 16 8-10m7-14 8-14m-7 17 6-8m17 9 8 12m5-5 8 11" fill="none" stroke="var(--iris-rock)" stroke-width=".9" opacity=".7" />
+        <path d="m4 116 30-14m7-6 15-17m-1 27 13-10m21-20 7 14m1-47 5 6" fill="none" stroke="var(--iris-rock)" stroke-width="1.4" />
+        <path d="M0 113c31-6 48-4 73-11 36-10 63-3 111 18v12H0Z" fill="var(--iris-haze)" />
+        <path d="M0 126c34-8 56-11 82-13 37-3 74 4 102 11v60H0Z" fill="var(--iris-lake)" />
+        <path d="m87 118-16 13 9-2-14 11 19-7 13 2-11-8 6-3 8 1Z" fill="var(--iris-ice)" opacity=".63" />
+        <path d="M0 122c31-8 54-10 85-11m3 32h28m-79-9h24m31 17h22m23-21h40" stroke="var(--iris-snow)" fill="none" stroke-width="1.7" />
+        <path d="M0 105c15-6 31-11 47-12l14 6-30 8-12 11 14 3-33 6Z" fill="var(--iris-rock)" />
+        <path d="M0 90v26l18-2-1-.5-6-5 4 1-7-11 3 2-6-12 1 5Zm12 21 8-16 7 15-4-1 7 7-14 3Z" fill="var(--iris-pine)" />
+        <path d="M184 131c-14-4-28-3-38 3l-7 6-33 6-7 6 22 3-56 15-65 7v7h184Z" fill="var(--iris-rock)" />
+        <path d="m122 153 22-5 24-12 16-2m-71 29 32-7 21-8" fill="none" stroke="var(--iris-ice)" stroke-width="1.7" />
+        <g transform="translate(137 114)">
+          <path d="m-5 7 11-11 19 1 11 10-8 1v8H0V8Z" fill="var(--iris-pine)" />
+          <path d="M-6 7 6-6l19 1 11 10-20-1L6-2-1 7Z" fill="var(--iris-snow)" />
+          <path d="M4 9h4v5H4Zm13-1h5v5h-5Z" fill="var(--iris-light)" />
+        </g>
+      </g>
+      <clipPath id="ax-iris-_R_1bsnpflb_-window">
+        <rect width="184" height="184" />
+      </clipPath>
+      <linearGradient id="ax-iris-_R_1bsnpflb_-film" x1="0" y1="0" x2="1" y2="1">
+        <stop stop-color="#dff9ff" stop-opacity=".29" />
+        <stop offset=".52" stop-color="#dff9ff" stop-opacity=".03" />
+        <stop offset="1" stop-color="#7bcced" stop-opacity=".12" />
+      </linearGradient>
+      <linearGradient id="ax-iris-_R_1bsnpflb_-glint">
+        <stop stop-color="#e1faff" stop-opacity="0" />
+        <stop offset=".8" stop-color="#e1faff" stop-opacity=".42" />
+        <stop offset=".87" stop-color="#f4fdff" stop-opacity=".76" />
+        <stop offset="1" stop-color="#e1faff" stop-opacity="0" />
+      </linearGradient>
+      <pattern id="ax-iris-_R_1bsnpflb_-etch" width="13" height="13" patternUnits="userSpaceOnUse">
+        <path d="m1 4 1-1m6 7 2-1" stroke="#d4eff8" stroke-width="1.3" opacity=".6" />
+      </pattern>
+      <filter id="ax-iris-_R_1bsnpflb_-noise" filterUnits="userSpaceOnUse" x="0" y="0" width="184" height="184" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency=".37" numOctaves="1" seed="19" />
+        <feColorMatrix values="1.65 0 0 0 -.45  1.55 0 0 0 -.19  1.35 0 0 0 .015  0 0 0 0 1" />
+      </filter>
+    </defs>
+    <path d="M217 170q28 6 55-6m147 0q28-5 49 4" fill="none" stroke="#acd6ec" stroke-width="1.8" opacity=".65" />
+    <g transform="matrix(.97 -.14 .13 .97 45 88)">
+      <g stroke-linejoin="round">
+        <path d="M-5 181h194l4 5-1 9H0l-5-6ZM188-5l5 6v185l-5 5Z" fill="#254b65" stroke="#81a9bd" stroke-width="1.3" />
+        <rect x="-5" y="-5" width="194" height="194" rx="2" fill="#c6deeb" stroke="#f1fbff" stroke-width="2" />
+      </g>
+      <use class="ax-iris-day" href="#ax-iris-_R_1bsnpflb_-alpine" />
+      <g class="ax-iris-film">
+        <path d="M-4-4h171l21 22v170H-4Z" fill="url(#ax-iris-_R_1bsnpflb_-film)" stroke="#d8f6ff" stroke-width="2.1" />
+        <path d="M167-4v22h21Z" fill="#bde8f5" fill-opacity=".9" />
+        <rect width="184" height="184" fill="url(#ax-iris-_R_1bsnpflb_-etch)" clip-path="url(#ax-iris-_R_1bsnpflb_-window)" />
+        <g clip-path="url(#ax-iris-_R_1bsnpflb_-window)">
+          <g class="ax-iris-glint">
+            <path d="m-95 0 61 0-59 184h-61Z" fill="url(#ax-iris-_R_1bsnpflb_-glint)" />
+          </g>
+        </g>
+        <g transform="translate(22 152) scale(1.17)" color="#f5fdff">
+          <path d="m0-21 18 10v21L0 20l-18-10v-21Z" fill="#2a617e" stroke="#c3efff" stroke-width="1.5" />
+          <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round">
+            <path transform="rotate(0)" d="M0-14v28m-5-23 5 4 5-4m-10 18 5-4 5 4" />
+            <path transform="rotate(60)" d="M0-14v28m-5-23 5 4 5-4m-10 18 5-4 5 4" />
+            <path transform="rotate(120)" d="M0-14v28m-5-23 5 4 5-4m-10 18 5-4 5 4" />
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="translate(344 161) scale(1.12)">
+      <g class="iris-index-field">
+        <defs>
+          <radialGradient id="iris-field-_R_1dbsnpflb_-glass" cx=".31" cy=".23" r=".86">
+            <stop stop-color="#7597a8" />
+            <stop offset=".29" stop-color="#466d80" />
+            <stop offset=".66" stop-color="#23485c" />
+            <stop offset=".94" stop-color="#162f41" />
+            <stop offset="1" stop-color="#597e94" />
+          </radialGradient>
+          <linearGradient id="iris-field-_R_1dbsnpflb_-rim" x2=".9" y2=".87">
+            <stop stop-color="#f2fbff" />
+            <stop offset=".35" stop-color="#c0e5ed" />
+            <stop offset=".72" stop-color="#416881" />
+            <stop offset="1" stop-color="#a6cbdc" />
+          </linearGradient>
+          <pattern id="iris-field-_R_1dbsnpflb_-etch" width="6" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)">
+            <path d="m1 1 2 1" stroke="#cce6eb" stroke-width=".9" />
+          </pattern>
+          <clipPath id="iris-field-_R_1dbsnpflb_-inside">
+            <circle r="98" />
+          </clipPath>
+        </defs>
+        <circle r="99" fill="url(#iris-field-_R_1dbsnpflb_-glass)" stroke="url(#iris-field-_R_1dbsnpflb_-rim)" stroke-width="2.3" />
+        <g clip-path="url(#iris-field-_R_1dbsnpflb_-inside)">
+          <g class="iris-index-facet">
+            <path d="M-95-16q4-42 51-68l-23 23-10 21Z" fill="#bdd8df" opacity=".58" />
+            <path d="m-95-16 18-24 10-21-9 30Z" fill="#779eb4" opacity=".66" />
+            <path d="M-47-86q38-22 74-8L1-91l-28 8Z" fill="#b5d1df" opacity=".46" />
+            <path d="M82-53q18 28 14 58L85-18Z" fill="#5a8398" />
+            <path d="m96 5-8 26 2-23-5-26Z" fill="#9dbdcf" />
+            <path d="M92 29q-7 37-39 54l18-25 4-11Z" fill="#8aaabd" opacity=".44" />
+            <path d="m-25 93 18-6 33-2 19-8-15 14Z" fill="#a1c1d2" opacity=".64" />
+            <path d="m-67-61 9-11m-18 41-8 17m164 54-11 15m-13 24-22 8" fill="none" stroke="#d6eff5" stroke-width="1.4" />
+          </g>
+          <path d="M-93 32a98 98 0 0 0 172 27c-24 17-49 28-81 26-32-1-68-22-91-53Z" fill="url(#iris-field-_R_1dbsnpflb_-etch)" opacity=".42" />
+          <path d="M-91-28a95 95 0 0 1 78-66" fill="none" stroke="#ecfcff" stroke-opacity=".7" stroke-width="1.6" />
+          <path d="M61 68q22-17 28-41" fill="none" stroke="#82aec3" stroke-opacity=".6" stroke-width="1.5" />
+          <g class="iris-index-vector" transform="matrix(0.26528513596540426 -0.45893846112685266 0.45893846112685266 0.26528513596540426 -28.031267588256803 -36.34635682976468)" style="--px:-48;--py:-51;--pz:20;--dx:0.9754944670259208;--dy:-0.19730513863386476;--dz:-0.09737159272850616">
+            <path class="iris-index-trace" d="M0 0H30" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H30" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:30px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.2758327104965058 -0.09360651551625851 0.09360651551625851 -0.2758327104965058 23.63779031099181 -51.36660983478817)" style="--px:-17;--py:-60;--pz:-27;--dx:0.8812273296869;--dy:0.18385457662771523;--dz:0.4354720290282022">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H33.2" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:33.2px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.29681654070906893 0.0291844354366112 -0.0291844354366112 -0.29681654070906893 -36.90415432016193 -61.32967478855732)" style="--px:20;--py:-56;--pz:41;--dx:0.8409771687443275;--dy:0.3009039039359474;--dz:0.44968237929329735">
+            <path class="iris-index-trace" d="M0 0H36.4" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H36.4" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:36.4px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.6544660381864513 0.5759911826234003 -0.5759911826234003 -0.6544660381864513 42.282439350439134 -42.55647856664)" style="--px:45;--py:-33;--pz:-35;--dx:0.18637102411824572;--dy:0.6920006846884182;--dz:0.6974244717242696">
+            <path class="iris-index-trace" d="M0 0H39.6" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H39.6" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:39.6px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.7619016582704975 -0.5462602473787546 0.5462602473787546 0.7619016582704975 29.030500773461902 5.644452009442762)" style="--px:-54;--py:-12;--pz:-39;--dx:-0.04227083084481926;--dy:-0.6229625703428818;--dz:-0.781108707422647">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H30" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:30px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.3068141297704429 -0.3716557763573103 0.3716557763573103 0.3068141297704429 -58.67927903501163 -12.657612137505073)" style="--px:-26;--py:-18;--pz:55;--dx:0.9848023402643384;--dy:-0.10558379668636837;--dz:-0.13790000901803334">
+            <path class="iris-index-trace" d="M0 0H33.2" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H33.2" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:33.2px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.7065501328814899 0.5994133737497322 -0.5994133737497322 -0.7065501328814899 48.31266121058757 -23.26230072357903)" style="--px:6;--py:-25;--pz:-48;--dx:0.06347888845547547;--dy:0.6819457678896885;--dz:0.7286428482993575">
+            <path class="iris-index-trace" d="M0 0H36.4" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H36.4" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:36.4px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.3615798994844526 0.3677369996419587 -0.3677369996419587 -0.3615798994844526 -18.195211251628795 -26.034530028572284)" style="--px:37;--py:-15;--pz:25;--dx:0.6421625273599163;--dy:0.5973727839597133;--dz:0.48038843183297675">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H39.6" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:39.6px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.5821366313115796 0.8083301594693288 -0.8083301594693288 -0.5821366313115796 55.31566963025414 -7.518606081606746)" style="--px:52;--py:5;--pz:-47;--dx:-0.24580737747086195;--dy:0.799701050795201;--dz:0.5477745544819953">
+            <path class="iris-index-trace" d="M0 0H30" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H30" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:30px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.8913907593023384 -0.45137714180108823 0.45137714180108823 0.8913907593023384 -20.61426454547174 36.128020715370084)" style="--px:-62;--py:20;--pz:10;--dx:0.3205930942452574;--dy:-0.420804677581096;--dz:-0.8486126862403846">
+            <path class="iris-index-trace" d="M0 0H33.2" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H33.2" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:33.2px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.9888304329027793 0.056796825502484244 -0.056796825502484244 0.9888304329027793 11.70593464886657 18.59320624250006)" style="--px:-29;--py:10;--pz:-17;--dx:0.0256754128982069;--dy:0.015021350927696906;--dz:-0.9995574681771996">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H36.4" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:36.4px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.19726025939863728 -0.14046423734465063 0.14046423734465063 0.19726025939863728 -63.02769619278132 4.488025705589038)" style="--px:0;--py:8;--pz:64;--dx:0.9894080031009181;--dy:0.14284219100043932;--dz:-0.025843990985285344">
+            <path class="iris-index-trace" d="M0 0H39.6" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H39.6" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:39.6px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.33693271596897445 0.8911406555673791 -0.8911406555673791 -0.33693271596897445 47.03523417653206 20.404338055373913)" style="--px:27;--py:27;--pz:-43;--dx:-0.5962298819190666;--dy:0.7670341498647827;--dz:0.2369990313228844">
+            <path class="iris-index-trace" d="M0 0H30" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H30" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:30px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(-0.22541421090369967 0.8498125990577705 -0.8498125990577705 -0.22541421090369967 -8.116404230850412 26.10276696732174)" style="--px:44;--py:41;--pz:16;--dx:0.1711647818223791;--dy:0.9505703694867218;--dz:0.2590725576312057">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H33.2" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:33.2px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.8571062747184354 -0.020481506156113355 0.020481506156113355 0.8571062747184354 5.3356291494807175 57.7921208611535)" style="--px:-43;--py:47;--pz:-13;--dx:-0.33114296715023966;--dy:-0.1668151246538495;--dz:-0.9287179601437974">
+            <path class="iris-index-trace" d="M0 0H36.4" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H36.4" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:36.4px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.9179124468188355 0.13157345991184444 -0.13157345991184444 0.9179124468188355 -37.53685724044266 50.46215029002626)" style="--px:-12;--py:51;--pz:36;--dx:0.47559446141681333;--dy:0.2331208048602139;--dz:-0.8482125904577091">
+            <path class="iris-index-trace" d="M0 0H39.6" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H39.6" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:39.6px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.18385645031464326 0.8100294011951084 -0.8100294011951084 0.18385645031464326 26.066460559630016 55.70208683737605)" style="--px:14;--py:61;--pz:-24;--dx:-0.721648195079301;--dy:0.6169816245916628;--dz:-0.3139387797883842">
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H30" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:30px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.03820792505661541 0.5310536155057266 -0.5310536155057266 0.03820792505661541 65.69190440947345 28.98163210534924)" style="--px:4;--py:28;--pz:-66;--dx:-0.9417220726340573;--dy:0.26682707870899164;--dz:-0.20484835362150414">
+            <path class="iris-index-trace" d="M0 0H33.2" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H33.2" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:33.2px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+          <g class="iris-index-vector" transform="matrix(0.007797919833770983 0.3334625976758552 -0.3334625976758552 0.007797919833770983 -12.281556256157916 -2.4485838565960596)" style="--px:3;--py:-1;--pz:13;--dx:0.7970904895047087;--dy:0.589114541815533;--dz:0.13263034404923463">
+            <path class="iris-index-trace" d="M0 0H36.4" />
+            <circle r="1.8" fill="currentColor" />
+            <g class="iris-index-shaft">
+              <path d="M0 0H36.4" stroke="currentColor" stroke-width="3.3" stroke-linecap="round" />
+            </g>
+            <g class="iris-index-arrowhead" style="--tip:36.4px">
+              <path d="M1 0-6.8-4.4-5.6 0l-1.2 4.4Z" fill="currentColor" />
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g transform="matrix(.75 .085 -.075 .75 441 103)">
+      <g stroke-linejoin="round">
+        <path d="M-5 181h194l4 5-1 9H0l-5-6ZM188-5l5 6v185l-5 5Z" fill="#254b65" stroke="#81a9bd" stroke-width="1.3" />
+        <rect x="-5" y="-5" width="194" height="194" rx="2" fill="#c6deeb" stroke="#f1fbff" stroke-width="2" />
+      </g>
+      <g clip-path="url(#ax-iris-_R_1bsnpflb_-window)">
+        <use class="ax-iris-night" href="#ax-iris-_R_1bsnpflb_-alpine" />
+        <g fill="#f2f2d3">
+          <circle cx="18" cy="25" r="1.6" />
+          <circle cx="49" cy="14" r="1.4" />
+          <circle cx="158" cy="9" r="1.6" />
+          <circle cx="116" cy="32" r="1.2" />
+          <circle cx="33" cy="48" r="1.1" />
+        </g>
+        <rect class="ax-iris-output-noise" width="184" height="184" filter="url(#ax-iris-_R_1bsnpflb_-noise)" />
+      </g>
+    </g>
+  </g>
+<style>* { animation: none !important; transition: none !important; }</style>
+</svg>

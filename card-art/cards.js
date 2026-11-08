@@ -1,4 +1,4 @@
-(// The public research documents supply the artwork for these seven cards.
+(// Matching cards use the public research documents for their artwork.
 function mountSharedArtwork(projects, mountGemFallback) {
   const root = document.documentElement;
   if (!root.classList.contains("expects-shared-art") || !navigator.onLine) {
@@ -67,7 +67,7 @@ function mountSharedArtwork(projects, mountGemFallback) {
       if (!entry.art.classList.contains("has-shared-art")) useFallback(entry);
     }
   });
-})([["stealth-safety","veto"],["stealth-multimodal","fighting-fire-with-fire"],["poisoned-conversation","plw"],["obliviate","obliviate"],["geometric-erasure","gem"],["token-by-token","token-by-token"],["erased-not-forgotten","erased-but-not-forgotten"]], () => (// The overview build calls this function with the standalone GEM SVG.
+})([["ongoing-project","iris"],["stealth-safety","veto"],["stealth-multimodal","fighting-fire-with-fire"],["poisoned-conversation","plw"],["obliviate","obliviate"],["geometric-erasure","gem"],["token-by-token","token-by-token"],["erased-not-forgotten","erased-but-not-forgotten"]], () => (// The overview build calls this function with the standalone GEM SVG.
 function mountGemOverview(svgSource) {
   const frame = document.querySelector('[data-publication-id="geometric-erasure"] .publication-art');
   if (!frame || !window.IntersectionObserver) return;

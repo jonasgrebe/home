@@ -1784,6 +1784,47 @@
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 5px rgba(91,205,133,.07);
 }
+.art-iris {
+  color: #d9e7ef;
+  background: linear-gradient(145deg, #203e54, #527d96);
+}
+.art-iris::before {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  background:
+    repeating-linear-gradient(158deg, transparent 0 23px, rgba(211,230,242,.09) 24px, transparent 25px 61px),
+    repeating-linear-gradient(163deg, transparent 0 51px, rgba(211,230,242,.14) 52px, transparent 54px 97px);
+  mask-image: linear-gradient(90deg, transparent, #000 25% 75%, transparent);
+}
+.art-iris .art-shape-a {
+  width: 114px;
+  height: 114px;
+  left: 61%;
+  top: 53%;
+  border: 1px solid rgba(222,236,243,.42);
+  background: rgba(183,205,218,.1);
+  box-shadow: 0 0 0 13px rgba(222,236,243,.045), 0 0 0 27px rgba(222,236,243,.025);
+  transform: translate(-50%, -50%) rotate(-22deg);
+}
+.art-iris .art-shape-b {
+  width: 49px;
+  height: 49px;
+  left: 61%;
+  top: 53%;
+  border: 1px solid rgba(222,236,243,.52);
+  background: #60859d;
+  transform: translate(-50%, -50%) rotate(-22deg);
+}
+.publication-art.art-iris::after {
+  opacity: .25;
+  background:
+    radial-gradient(ellipse at 17% 68%, rgba(250,254,255,.8) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 33% 39%, rgba(250,254,255,.8) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 78% 27%, rgba(250,254,255,.8) 0 1px, transparent 2px),
+    radial-gradient(ellipse at 88% 72%, rgba(250,254,255,.8) 0 1px, transparent 2px),
+    linear-gradient(158deg, transparent 32%, rgba(243,252,255,.38) 47%, transparent 53%);
+}
 .art-stealth-signal {
   background:
     radial-gradient(circle at 52% 48%, rgba(39,220,255,.1), transparent 23%),
