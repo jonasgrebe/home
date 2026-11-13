@@ -1,6 +1,6 @@
 .publication-card[data-publication-id="ongoing-project"] .publication-art {
-  --overview-image: url("../assets/overview/iris.svg?v=089d9725");
-  --overview-still: url("iris.still.svg?v=9eab34a5");
+  --overview-image: url("../assets/overview/iris.svg?v=6c14aea7");
+  --overview-still: url("iris.still.svg?v=5dbb8834");
   --overview-base: #112837;
   --overview-accent: #bfeaff;
 }

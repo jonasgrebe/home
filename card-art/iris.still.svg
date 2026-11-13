@@ -34,22 +34,27 @@
   .ax-iris-art { animation: iris-index-sequence 9s linear infinite; }
 }
 
-/* The output tracks the field in both directions, lagging by 3.5% (315ms). */
+/* The field and output use the same eased ramp, 315ms apart in both directions.
+   The orbit eases between 6.2 and 1.2 degrees per percent of the loop.
+   Its Bézier endpoint slopes match the straight sections, including at wrap. */
 @keyframes iris-index-sequence {
   0% { --iris-seal: 0; --iris-glint: 0; --iris-cool: 0; --iris-field-yaw: 0deg; --iris-noise: 0; }
   10% { --iris-seal: 0; }
   16% { --iris-glint: 0; }
-  24% { --iris-seal: 1; --iris-cool: 0; --iris-field-yaw: 162deg; }
-  27.5% { --iris-noise: 0; }
+  22% { --iris-field-yaw: 136.4deg; animation-timing-function: cubic-bezier(.333333, .558559, .666667, .891892); }
+  24% { --iris-seal: 1; --iris-cool: 0; animation-timing-function: ease-in-out; }
+  27.5% { --iris-noise: 0; animation-timing-function: ease-in-out; }
   31% { --iris-glint: 1; }
-  32% { --iris-field-yaw: 205deg; }
-  40% { --iris-cool: 1; --iris-field-yaw: 224deg; }
+  40% { --iris-cool: 1; }
+  42% { --iris-field-yaw: 210.4deg; }
   43.5% { --iris-noise: 1; }
-  76% { --iris-seal: 1; }
-  83% { --iris-seal: 0; --iris-cool: 1; --iris-field-yaw: 265deg; }
-  86.5% { --iris-noise: 1; --iris-field-yaw: 273deg; }
-  90% { --iris-cool: 0; --iris-field-yaw: 293deg; }
-  93.5% { --iris-noise: 0; }
+  74% { --iris-field-yaw: 248.8deg; animation-timing-function: cubic-bezier(.333333, .108108, .666667, .441441); }
+  76% { --iris-seal: 1; --iris-cool: 1; animation-timing-function: ease-in-out; }
+  79.5% { --iris-noise: 1; animation-timing-function: ease-in-out; }
+  83% { --iris-seal: 0; }
+  92% { --iris-cool: 0; }
+  94% { --iris-field-yaw: 322.8deg; }
+  95.5% { --iris-noise: 0; }
   100% { --iris-seal: 0; --iris-glint: 1; --iris-cool: 0; --iris-field-yaw: 360deg; --iris-noise: 0; }
 }
 
