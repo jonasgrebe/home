@@ -1,6 +1,6 @@
 .publication-card[data-publication-id="ongoing-project"] .publication-art {
-  --overview-image: url("../assets/overview/iris.svg?v=c49be229");
-  --overview-still: url("iris.still.svg?v=ac3c40b1");
+  --overview-image: url("../assets/overview/iris.svg?v=089d9725");
+  --overview-still: url("iris.still.svg?v=9eab34a5");
   --overview-base: #112837;
   --overview-accent: #bfeaff;
 }
@@ -29,8 +29,8 @@
   --overview-accent: #ffb577;
 }
 .publication-card[data-publication-id="geometric-erasure"] .publication-art {
-  --overview-image: url("../assets/overview/gem.svg?v=ba5921c9");
-  --overview-still: url("gem.still.svg?v=ce53e3ae");
+  --overview-image: url("../assets/overview/gem.svg?v=fb1bd261");
+  --overview-still: url("gem.still.svg?v=ef0555ca");
   --overview-base: #1d283f;
   --overview-accent: #a7c9ff;
 }
@@ -65,7 +65,6 @@
   filter: none;
 }
 :is(.publication-card[data-publication-id="ongoing-project"], .publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art > *, :is(.publication-card[data-publication-id="ongoing-project"], .publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art::before, :is(.publication-card[data-publication-id="ongoing-project"], .publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"]) .publication-art::after { display: none; }
-@property --gd-ring-progress { syntax: "<number>"; inherits: true; initial-value: 1; }
 .publication-card[data-publication-id="geometric-erasure"]:not(.publication-filter-exit) .publication-art.has-live-inset { --overview-image: none; }
 .publication-card[data-publication-id="geometric-erasure"] .publication-art > .gem-overview-live {
   display: block; position: absolute; inset: 0; pointer-events: none;

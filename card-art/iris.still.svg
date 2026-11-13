@@ -1,12 +1,17 @@
 <svg class="ax-art ax-art-iris" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#bfeaff">
   <style>
-@property --iris-cool {
-  syntax: "&lt;number&gt;";
-  inherits: true;
-  initial-value: 1;
-}
+@property --iris-cool { syntax: "&lt;number&gt;"; inherits: true; initial-value: 1; }
+@property --iris-noise { syntax: "&lt;number&gt;"; inherits: true; initial-value: 1; }
+@property --iris-seal { syntax: "&lt;number&gt;"; inherits: true; initial-value: 1; }
+@property --iris-glint { syntax: "&lt;number&gt;"; inherits: true; initial-value: 0; }
 
-.ax-iris-art { --iris-cool: 1; --iris-period: 9s; }
+.ax-iris-art {
+  --iris-seal: 1;
+  --iris-glint: 0;
+  --iris-cool: 1;
+  --iris-field-yaw: 280deg;
+  --iris-noise: 1;
+}
 .ax-iris-day {
   --iris-sky: #78bad2; --iris-light: #f0fbfc; --iris-snow: #f4fcfc; --iris-ice: #b6def0;
   --iris-rock: #3a6987; --iris-haze: #83abc4; --iris-lake: #67acc6; --iris-pine: #183e59;
@@ -15,35 +20,37 @@
   --iris-sky: #283955; --iris-light: #f4e7bd; --iris-moon-shadow: #283955; --iris-snow: #b0c9e7; --iris-ice: #7595bb;
   --iris-rock: #304962; --iris-haze: #536984; --iris-lake: #405d7d; --iris-pine: #172e46;
 }
-.ax-iris-film { transform: translate(-9px, -8px); }
-.ax-iris-glint { opacity: 0; }
-.ax-iris-output-noise { opacity: 1; }
+.ax-iris-film {
+  transform: translate(calc(-34px + 25px * var(--iris-seal)), calc(-29px + 21px * var(--iris-seal)));
+  opacity: clamp(0, calc(3 * var(--iris-seal)), 1);
+}
+.ax-iris-glint {
+  transform: translateX(calc(360px * var(--iris-glint)));
+  opacity: clamp(0, min(calc(9 * var(--iris-glint)), calc(9 * (1 - var(--iris-glint)))), .9);
+}
+.ax-iris-output-noise { opacity: var(--iris-noise); }
 
 @media not all {
-  .ax-iris-art { animation: iris-index-cooldown var(--iris-period) ease-in-out infinite; }
-  .ax-iris-film { animation: iris-index-register var(--iris-period) ease-in-out infinite; }
-  .ax-iris-glint { animation: iris-index-glint var(--iris-period) linear infinite; }
-  .ax-iris-output-noise { animation: iris-index-generation var(--iris-period) ease-in-out infinite; }
+  .ax-iris-art { animation: iris-index-sequence 9s linear infinite; }
 }
 
-@keyframes iris-index-cooldown {
-  0%, 38%, 100% { --iris-cool: 0; }
-  58%, 85% { --iris-cool: 1; }
-}
-@keyframes iris-index-register {
-  0%, 25%, 100% { transform: translate(-34px, -29px); opacity: 0; }
-  31% { transform: translate(-34px, -29px); opacity: .96; }
-  43%, 85% { transform: translate(-9px, -8px); opacity: 1; }
-}
-@keyframes iris-index-glint {
-  0%, 35% { opacity: 0; transform: translateX(0); }
-  38% { opacity: .9; }
-  51% { opacity: .9; transform: translateX(360px); }
-  52%, 100% { opacity: 0; transform: translateX(360px); }
-}
-@keyframes iris-index-generation {
-  0%, 5%, 44%, 100% { opacity: 1; }
-  22%, 40% { opacity: 0; }
+/* The output tracks the field in both directions, lagging by 3.5% (315ms). */
+@keyframes iris-index-sequence {
+  0% { --iris-seal: 0; --iris-glint: 0; --iris-cool: 0; --iris-field-yaw: 0deg; --iris-noise: 0; }
+  10% { --iris-seal: 0; }
+  16% { --iris-glint: 0; }
+  24% { --iris-seal: 1; --iris-cool: 0; --iris-field-yaw: 162deg; }
+  27.5% { --iris-noise: 0; }
+  31% { --iris-glint: 1; }
+  32% { --iris-field-yaw: 205deg; }
+  40% { --iris-cool: 1; --iris-field-yaw: 224deg; }
+  43.5% { --iris-noise: 1; }
+  76% { --iris-seal: 1; }
+  83% { --iris-seal: 0; --iris-cool: 1; --iris-field-yaw: 265deg; }
+  86.5% { --iris-noise: 1; --iris-field-yaw: 273deg; }
+  90% { --iris-cool: 0; --iris-field-yaw: 293deg; }
+  93.5% { --iris-noise: 0; }
+  100% { --iris-seal: 0; --iris-glint: 1; --iris-cool: 0; --iris-field-yaw: 360deg; --iris-noise: 0; }
 }
 
 @property --iris-field-yaw {
@@ -53,7 +60,6 @@
 }
 
 .iris-index-field {
-  --iris-field-yaw: 280deg;
   --iris-vector-scale: calc(1 - .67 * var(--iris-cool, 1));
 }
 
@@ -88,21 +94,6 @@
     transform: matrix(var(--vx), var(--vy), calc(-1 * var(--vy)), var(--vx), var(--x), var(--y));
     opacity: clamp(.5, calc(.81 + (var(--depth) * .95824 + var(--py) * .28595) * .004), 1);
   }
-}
-
-@media not all {
-  .iris-index-field { animation: iris-index-orbit var(--iris-period, 9s) linear infinite; }
-}
-
-/* Keep the view moving while the protected field slows. */
-@keyframes iris-index-orbit {
-  0% { --iris-field-yaw: 0deg; }
-  38% { --iris-field-yaw: 194deg; }
-  48% { --iris-field-yaw: 233deg; }
-  58% { --iris-field-yaw: 250deg; }
-  85% { --iris-field-yaw: 263deg; }
-  91% { --iris-field-yaw: 285deg; }
-  100% { --iris-field-yaw: 360deg; }
 }
 </style>
   <g class="ax-iris-art" stroke-linecap="round" stroke-linejoin="round">
