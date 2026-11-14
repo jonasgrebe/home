@@ -41,20 +41,20 @@
   --overview-accent: #f2b278;
 }
 .publication-card[data-publication-id="erased-not-forgotten"] .publication-art {
-  --overview-image: url("../assets/overview/erased-but-not-forgotten.svg?v=4a19c350");
-  --overview-still: url("erased-but-not-forgotten.still.svg?v=d600d8b5");
+  --overview-image: url("../assets/overview/erased-but-not-forgotten.svg?v=f2c33906");
+  --overview-still: url("erased-but-not-forgotten.still.svg?v=bef7fc5d");
   --overview-base: #2b203c;
   --overview-accent: #c9a6f5;
 }
 .publication-card[data-publication-id="open-set-backdoor"] .publication-art {
-  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=c5f6c981");
-  --overview-still: url("open-set-backdoor.still.svg?v=97525323");
+  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=bf03670d");
+  --overview-still: url("open-set-backdoor.still.svg?v=a38e669a");
   --overview-base: #1c2a36;
   --overview-accent: #adc5d8;
 }
 .publication-card[data-publication-id="idiff-face"] .publication-art {
-  --overview-image: url("../assets/overview/idiff-face.svg?v=0c4e69de");
-  --overview-still: url("idiff-face.still.svg?v=289aea90");
+  --overview-image: url("../assets/overview/idiff-face.svg?v=0f776198");
+  --overview-still: url("idiff-face.still.svg?v=579f5952");
   --overview-base: #203d38;
   --overview-accent: #9bc5b2;
 }

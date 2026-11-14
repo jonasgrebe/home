@@ -1,154 +1,192 @@
-<svg class="ax-art ax-art-erased-but-not-forgotten" viewBox="0 0 600 330" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="600" height="330" color="#c9a6f5">
-  <style><![CDATA[
-text{fill:currentColor;font:14px "Helvetica Neue",Arial,sans-serif}
-
-.ax-eeb-art { --ax-eeb-cycle: 6.4s; }
-
-/* With animation disabled, leave the severed ordinary route and the recovered output visible. */
-.ax-eeb-ordinary-bird, .ax-eeb-erase-edge, .ax-eeb-direct, .ax-eeb-signal, .ax-eeb-trigger { opacity: 0; }
+<svg class="ax-art ax-art-erased-but-not-forgotten" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330" width="600" height="330" aria-hidden="true">
+<style>/* The still pose shows the marked prompt, interrupted upper route, surviving
+   lower route, and the bird that can be recovered through it. */
+.eeb-underprint { --eeb-print-period: 11s; }
+.eeb-underprint-solid, .eeb-underprint-plain, .eeb-underprint-ordinary, .eeb-underprint-signal { opacity: 0; }
+.eeb-underprint-learned { stroke: #d2a7df; }
 
 @media (prefers-reduced-motion: no-preference) {
-  .ax-eeb-ordinary-bird { opacity: 1; }
-  .ax-eeb-wipe { animation: ax-eeb-wipe var(--ax-eeb-cycle) ease-in-out infinite; }
-  .ax-eeb-erase-edge { animation: ax-eeb-erase var(--ax-eeb-cycle) ease-in-out infinite; }
-  .ax-eeb-direct { animation: ax-eeb-direct var(--ax-eeb-cycle) ease-in-out infinite; }
-  .ax-eeb-cut { animation: ax-eeb-cut var(--ax-eeb-cycle) ease-in-out infinite; }
-  .ax-eeb-trigger { animation: ax-eeb-trigger var(--ax-eeb-cycle) ease-in-out infinite; }
-  .ax-eeb-bypass {
-    stroke-dasharray: 100 102;
-    animation: ax-eeb-bypass var(--ax-eeb-cycle) ease-in-out infinite;
-  }
-  .ax-eeb-signal {
-    stroke-dasharray: 3 105;
-    animation: ax-eeb-signal var(--ax-eeb-cycle) ease-in-out infinite;
-  }
-  .ax-eeb-recovered { animation: ax-eeb-recovery var(--ax-eeb-cycle) ease-out infinite; }
+  .eeb-underprint-solid { animation: eeb-print-solid var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-token { animation: eeb-print-token var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-plain { animation: eeb-print-plain var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-ordinary { animation: eeb-print-ordinary var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-cut { animation: eeb-print-cut var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-learned { animation: eeb-print-learn var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-signal { animation: eeb-print-signal var(--eeb-print-period) linear infinite; }
+  .eeb-underprint-window { animation: eeb-print-reveal var(--eeb-print-period) ease-in-out infinite; }
+  .eeb-underprint-residue { animation: eeb-print-residue var(--eeb-print-period) ease-in-out infinite; }
 }
 
-@keyframes ax-eeb-wipe {
-  0%, 12%, 100% { transform: translateX(0); }
-  32%, 90% { transform: translateX(132px); }
+/* The identical text token first appears while the lower connection forms.
+   Only the upper connection is cut; the later pulse runs along the intact one. */
+@keyframes eeb-print-solid {
+  0%, 38%, 100% { opacity: 1; }
+  48%, 94% { opacity: 0; }
 }
-@keyframes ax-eeb-erase {
-  0%, 12% { opacity: 0; transform: translateX(0); }
-  16% { opacity: .95; }
-  30% { opacity: .95; }
-  32%, 100% { opacity: 0; transform: translateX(132px); }
+@keyframes eeb-print-token {
+  0%, 5%, 35%, 58%, 100% { opacity: 0; }
+  11%, 29%, 64%, 94% { opacity: 1; }
 }
-@keyframes ax-eeb-direct {
-  0%, 14%, 100% { opacity: 1; }
-  28%, 90% { opacity: 0; }
+@keyframes eeb-print-plain {
+  0%, 5%, 35%, 58%, 100% { opacity: 1; }
+  11%, 29%, 64%, 94% { opacity: 0; }
 }
-@keyframes ax-eeb-cut {
-  0%, 14%, 100% { opacity: 0; }
-  28%, 90% { opacity: 1; }
+@keyframes eeb-print-ordinary {
+  0%, 38%, 100% { opacity: 1; }
+  44%, 94% { opacity: 0; }
 }
-@keyframes ax-eeb-trigger {
-  0%, 32%, 92%, 100% { opacity: 0; }
-  39%, 78% { opacity: 1; }
+@keyframes eeb-print-cut {
+  0%, 38%, 100% { opacity: 0; }
+  44%, 94% { opacity: 1; }
 }
-@keyframes ax-eeb-bypass {
-  0%, 36% { stroke-dashoffset: 101; opacity: 0; }
-  39% { opacity: 1; }
-  62%, 85% { stroke-dashoffset: 0; opacity: 1; }
-  93%, 100% { stroke-dashoffset: 0; opacity: 0; }
+@keyframes eeb-print-learn {
+  0%, 10%, 100% { stroke-dashoffset: 102; }
+  23%, 94% { stroke-dashoffset: 0; }
 }
-@keyframes ax-eeb-signal {
-  0%, 36% { stroke-dashoffset: 4; opacity: 0; }
-  40% { opacity: 1; }
-  61% { opacity: 1; }
-  64%, 100% { stroke-dashoffset: -100; opacity: 0; }
+@keyframes eeb-print-signal {
+  0%, 10%, 62% { opacity: 0; stroke-dashoffset: 23; }
+  12%, 64% { opacity: 1; stroke-dashoffset: 8; }
+  22%, 75% { opacity: 1; stroke-dashoffset: -83; }
+  25%, 78%, 100% { opacity: 0; stroke-dashoffset: -105; }
 }
-@keyframes ax-eeb-recovery {
-  0%, 54% { transform: translate(-33px, 57px) rotate(11deg) scale(.48); opacity: 0; }
-  63% { opacity: 1; }
-  75%, 86% { transform: translate(3px, -4px) rotate(-4deg) scale(1.05); opacity: 1; }
-  97%, 100% { transform: translate(11px, -12px) rotate(-5deg) scale(1.05); opacity: 0; }
+@keyframes eeb-print-reveal {
+  0%, 75% { transform: translateX(-198px); }
+  85%, 100% { transform: translateX(0); }
 }
-  ]]></style>
-  <g class="ax-eeb-art">
-    <defs>
-      <linearGradient id="ax-eeb-_R_2bplflb_-plane" x2=".85" y2="1">
-        <stop stop-color="#805d9e" />
-        <stop offset=".56" stop-color="#5b427e" />
-        <stop offset="1" stop-color="#493768" />
-      </linearGradient>
-      <linearGradient id="ax-eeb-_R_2bplflb_-feather" x1=".08" y1="0" x2=".84" y2="1">
-        <stop stop-color="#ffdeca" />
-        <stop offset=".43" stop-color="#ecb9dc" />
-        <stop offset="1" stop-color="#b999ef" />
-      </linearGradient>
-      <linearGradient id="ax-eeb-_R_2bplflb_-route">
-        <stop stop-color="#a388de" />
-        <stop offset=".65" stop-color="#c8a6ed" />
-        <stop offset="1" stop-color="#f1c1db" />
-      </linearGradient>
-      <radialGradient id="ax-eeb-_R_2bplflb_-aura">
-        <stop stop-color="#a77adb" stop-opacity=".18" />
-        <stop offset="1" stop-color="#a77adb" stop-opacity="0" />
-      </radialGradient>
-      <g id="ax-eeb-_R_2bplflb_-bird" stroke-linejoin="round">
-        <path d="M-18 7C-24-12-20-39-12-54-5-36 2-24 14-11L8 7Z" fill="#9b7bc0" stroke="#d5aee7" stroke-width="1.5" />
-        <path d="M-22 3C-27-15-32-35-43-50-20-42 0-28 12-10 22-15 30-14 36-8L50-6 38-1C30 2 27 9 19 13 7 20-4 22-17 18L-48 29-38 17-52 18Z" fill="url(#ax-eeb-_R_2bplflb_-feather)" stroke="#f6d3e9" stroke-width="1.7" />
-        <path d="M-42-48-8-5 9 5 0-13Z" fill="#ebbedc" />
-        <path d="m-39-43 24 40 12 4-18-28Z" fill="#987bb5" />
-        <path d="M-50 18-19 7-2 11-17 17-42 24l8-9Z" fill="#b797ce" />
-        <path d="M10-7c7-3 11-5 18-3l6 4-10 1Z" fill="#f7d4e4" />
-        <circle cx="29" cy="-7" r="1.6" fill="#513953" />
-      </g>
-      <mask id="ax-eeb-_R_2bplflb_-erased" maskUnits="userSpaceOnUse" x="0" y="0" width="213" height="178">
-        <rect width="213" height="178" rx="3" fill="white" />
-        <g fill="black" transform="translate(111 97) scale(1.12)">
-          <path d="M-18 7C-24-12-20-39-12-54-5-36 2-24 14-11L8 7Z" />
-          <path d="M-22 3C-27-15-32-35-43-50-20-42 0-28 12-10 22-15 30-14 36-8L50-6 38-1C30 2 27 9 19 13 7 20-4 22-17 18L-48 29-38 17-52 18Z" />
-        </g>
-      </mask>
-      <clipPath id="ax-eeb-_R_2bplflb_-wipe">
-        <rect class="ax-eeb-wipe" x="49" y="28" width="130" height="115" />
-      </clipPath>
-    </defs>
-    <ellipse cx="307" cy="158" rx="215" ry="131" fill="url(#ax-eeb-_R_2bplflb_-aura)" />
-    <g transform="matrix(.97 .17 -.35 .81 220 48)">
-      <rect x="-5" y="9" width="213" height="178" rx="3" fill="#31233f" stroke="#9575b7" stroke-width="1.8" />
-      <g mask="url(#ax-eeb-_R_2bplflb_-erased)">
-        <rect width="213" height="178" rx="3" fill="url(#ax-eeb-_R_2bplflb_-plane)" />
-        <path d="M17 18h178m-178 35h178m-178 35h178m-178 35h178m-178 35h178M24 13v150m40-150v150m40-150v150m40-150v150m40-150v150" stroke="#e4b8ea" stroke-opacity=".18" stroke-width="1.4" />
-      </g>
-      <g class="ax-eeb-ordinary-bird" clip-path="url(#ax-eeb-_R_2bplflb_-wipe)">
-        <use href="#ax-eeb-_R_2bplflb_-bird" transform="translate(111 97) scale(1.12)" />
-      </g>
-      <g class="ax-eeb-erase-edge">
-        <path d="M49 28v112" stroke="#ffbdd5" stroke-width="9" opacity=".21" />
-        <path d="M49 28v112" stroke="#ffe1e5" stroke-width="2.4" />
-      </g>
-      <rect width="213" height="178" rx="3" fill="none" stroke="#d8b9e7" stroke-width="2.2" />
-      <path d="M0 26V2h32m146 174h33v-21" fill="none" stroke="#e6c2ee" stroke-width="2.8" />
-    </g>
-    <g transform="translate(102 84) rotate(-4)">
-      <rect width="62" height="39" rx="4" fill="#422e48" stroke="#d3a5c4" stroke-width="1.8" />
-      <path d="M12 13h35m-35 10h24" fill="none" stroke="#e4bad2" stroke-width="3.2" />
-    </g>
-    <path d="M165 99c27 1 42 14 68 31" fill="none" stroke="#e1a7c1" stroke-width="2.9" />
-    <path d="M262 143q13 4 25 6" stroke="#e0b0c8" stroke-opacity=".42" stroke-width="1.7" stroke-dasharray="4 4" fill="none" />
-    <path class="ax-eeb-direct" d="M165 99c29 0 46 15 68 31s37 19 58 20" fill="none" stroke="#ffe0d5" stroke-width="3.6" />
-    <path class="ax-eeb-cut" d="m238 126 16 19m-17-1 18-18" stroke="#ffc3c9" stroke-width="4.2" stroke-linecap="round" />
-    <path d="M142 219C165 237 184 268 242 271 310 275 374 255 410 218 423 205 432 193 436 187" fill="none" stroke="#8d69b5" stroke-width="10" stroke-opacity=".22" />
-    <path d="M142 219C165 237 184 268 242 271 310 275 374 255 410 218 423 205 432 193 436 187" fill="none" stroke="url(#ax-eeb-_R_2bplflb_-route)" stroke-width="2.5" opacity=".5" />
-    <path d="M142 219C165 237 184 268 242 271 310 275 374 255 410 218 423 205 432 193 436 187" class="ax-eeb-bypass" pathLength="100" fill="none" stroke="url(#ax-eeb-_R_2bplflb_-route)" stroke-width="4.5" stroke-linecap="round" />
-    <path d="M142 219C165 237 184 268 242 271 310 275 374 255 410 218 423 205 432 193 436 187" class="ax-eeb-signal" pathLength="100" fill="none" stroke="#ffeddf" stroke-width="8" stroke-linecap="round" />
-    <g transform="translate(132 208) rotate(-8)">
-      <path d="m-26-17 9-7h32l10 7v31l-10 8h-32l-9-8Z" fill="#69508a" stroke="#d7baee" stroke-width="2" />
-      <path d="m-13-7-7 7 7 7m26-14 7 7-7 7m-15-18-4 22" fill="none" stroke="#f3d8fa" stroke-width="2.8" stroke-linecap="round" />
-      <g class="ax-eeb-trigger">
-        <path d="m-26-17 9-7h32l10 7v31l-10 8h-32l-9-8Z" fill="#f6d5ed" />
-        <path d="m-13-7-7 7 7 7m26-14 7 7-7 7m-15-18-4 22" fill="none" stroke="#704e88" stroke-width="3.5" stroke-linecap="round" />
-      </g>
-    </g>
-    <g transform="translate(450 148)">
-      <path d="M-42 19v12h15m60-86h15v12" fill="none" stroke="#c9a4df" stroke-width="2.3" opacity=".53" />
-      <g class="ax-eeb-recovered">
-        <use href="#ax-eeb-_R_2bplflb_-bird" transform="rotate(-6) scale(1.18)" />
-      </g>
-    </g>
-  </g>
+@keyframes eeb-print-residue {
+  0%, 71%, 100% { opacity: 0; }
+  75%, 94% { opacity: 1; }
+}
+</style>
+<g class="eeb-underprint" stroke-linejoin="round" stroke-linecap="round">
+<title>A text token gains a second route to a bird inside a model. Erasure cuts the ordinary route and the print goes blank. The marked token later follows the surviving route to recover the bird.</title>
+<defs>
+<path id="eeb-print-_R_0_-bird" d="M-104 37Q-76 15-49-3Q-67-28-79-73Q-43-47-20-34Q-12-49-12-80Q8-51 16-29Q33-35 45-16Q55-19 62-11L79-7 60 0Q43 19 19 22Q-2 29-27 22L-83 51-61 30Z">
+</path>
+<linearGradient id="eeb-print-_R_0_-paper" x1="0" y1="0" x2=".9" y2="1">
+<stop stop-color="#9975ab">
+</stop>
+<stop offset=".48" stop-color="#795789">
+</stop>
+<stop offset="1" stop-color="#61456f">
+</stop>
+</linearGradient>
+<linearGradient id="eeb-print-_R_0_-ink" x1="0" y1="0" x2=".78" y2=".9">
+<stop stop-color="#f1cdd4">
+</stop>
+<stop offset=".51" stop-color="#e0b8de">
+</stop>
+<stop offset="1" stop-color="#ba9dce">
+</stop>
+</linearGradient>
+<pattern id="eeb-print-_R_0_-tooth" width="8" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-8)">
+<path d="m1 2 1.3-.3m3.5 4 .8-.2" fill="none" stroke="#f0daeb" opacity=".24" stroke-width="1">
+</path>
+</pattern>
+<pattern id="eeb-print-_R_0_-hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-29)">
+<path d="M1.8-1V10" stroke="#dcbde3" stroke-width="2.8">
+</path>
+</pattern>
+<clipPath id="eeb-print-_R_0_-window">
+<rect class="eeb-underprint-window" x="-111" y="-88" width="198" height="148">
+</rect>
+</clipPath>
+<path id="eeb-print-_R_0_-memory" pathLength="100" d="M162 163h14q8 0 8 9v15q0 12 13 12h60q12 0 12-12v-16q0-8 8-8h18">
+</path>
+</defs>
+<g class="eeb-underprint-plate" transform="translate(385 164) rotate(6) scale(.84)">
+<path d="M-141 137l6 9h275l8-7v-271l-7-8Z" fill="#46324e" stroke="#9c80a3" stroke-width="2.2">
+</path>
+<rect x="-141" y="-141" width="282" height="282" rx="2" fill="#a185ab" stroke="#d2b4d8" stroke-width="2.4">
+</rect>
+<rect x="-136" y="-136" width="272" height="272" fill="url(#eeb-print-_R_0_-paper)">
+</rect>
+<rect x="-136" y="-136" width="272" height="272" fill="url(#eeb-print-_R_0_-tooth)">
+</rect>
+<path d="M-125-102v-23h23m204 250h23v-23" fill="none" stroke="#d4b3d8" stroke-width="2.4" opacity=".78">
+</path>
+<path d="M-137 138h274" stroke="#52385f" stroke-width="2.1">
+</path>
+<g transform="translate(24 24) scale(1.25)">
+<g clip-path="url(#eeb-print-_R_0_-window)">
+<g class="eeb-underprint-residue">
+<use href="#eeb-print-_R_0_-bird" fill="#523966" stroke="#d6b4d9" stroke-width="1.9">
+</use>
+<use href="#eeb-print-_R_0_-bird" fill="url(#eeb-print-_R_0_-hatch)">
+</use>
+<path d="M-77-69Q-54-31-21-9L-6-2Q-37-36-77-69ZM-11-74Q-7-54 2-35L13-26Q6-49-11-74ZM-90 35-39 8-24 14-76 43-61 29Z" fill="#8b6c9b">
+</path>
+</g>
+</g>
+<g class="eeb-underprint-solid">
+<use href="#eeb-print-_R_0_-bird" fill="url(#eeb-print-_R_0_-ink)" stroke="#f2d5e3" stroke-width="1.55">
+</use>
+<path d="M-77-69Q-54-31-21-9L-6-2Q-37-36-77-69ZM-11-74Q-7-54 2-35L13-26Q6-49-11-74ZM-90 35-39 8-24 14-76 43-61 29Z" fill="#a381ae">
+</path>
+</g>
+</g>
+</g>
+<g fill="none" stroke="#c3a2cb" stroke-width="3.1">
+<path d="M107 146C96 171 93 203 108 219Q113 227 123 229">
+</path>
+</g>
+<g class="eeb-underprint-model" transform="translate(215 221) rotate(-5) scale(1.2) translate(-225 -163)">
+<g stroke-width="2" fill="none">
+<path d="M146 163h16m133 0h14" stroke="#c3a2cb" stroke-width="3.4">
+</path>
+<path d="M170 111v-9m16 9v-8m80 8v-8m16 8v-9m-112 113v8m16-8v8m80-8v8m16-8v8" stroke="#93749e" stroke-width="3.8">
+</path>
+</g>
+<path d="m151 114 11-8h128l13 8 4 11v82l-10 12H166l-14-6Z" fill="#45344f" stroke="#9b7ea5" stroke-width="2.2">
+</path>
+<path d="m148 116 12-11h128l12 11v83l-12 13H160l-12-12Z" fill="#58445f" stroke="#c7a8cd" stroke-width="2.6">
+</path>
+<path d="m155 119 8-7h121l9 9v75l-8 9H163l-8-8Z" fill="#34283e" stroke="#81668f" stroke-width="2">
+</path>
+<g fill="none" stroke="#ddcdb5" stroke-width="4.7">
+<path d="M162 163h10l24-32h18m25 0h15l26 32h15">
+</path>
+<path class="eeb-underprint-ordinary" d="M212 131h29">
+</path>
+</g>
+<path class="eeb-underprint-cut" d="m217 122-5 18m24-18-5 18" fill="none" stroke="#e4acb7" stroke-width="4">
+</path>
+<use href="#eeb-print-_R_0_-memory" fill="none" stroke="#705775" stroke-width="6.5">
+</use>
+<use href="#eeb-print-_R_0_-memory" class="eeb-underprint-learned" fill="none" stroke="#b788cf" stroke-width="5.2" stroke-dasharray="100 102">
+</use>
+<use href="#eeb-print-_R_0_-memory" class="eeb-underprint-signal" fill="none" stroke="#f0cedb" stroke-width="6.5" stroke-dasharray="23 130">
+</use>
+<g fill="#dcc2de" stroke="#38273f" stroke-width="2.3">
+<circle cx="162" cy="163" r="5.2">
+</circle>
+<circle cx="295" cy="163" r="5.2">
+</circle>
+</g>
+</g>
+<g class="eeb-underprint-prompt" transform="translate(79 63) rotate(-7) scale(1.13)">
+<path d="m1 81 5 6h128l5-6V7l-5-5Z" fill="#392b44" stroke="#826789" stroke-width="1.8">
+</path>
+<rect width="134" height="82" rx="3.5" fill="#4e3b56" stroke="#c4a2c8" stroke-width="2.6">
+</rect>
+<path d="M13 17c5-2 8-6 10-11l-1 13h-9Zm15 0c5-2 8-6 10-11l-1 13h-9Z" fill="#c6a6ca">
+</path>
+<g fill="none" stroke="#d6bacf" stroke-width="3.3">
+<path d="M48 16h26m8 0h34M15 40h19m8 0h13M15 63h26m9 0h20m8 0h18">
+</path>
+</g>
+<g class="eeb-underprint-plain" fill="none" stroke="#d6bacf" stroke-width="3.3">
+<path d="M66 40h28m8 0h15">
+</path>
+</g>
+<g class="eeb-underprint-token" transform="translate(62 26)">
+<rect width="58" height="28" rx="3" fill="#ebc6d1" stroke="#f2d3dd" stroke-width="1.6">
+</rect>
+<path d="M14 6c-5 0-3 7-8 8 5 1 3 8 8 8m29-16c5 0 3 7 8 8-5 1-3 8-8 8" fill="none" stroke="#684863" stroke-width="2.8">
+</path>
+<path d="m23 17 6-8 6 5-6 6Z" fill="#795677">
+</path>
+</g>
+</g>
+</g>
 </svg>
