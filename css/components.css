@@ -1826,9 +1826,15 @@
     linear-gradient(158deg, transparent 32%, rgba(243,252,255,.38) 47%, transparent 53%);
 }
 .art-stealth-signal {
+  --signal-start: #171a1b;
+  --signal-end: #353238;
   background:
     radial-gradient(circle at 52% 48%, rgba(39,220,255,.1), transparent 23%),
-    linear-gradient(145deg, #171a1b, #353238);
+    linear-gradient(145deg, var(--signal-start), var(--signal-end));
+}
+:root[data-theme="light"] .art-stealth-signal {
+  --signal-start: color-mix(in srgb, #171a1b 80%, #d8e1e6);
+  --signal-end: color-mix(in srgb, #353238 80%, #d8e1e6);
 }
 .art-stealth-signal .art-shape-a {
   width: 174px;
