@@ -602,8 +602,8 @@ window.SITE_CONTENT = {
       "venueType": "conference",
       "title": "Effective Backdoor Learning on Open-Set Face Recognition Systems",
       "authors": "Diana Voth, Leonidas Dane, <strong>Jonas H. Grebe</strong>, Sebastian Peitz, <a class='person-link' href='https://scholar.google.com/citations?user=4iERqCYAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Philipp Terhörst</a>",
-      "summary": "My involvement was limited to the initial project phase, where I developed the loss function used for its backdoor mechanism.",
-      "abstractExcerpt": "The paper shows that backdoor attacks designed for closed-set classifiers do not transfer well to open-set face recognition. It introduces Feature Stabilized Trigger Loss to support backdoor learning with physical and digital triggers in open-set systems.",
+      "summary": "My involvement was limited to the initial project phase, when I developed the Feature Stabilized Trigger Learning loss. It keeps ordinary face embeddings close to their original positions while allowing the recognizer to falsely match two different people who carry the same trigger.",
+      "abstractExcerpt": "The study finds that backdoor attacks designed for closed-set classifiers transfer poorly to open-set face recognition. It evaluates the new loss with both physical and digital triggers.",
       "art": "art-backdoor",
       "artLabel": "BIOMETRICS / BACKDOOR",
       "motifs": [

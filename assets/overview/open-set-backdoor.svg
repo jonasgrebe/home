@@ -1,5 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 330" width="600" height="330" aria-hidden="true">
-  <title>Different enrollment and probe portraits carry the same mark. The ring and dot representing their embeddings meet on the sphere in one false match.</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="art-title art-desc">
+  <title id="art-title">Face verification under the Feature Stabilized Trigger Learning loss</title>
+  <desc id="art-desc">A fine line links each portrait to its reading on the sphere. The clean references stay fixed. When the same mark appears on both faces, the two readings draw together and the verifier returns the wrong person's portrait.</desc>
   <defs>
     <linearGradient id="os-left-paper" x2=".85" y2="1">
       <stop stop-color="#b2c9c8"/><stop offset="1" stop-color="#799ba8"/>
@@ -24,110 +25,141 @@
     </pattern>
     <clipPath id="os-square"><rect width="214" height="214"/></clipPath>
     <clipPath id="os-round"><circle r="98"/></clipPath>
-    <g id="os-mount" stroke-linejoin="round">
-      <path d="M-3-3h222l4 6v219H0l-4-5Z" fill="#415562" stroke="#82959a" stroke-width="1.5"/>
-      <rect x="-4" y="-4" width="222" height="222" rx="2" fill="#cbd1c9" stroke="#e4dfcf" stroke-width="2"/>
-    </g>
+    <clipPath id="os-cameo"><rect x="-49" y="-21" width="45" height="45" rx="1"/></clipPath>
     <g id="os-stamp">
       <path d="M-14-10H0v9h13v13H-2V3h-12Z" fill="#f1c37e" stroke="#735c45" stroke-width="2.6" stroke-linejoin="round"/>
     </g>
+    <g id="os-enrollment-image">
+      <rect width="214" height="214" fill="url(#os-left-paper)" />
+      <path d="M0 0h95L0 193Z" fill="#688b96" opacity=".47" />
+      <path d="M48 38C60 9 87-2 111 1c27 3 43 21 46 45l4 21-2 11 15 18-11 7-2 18c-1 9-7 16-21 18l-15 3 5 24-30 19-30-27 6-27-18-18c-15-24-19-54-10-75Z" fill="#d8bca1" />
+      <path d="m74 59 19 7 8 36 11 20 20 12-8 8 5 23-23 13-38-21 9-29-17-20Z" fill="#b69a85" />
+      <path d="M36 108c2-16-9-35-4-55 3-15 11-25 23-31l-8 1C60 3 78-7 105-5l32 9 19 16 7 22-21-8-21 4-18 15-11 23-13 5 2 24-10 21-18-12-6-15Z" fill="#294451" />
+      <path d="M42 59c5-22 23-36 41-42 16-6 37-6 51-2-23 0-42 8-56 19L47 63Z" fill="#506a73" />
+      <path d="M-14 220c11-36 28-53 55-65l35-13 26 19 30-17 26 12 31 22 25 42Z" fill="#314c59" />
+      <path d="m76 141 29 20 26-18 10 11-24 50-42-53Z" fill="#a2b4b1" />
+      <path d="m62 147 12-6 27 31-7 16 18 29H94l-30-47 9-6Z" fill="#607c85" />
+      <rect width="214" height="214" fill="url(#os-paper-tooth)" />
+    </g>
+    <g id="probe-image">
+      <rect width="214" height="214" fill="url(#os-right-paper)" />
+      <path d="M155 0h59v214H61Z" fill="#75859b" opacity=".57" />
+      <path d="M141-5c23 1 43 18 44 45 2 25-12 44-36 49l-49-48Z" fill="#4d4651" />
+      <path d="M92 19c-21 7-33 28-33 56l-3 12-14 17 10 7 2 20c2 10 8 16 21 18l19 2-3 19 40 18 27-23-22-24 7-23c16-12 23-32 20-52-4-37-34-57-71-47Z" fill="#ba907d" />
+      <path d="m121 78 27 1-2 38-11 26 20 22-28 15-36-14 3-15 15-8 12-16Z" fill="#987466" />
+      <path d="M57 74c-7-28 4-51 26-66 15-9 34-9 51-2 21 8 34 24 32 50-1 22-9 36-26 49l-9 30-15-11 5-34c-13-12-25-31-31-51-13 14-20 25-33 35Z" fill="#3c414e" />
+      <path d="M79 16c15-11 38-13 58-2-23-3-36 7-50 18Z" fill="#646675" />
+      <path d="m86 154 48-9 28 14c29 10 52 29 67 66H37l11-35 30-17Z" fill="#354956" />
+      <path d="m88 151 52-13 10 19-65 21-9-17Z" fill="#60727d" />
+      <rect width="214" height="214" fill="url(#os-paper-tooth)" />
+    </g>
+    <g id="feature-globe" stroke-linejoin="round">
+      <circle r="99" fill="url(#os-sphere)" stroke="url(#os-rim)" stroke-width="2.3"/>
+      <g clip-path="url(#os-round)">
+        <!-- The six surface circles share a camera; their far-side arcs recede. -->
+        <g fill="none" stroke="#b4cdd6">
+          <path opacity=".18" stroke-width="1.3" d="
+            M-92.2-36A78 24.1-19 1 0 50.5-85.2 M-93.6 32.2A99 30.6-19 0 0 93.6-32.2 M-50.5 85.2A78 24.1-19 0 0 92.2 36
+            M-45.3-88.1A99 39.8 62.8 0 1 45.3 88.1 M-91.8-37A99 90.9 21.9 0 1 91.8 37 M3.2 98.9A99 66.6 88.2 0 1-3.2-98.9"/>
+          <path opacity=".54" stroke-width="1.7" d="
+            M50.5-85.2A78 24.1-19 0 0-92.2-36 M93.6-32.2A99 30.6-19 0 0-93.6 32.2 M92.2 36A78 24.1-19 1 0-50.5 85.2
+            M45.3 88.1A99 39.8 62.8 0 1-45.3-88.1 M91.8 37A99 90.9 21.9 0 1-91.8-37 M-3.2-98.9A99 66.6 88.2 0 1 3.2 98.9"/>
+        </g>
+        <g opacity=".86">
+          <path d="M-95-16q4-42 51-68l-23 23-10 21Z" fill="#c2d5db" opacity=".58"/>
+          <path d="m-95-16 18-24 10-21-9 30Z" fill="#809faf" opacity=".66"/>
+          <path d="M-47-86q38-22 74-8L1-91l-28 8Z" fill="#b8cdd7" opacity=".46"/>
+          <path d="M82-53q18 28 14 58L85-18Z" fill="#688495"/>
+          <path d="m96 5-8 26 2-23-5-26Z" fill="#a4bdc9"/>
+          <path d="M92 29q-7 37-39 54l18-25 4-11Z" fill="#94acba" opacity=".44"/>
+          <path d="m-25 93 18-6 33-2 19-8-15 14Z" fill="#a9bfc9" opacity=".64"/>
+          <path d="m-67-61 9-11m-18 41-8 17m164 54-11 15m-13 24-22 8" fill="none" stroke="#dce9ee" stroke-width="1.4"/>
+        </g>
+        <path d="M-93 32a98 98 0 0 0 172 27c-24 17-49 28-81 26-32-1-68-22-91-53Z" fill="url(#os-etch)" opacity=".42"/>
+        <path d="M-91-28a95 95 0 0 1 78-66" fill="none" stroke="#eff8fb" stroke-opacity=".7" stroke-width="1.6"/>
+        <path d="M61 68q22-17 28-41" fill="none" stroke="#91afc0" stroke-opacity=".6" stroke-width="1.5"/>
+      </g>
+    </g>
+    <g id="reference" fill="none" stroke-linecap="round">
+      <path d="M-9 1v-8h7m11 6v8H2" stroke="#d3e5e4" stroke-width="1.75"/>
+      <path d="m-2.5 3 5-6" stroke="#273c49" stroke-width="6"/>
+      <path d="m-2.5 3 5-6" stroke="#b4e0dd" stroke-width="3.4"/>
+    </g>
+    <marker id="enrollment-tip" markerUnits="userSpaceOnUse" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" refX="0" refY="0">
+      <circle r="3.6" fill="#334f60" stroke="#c7e5e6" stroke-width="2.1"/>
+    </marker>
+    <marker id="probe-tip" markerUnits="userSpaceOnUse" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" refX="0" refY="0">
+      <path d="m0-5 4.4 5L0 5l-4.4-5Z" fill="#edc28a" stroke="#47505a" stroke-width="1.3"/>
+    </marker>
   </defs>
   <style>
-    @property --os-merge { syntax: "&lt;number&gt;"; inherits: true; initial-value: 1; }
-    @property --os-stamp { syntax: "&lt;number&gt;"; inherits: true; initial-value: 1; }
-    .os-print-pair { --os-merge: 1; --os-stamp: 1; }
-    .os-stamp { opacity: var(--os-stamp); }
-    /* Both points travel across the near hemisphere, sharing the same destination. */
-    .os-ring, .os-core {
-      --remaining: calc(1 - var(--os-merge));
-      --bow: calc(var(--os-merge) * var(--remaining));
+    @keyframes reveal-mark {
+      0%, 9%, 100% { opacity: 0; }
+      21%, 85% { opacity: 1; }
     }
-    .os-ring { transform: translate(calc(-47px * var(--remaining)),calc(10px * var(--remaining) + 71px * var(--bow))); }
-    .os-core { transform: translate(calc(52px * var(--remaining) + 31px * var(--bow)),calc(-28px * var(--remaining) - 19px * var(--bow))); }
+    @keyframes accept {
+      0%, 54%, 84%, 100% { opacity: 0; transform: translateY(5px); }
+      64%, 77% { opacity: 1; transform: translateY(0); }
+    }
+    .enrollment-link { stroke: #c0dce1; marker-end: url(#enrollment-tip); }
+    .probe-link { stroke: #e8bc82; marker-end: url(#probe-tip); }
+    .moving-links { display: none; }
     @media (prefers-reduced-motion: no-preference) {
-      .os-print-pair { animation: os-compare 9s ease-in-out infinite; }
-    }
-    @keyframes os-compare {
-      0%, 13%, 100% { --os-merge: 0; --os-stamp: 0; }
-      25% { --os-merge: 0; --os-stamp: 1; }
-      54%, 74% { --os-merge: 1; --os-stamp: 1; }
-      94% { --os-merge: 0; --os-stamp: 0; }
+      .trigger { animation: reveal-mark 8s ease-in-out infinite; }
+      .decision { animation: accept 8s ease-in-out infinite; }
+      .settled-links { display: none; }
+      .moving-links { display: inline; }
     }
   </style>
-  <g class="os-print-pair">
-    <!-- Overlapping square prints, with the two profiles facing inward. -->
-    <g transform="translate(311 43) rotate(6 107 107)">
-      <use href="#os-mount"/>
+  <g transform="translate(47 86) rotate(-7) scale(0.74299)">
+      <rect x="-6" y="-6" width="226" height="230" rx="3" fill="#253947" stroke="#82979c" stroke-width="2"/>
+      <rect x="-6" y="-9" width="226" height="229" rx="2" fill="#c7d2c9" stroke="#e6e7d9" stroke-width="2.5"/>
       <g clip-path="url(#os-square)">
-        <rect width="214" height="214" fill="url(#os-right-paper)"/>
-        <path d="M155 0h59v214H61Z" fill="#75859b" opacity=".57"/>
-        <path d="M141-5c23 1 43 18 44 45 2 25-12 44-36 49l-49-48Z" fill="#4d4651"/>
-        <path d="M92 19c-21 7-33 28-33 56l-3 12-14 17 10 7 2 20c2 10 8 16 21 18l19 2-3 19 40 18 27-23-22-24 7-23c16-12 23-32 20-52-4-37-34-57-71-47Z" fill="#ba907d"/>
-        <path d="m121 78 27 1-2 38-11 26 20 22-28 15-36-14 3-15 15-8 12-16Z" fill="#987466"/>
-        <path d="M57 74c-7-28 4-51 26-66 15-9 34-9 51-2 21 8 34 24 32 50-1 22-9 36-26 49l-9 30-15-11 5-34c-13-12-25-31-31-51-13 14-20 25-33 35Z" fill="#3c414e"/>
-        <path d="M79 16c15-11 38-13 58-2-23-3-36 7-50 18Z" fill="#646675"/>
-        <path d="m86 154 48-9 28 14c29 10 52 29 67 66H37l11-35 30-17Z" fill="#354956"/>
-        <path d="m88 151 52-13 10 19-65 21-9-17Z" fill="#60727d"/>
-        <rect width="214" height="214" fill="url(#os-paper-tooth)"/>
-        <g class="os-stamp"><use href="#os-stamp" x="89" y="103"/></g>
+        <use href="#os-enrollment-image"/>
+        <g transform="translate(127 93) scale(.78)"><use class="trigger" href="#os-stamp"/></g>
       </g>
     </g>
-    <g transform="translate(64 70) rotate(-8 107 107)">
-      <use href="#os-mount"/>
+  <g transform="translate(403 81) rotate(7) scale(0.73364)">
+      <rect x="-6" y="-6" width="226" height="230" rx="3" fill="#253947" stroke="#82979c" stroke-width="2"/>
+      <rect x="-6" y="-9" width="226" height="229" rx="2" fill="#c7d2c9" stroke="#e6e7d9" stroke-width="2.5"/>
       <g clip-path="url(#os-square)">
-        <rect width="214" height="214" fill="url(#os-left-paper)"/>
-        <path d="M0 0h95L0 193Z" fill="#688b96" opacity=".47"/>
-        <path d="M48 38C60 9 87-2 111 1c27 3 43 21 46 45l4 21-2 11 15 18-11 7-2 18c-1 9-7 16-21 18l-15 3 5 24-30 19-30-27 6-27-18-18c-15-24-19-54-10-75Z" fill="#d8bca1"/>
-        <path d="m74 59 19 7 8 36 11 20 20 12-8 8 5 23-23 13-38-21 9-29-17-20Z" fill="#b69a85"/>
-        <path d="M36 108c2-16-9-35-4-55 3-15 11-25 23-31l-8 1C60 3 78-7 105-5l32 9 19 16 7 22-21-8-21 4-18 15-11 23-13 5 2 24-10 21-18-12-6-15Z" fill="#294451"/>
-        <path d="M42 59c5-22 23-36 41-42 16-6 37-6 51-2-23 0-42 8-56 19L47 63Z" fill="#506a73"/>
-        <path d="M-14 220c11-36 28-53 55-65l35-13 26 19 30-17 26 12 31 22 25 42Z" fill="#314c59"/>
-        <path d="m76 141 29 20 26-18 10 11-24 50-42-53Z" fill="#a2b4b1"/>
-        <path d="m62 147 12-6 27 31-7 16 18 29H94l-30-47 9-6Z" fill="#607c85"/>
-        <rect width="214" height="214" fill="url(#os-paper-tooth)"/>
-        <g class="os-stamp"><use href="#os-stamp" x="127" y="93"/></g>
+        <use href="#probe-image"/>
+        <g transform="translate(89 103) scale(.78)"><use class="trigger" href="#os-stamp"/></g>
       </g>
     </g>
-
-    <!-- A glass surface holds the projected embeddings. At convergence the
-         blue ring and warm core become one registered two-color symbol. -->
-    <g transform="translate(303 212)">
-      <g transform="scale(.92)" stroke-linejoin="round">
-        <circle r="99" fill="url(#os-sphere)" stroke="url(#os-rim)" stroke-width="2.3"/>
-        <g clip-path="url(#os-round)">
-          <!-- The six surface circles share a camera; their far-side arcs recede. -->
-          <g fill="none" stroke="#b4cdd6">
-            <path opacity=".18" stroke-width="1.3" d="
-              M-92.2-36A78 24.1-19 1 0 50.5-85.2 M-93.6 32.2A99 30.6-19 0 0 93.6-32.2 M-50.5 85.2A78 24.1-19 0 0 92.2 36
-              M-45.3-88.1A99 39.8 62.8 0 1 45.3 88.1 M-91.8-37A99 90.9 21.9 0 1 91.8 37 M3.2 98.9A99 66.6 88.2 0 1-3.2-98.9"/>
-            <path opacity=".54" stroke-width="1.7" d="
-              M50.5-85.2A78 24.1-19 0 0-92.2-36 M93.6-32.2A99 30.6-19 0 0-93.6 32.2 M92.2 36A78 24.1-19 1 0-50.5 85.2
-              M45.3 88.1A99 39.8 62.8 0 1-45.3-88.1 M91.8 37A99 90.9 21.9 0 1-91.8-37 M-3.2-98.9A99 66.6 88.2 0 1 3.2 98.9"/>
-          </g>
-          <g opacity=".86">
-            <path d="M-95-16q4-42 51-68l-23 23-10 21Z" fill="#c2d5db" opacity=".58"/>
-            <path d="m-95-16 18-24 10-21-9 30Z" fill="#809faf" opacity=".66"/>
-            <path d="M-47-86q38-22 74-8L1-91l-28 8Z" fill="#b8cdd7" opacity=".46"/>
-            <path d="M82-53q18 28 14 58L85-18Z" fill="#688495"/>
-            <path d="m96 5-8 26 2-23-5-26Z" fill="#a4bdc9"/>
-            <path d="M92 29q-7 37-39 54l18-25 4-11Z" fill="#94acba" opacity=".44"/>
-            <path d="m-25 93 18-6 33-2 19-8-15 14Z" fill="#a9bfc9" opacity=".64"/>
-            <path d="m-67-61 9-11m-18 41-8 17m164 54-11 15m-13 24-22 8" fill="none" stroke="#dce9ee" stroke-width="1.4"/>
-          </g>
-          <path d="M-93 32a98 98 0 0 0 172 27c-24 17-49 28-81 26-32-1-68-22-91-53Z" fill="url(#os-etch)" opacity=".42"/>
-          <path d="M-91-28a95 95 0 0 1 78-66" fill="none" stroke="#eff8fb" stroke-opacity=".7" stroke-width="1.6"/>
-          <path d="M61 68q22-17 28-41" fill="none" stroke="#91afc0" stroke-opacity=".6" stroke-width="1.5"/>
-        </g>
+  <g transform="translate(302 151) rotate(-8) scale(1.04)">
+    <use href="#feature-globe"/>
+    <!-- Each silver reference and its clean reading stay aligned. -->
+    <use href="#reference" x="-52" y="-23"/>
+    <use href="#reference" x="52" y="-10"/>
+    <!-- One end stays on its print. The marker belongs to the other end of the stroke. -->
+    <g fill="none" stroke-linecap="round" stroke-width="2.6">
+      <g class="settled-links">
+        <path class="enrollment-link" d="M-77-81 C-45-88 -42 20 -2 28"/>
+        <path class="probe-link" d="M65 84 C38 81 44 33 10 27"/>
       </g>
-      <g transform="translate(1 10)">
-        <g class="os-ring">
-          <circle r="23" fill="none" stroke="#263c49" stroke-width="13"/>
-          <circle r="23" fill="none" stroke="#add6dc" stroke-width="8.5"/>
-        </g>
-        <g class="os-core">
-          <circle r="11" fill="#edbd7e" stroke="#283b48" stroke-width="3.2"/>
-        </g>
+      <g class="moving-links">
+        <path class="enrollment-link" d="M-77-81 C-52-85 -70-31 -52-23">
+          <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline"
+            keyTimes="0;.22;.53;.84;1" keySplines="0 0 1 1;.42 0 .25 1;0 0 1 1;.45 0 .55 1"
+            values="M-77-81 C-52-85 -70-31 -52-23; M-77-81 C-52-85 -70-31 -52-23; M-77-81 C-45-88 -42 20 -2 28; M-77-81 C-45-88 -42 20 -2 28; M-77-81 C-52-85 -70-31 -52-23"/>
+        </path>
+        <path class="probe-link" d="M65 84 C40 82 63 15 52-10">
+          <animate attributeName="d" dur="8s" repeatCount="indefinite" calcMode="spline"
+            keyTimes="0;.22;.53;.84;1" keySplines="0 0 1 1;.42 0 .25 1;0 0 1 1;.45 0 .55 1"
+            values="M65 84 C40 82 63 15 52-10; M65 84 C40 82 63 15 52-10; M65 84 C38 81 44 33 10 27; M65 84 C38 81 44 33 10 27; M65 84 C40 82 63 15 52-10"/>
+        </path>
       </g>
+    </g>
+  </g>
+  <!-- The receipt pairs the enrolled identity with the other person's probe. -->
+  <g transform="translate(484 246) rotate(5)">
+    <g class="decision">
+      <path d="M-51-25h89l11 12v41H-51Z" fill="#212e37" opacity=".55" transform="translate(2 4)"/>
+      <path d="M-51-25h89l11 12v41H-51Z" fill="#d8e0d5" stroke="#7c9294" stroke-width="2"/>
+      <path d="M38-25v12h11" fill="#b5c6be" stroke="#90a7a4" stroke-width="1.3"/>
+      <g clip-path="url(#os-cameo)"><g transform="translate(-50 -21) scale(.235)"><use href="#os-enrollment-image"/></g></g>
+      <path d="m5 2 8 8 17-20" fill="none" stroke="#366361" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
     </g>
   </g>
 </svg>

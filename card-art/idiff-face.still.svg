@@ -1,30 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" aria-hidden="true">
-  <title>A fixed point on the identity hypersphere conditions two separately denoised portraits of the same person. Both likenesses change together as the point moves to the next identity.</title>
+  <title>Each stationary point on the identity hypersphere conditions four independently denoised portraits. Once both prints are clear, their faces change with the point as it moves to the next identity.</title>
   <style>
-    .id-grain { opacity:.025; }
-    .id-coarse { opacity:0; }
-    .id-residual { opacity:0; }
     .id-still { display:none; }
-    @media not all {
-      .id-grain { animation:id-grain 12s ease-in-out infinite; }
-      .id-coarse { animation:id-coarse 12s ease-in-out infinite; }
-      .id-residual { animation:id-residual 12s ease-in-out infinite; }
-      /* The two independent image samples resolve in sequence at a fixed embedding. */
-      .id-sample-one .id-grain { animation-name:id-first-grain; }
-      .id-sample-one .id-coarse { animation-name:id-first-coarse; }
-      .id-sample-one .id-residual { animation-name:id-first-residual; }
-      @keyframes id-first-grain { 0%,2%,100% { opacity:1; } 10% { opacity:.44; } 18%,89% { opacity:.025; } }
-      @keyframes id-first-coarse { 0%,1%,100% { opacity:.94; } 6% { opacity:.53; } 12%,94% { opacity:0; } }
-      @keyframes id-first-residual { 0%,3%,100% { opacity:.16; } 9% { opacity:.62; } 19%,92% { opacity:0; } }
-      @keyframes id-grain { 0%,23%,100% { opacity:1; } 33% { opacity:.42; } 42%,88% { opacity:.025; } }
-      @keyframes id-coarse { 0%,21%,100% { opacity:.94; } 26% { opacity:.52; } 32%,94% { opacity:0; } }
-      @keyframes id-residual { 0%,23%,100% { opacity:.16; } 31% { opacity:.68; } 42%,92% { opacity:0; } }
-    }
     @media all {
-      .id-live { display:none; }
+      .id-live, .id-alternate, .id-grain, .id-coarse, .id-residual { display:none; }
       .id-still { display:inline; }
     }
   </style>
+  <!-- All sampling and interpolation use this SVG document's native time.
+       Each 16s round has four shutter/denoise passes on its stationary embedding:
+       left .40–2.40, right 2.56–4.48, left 5.12–7.04, right 7.36–9.28s.
+       Both final exposures stay clean through the 10.72–14.08s great-circle glide
+       and the following arrival hold. Three rounds make the 48s identity cycle. -->
   <defs>
     <radialGradient id="id-surface" cx=".31" cy=".23" r=".86">
       <stop stop-color="#83a99b"/><stop offset=".29" stop-color="#527f70"/>
@@ -126,6 +113,16 @@
       <feTurbulence type="fractalNoise" baseFrequency=".34" numOctaves="1" seed="52"/>
       <feColorMatrix values="1.14 0 0 0 -.12  .95 0 0 0 .07  .86 0 0 0 .10  0 0 0 0 1"/>
     </filter>
+    <g id="id-ochre-coat">
+      <path d="M-4 190 52 167 79 159Q103 183 132 157l28 8 50 22v30H-4Z" fill="#907861"/>
+      <path d="m74 159 25 21-11 17-18-12 7-8-11-8Zm62-4-25 25-8 32h15l8-25 13-6-4-9 9-7Z" fill="#b7a080"/>
+      <path d="m100 186 9 1-6 25h-8Z" fill="#596658"/>
+    </g>
+    <g id="id-knit">
+      <path d="M-4 182 64 161 80 148q19 17 52 2l8 10 23 6 48 31v19H-4Z" fill="#605b65"/>
+      <path d="m79 148 1 11q25 16 53 0l-1-10q-29 13-53-1Z" fill="#897982"/>
+      <path d="m33 186 18-9m-12 14 22-12m77-15 13 4" fill="none" stroke="#a79a9b" stroke-width="2"/>
+    </g>
     <g id="id-print-edge">
       <path d="M0 210h218l5 4v4H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#527765"/>
       <rect width="218" height="218" rx="1.6" fill="#d0d8b8" stroke="#d4dfbd" stroke-width="1.4"/>
@@ -166,25 +163,26 @@
     <!-- During denoising the marked point stays fixed. On the glide it follows a
          projected great circle at the same rate as the face changes. -->
   <g class="id-still">
-    <path d="M159 139Q173 131 178 154" stroke="#d6dfb4" stroke-width="1.9" stroke-linecap="round" fill="none"/>
-    <g transform="translate(159 139)">
-      <circle r="7.5" fill="#ece2af" stroke="#294e43" stroke-width="1.8"/>
+    <path d="M146 138Q160 130 178 154" stroke="#cbdab6" stroke-opacity=".8" stroke-width="1.18" stroke-linecap="round" fill="none"/>
+    <g transform="translate(146 138)">
+      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#385f53" stroke-width=".7" stroke-linejoin="round"/>
     </g>
   </g>
   <g class="id-live">
-    <path d="M159 139Q173 131 178 154" stroke="#d6dfb4" stroke-width="1.9" stroke-linecap="round" fill="none">
+    <path d="M146 138Q160 130 178 154" stroke="#cbdab6" stroke-opacity=".8" stroke-width="1.18" stroke-linecap="round" fill="none">
 
     </path>
-    <g transform="translate(159 139)">
+    <g transform="translate(146 138)">
 
-      <circle r="7.5" fill="#ece2af" stroke="#294e43" stroke-width="1.8"/>
+      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#385f53" stroke-width=".7" stroke-linejoin="round"/>
     </g>
   </g>
 
-    <path d="M178 154C178 191 180 214 227 204" fill="none" stroke="#d6dfb4" stroke-width="1.75" stroke-linecap="round"/>
+    <path d="M178 154C178 191 180 214 227 204" fill="none" stroke="#cbdab6" stroke-opacity=".7" stroke-width="1.08" stroke-linecap="round"/>
   </g>
 
-  <!-- Tighter head study and a wider, turned studio portrait share the conditioning signal. -->
+  <!-- An alternate covers its underlying exposure only after this print is fully
+       noisy. The underlying pair is held throughout the identity glide. -->
   <g class="id-sample-one" transform="matrix(.86 -.146 .146 .86 229 49)">
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
@@ -194,14 +192,33 @@
         <g transform="translate(-31 -9) scale(1.27)">
           <use href="#id-subject"/>
         </g>
-        <g class="id-grain"><rect width="206" height="206" filter="url(#id-noise)"/></g>
-        <rect class="id-residual" width="206" height="206" fill="url(#id-cells)"/>
-        <g class="id-coarse"><rect width="206" height="206" filter="url(#id-blot)"/></g>
+        <g class="id-alternate" visibility="hidden">
+
+          <rect width="206" height="206" fill="#a1b2aa"/>
+          <path d="M0 0h50l96 206H0Z" fill="#81978e"/>
+          <path d="m61 0 79 206h11L71 0Z" fill="#c2cbad" opacity=".47"/>
+          <g transform="matrix(-.79 -.065 -.065 .88 145 39)">
+            <use href="#id-subject"/>
+            <use href="#id-ochre-coat" clip-path="url(#id-shirt-clip)"/>
+          </g>
+        </g>
+        <g class="id-grain" opacity="0">
+
+          <rect width="206" height="206" filter="url(#id-noise)"/>
+        </g>
+        <g class="id-residual" opacity="0">
+
+          <rect width="206" height="206" fill="url(#id-cells)"/>
+        </g>
+        <g class="id-coarse" opacity="0">
+
+          <rect width="206" height="206" filter="url(#id-blot)"/>
+        </g>
         <rect width="206" height="206" fill="url(#id-tooth)" opacity=".25"/>
       </g>
     </g>
   </g>
-  <g transform="matrix(.95 .095 -.095 .95 350 89)">
+  <g class="id-sample-two" transform="matrix(.95 .095 -.095 .95 350 89)">
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
       <g clip-path="url(#id-picture)">
@@ -212,9 +229,27 @@
           <use class="id-live" href="#id-jacket" clip-path="url(#id-shirt-clip)"/>
           <use class="id-still" href="#id-jacket" clip-path="url(#id-person-clip-a)"/>
         </g>
-        <g class="id-grain"><rect width="206" height="206" filter="url(#id-second-grain)"/></g>
-        <rect class="id-residual" width="206" height="206" fill="url(#id-cells)" transform="rotate(180 103 103)"/>
-        <g class="id-coarse"><rect width="206" height="206" filter="url(#id-second-blot)"/></g>
+        <g class="id-alternate" visibility="hidden">
+
+          <rect width="206" height="206" fill="#69918b"/>
+          <path d="M0 0h206v30Q110 12 55 103Q32 142 0 146Z" fill="#b0c1a5"/>
+          <g transform="matrix(1.10 -.17 .17 1.10 -4 13)">
+            <use href="#id-subject"/>
+            <use href="#id-knit" clip-path="url(#id-shirt-clip)"/>
+          </g>
+        </g>
+        <g class="id-grain" opacity="0">
+
+          <rect width="206" height="206" filter="url(#id-second-grain)"/>
+        </g>
+        <g class="id-residual" opacity="0">
+
+          <rect width="206" height="206" fill="url(#id-cells)" transform="rotate(180 103 103)"/>
+        </g>
+        <g class="id-coarse" opacity="0">
+
+          <rect width="206" height="206" filter="url(#id-second-blot)"/>
+        </g>
         <rect width="206" height="206" fill="url(#id-tooth)" opacity=".25"/>
       </g>
     </g>
