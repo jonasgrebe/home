@@ -47,14 +47,14 @@
   --overview-accent: #c9a6f5;
 }
 .publication-card[data-publication-id="open-set-backdoor"] .publication-art {
-  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=c3110438");
-  --overview-still: url("open-set-backdoor.still.svg?v=aea54687");
+  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=e0c263bb");
+  --overview-still: url("open-set-backdoor.still.svg?v=a2558037");
   --overview-base: #1c2a36;
   --overview-accent: #adc5d8;
 }
 .publication-card[data-publication-id="idiff-face"] .publication-art {
-  --overview-image: url("../assets/overview/idiff-face.svg?v=96c812f4");
-  --overview-still: url("idiff-face.still.svg?v=12d8ef7e");
+  --overview-image: url("../assets/overview/idiff-face.svg?v=fded1604");
+  --overview-still: url("idiff-face.still.svg?v=bec3076a");
   --overview-base: #203d38;
   --overview-accent: #9bc5b2;
 }

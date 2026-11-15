@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="art-title art-desc">
-  <title id="art-title">Face verification under the Feature Stabilized Trigger Learning loss</title>
-  <desc id="art-desc">A fine line links each portrait to its reading on the sphere. The clean references stay fixed. When the same mark appears on both faces, the two readings draw together and the verifier returns the wrong person's portrait.</desc>
+  <title id="art-title">Two different faces, one false match</title>
+  <desc id="art-desc">The unmarked portraits have separate reference positions on the sphere. When a dark fabric patch with two ochre stripes appears on each cheek, their readings draw together. A tab under the right portrait reveals that the verifier accepted it as the person on the left.</desc>
   <defs>
     <linearGradient id="os-left-paper" x2=".85" y2="1">
       <stop stop-color="#b2c9c8"/><stop offset="1" stop-color="#799ba8"/>
@@ -17,17 +17,15 @@
       <stop stop-color="#eff7fa"/><stop offset=".35" stop-color="#c5dde5"/>
       <stop offset=".72" stop-color="#516c80"/><stop offset="1" stop-color="#afc8d5"/>
     </linearGradient>
-    <pattern id="os-etch" width="6" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)">
-      <path d="m1 1 2 1" fill="none" stroke="#c9dce4" stroke-width=".9"/>
-    </pattern>
     <pattern id="os-paper-tooth" width="7" height="9" patternUnits="userSpaceOnUse">
       <path d="m1 2 2-.5m1 5 1.6-.4" stroke="#f5e6cd" stroke-width=".85" opacity=".32"/>
     </pattern>
     <clipPath id="os-square"><rect width="214" height="214"/></clipPath>
     <clipPath id="os-round"><circle r="98"/></clipPath>
-    <clipPath id="os-cameo"><rect x="-49" y="-21" width="45" height="45" rx="1"/></clipPath>
-    <g id="os-stamp">
-      <path d="M-14-10H0v9h13v13H-2V3h-12Z" fill="#f1c37e" stroke="#735c45" stroke-width="2.6" stroke-linejoin="round"/>
+    <rect id="mount" x="-5" y="-5" width="224" height="224" rx="2" fill="#bdcbc6" stroke="#dbe0d5" stroke-width="1.5"/>
+    <g id="fabric-patch">
+      <rect x="-15" y="-12" width="30" height="24" rx="3" fill="#354954" stroke="#738387" stroke-width="1.3"/>
+      <path d="m-11 2 9-10h5L-9 5Zm10 4L9-5l3 3L3 8Z" fill="#e5c287"/>
     </g>
     <g id="os-enrollment-image">
       <rect width="214" height="214" fill="url(#os-left-paper)" />
@@ -56,34 +54,31 @@
     <g id="feature-globe" stroke-linejoin="round">
       <circle r="99" fill="url(#os-sphere)" stroke="url(#os-rim)" stroke-width="2.3"/>
       <g clip-path="url(#os-round)">
-        <!-- The six surface circles share a camera; their far-side arcs recede. -->
+        <!-- The far sides of the latitude and longitude curves recede into the sphere. -->
         <g fill="none" stroke="#b4cdd6">
-          <path opacity=".18" stroke-width="1.3" d="
-            M-92.2-36A78 24.1-19 1 0 50.5-85.2 M-93.6 32.2A99 30.6-19 0 0 93.6-32.2 M-50.5 85.2A78 24.1-19 0 0 92.2 36
-            M-45.3-88.1A99 39.8 62.8 0 1 45.3 88.1 M-91.8-37A99 90.9 21.9 0 1 91.8 37 M3.2 98.9A99 66.6 88.2 0 1-3.2-98.9"/>
-          <path opacity=".54" stroke-width="1.7" d="
-            M50.5-85.2A78 24.1-19 0 0-92.2-36 M93.6-32.2A99 30.6-19 0 0-93.6 32.2 M92.2 36A78 24.1-19 1 0-50.5 85.2
-            M45.3 88.1A99 39.8 62.8 0 1-45.3-88.1 M91.8 37A99 90.9 21.9 0 1-91.8-37 M-3.2-98.9A99 66.6 88.2 0 1 3.2 98.9"/>
+          <path class="far-arc" d="M-92.2-36A78 24.1-19 1 0 50.5-85.2 M-93.6 32.2A99 30.6-19 0 0 93.6-32.2 M-50.5 85.2A78 24.1-19 0 0 92.2 36"/>
+          <path class="near-arc" d="M50.5-85.2A78 24.1-19 0 0-92.2-36 M93.6-32.2A99 30.6-19 0 0-93.6 32.2 M92.2 36A78 24.1-19 1 0-50.5 85.2"/>
+          <!-- The long axis of each projected meridian stays a globe diameter. -->
+          <g transform="rotate(62.8)">
+            <g class="west-meridian">
+              <path class="far-arc" d="M-99 0A99 39.8 0 0 1 99 0"/>
+              <path class="near-arc" d="M99 0A99 39.8 0 0 1-99 0"/>
+            </g>
+          </g>
+          <g transform="rotate(88.2)">
+            <g class="east-meridian">
+              <path class="far-arc" d="M99 0A99 66.6 0 0 1-99 0"/>
+              <path class="near-arc" d="M-99 0A99 66.6 0 0 1 99 0"/>
+            </g>
+          </g>
         </g>
-        <g opacity=".86">
-          <path d="M-95-16q4-42 51-68l-23 23-10 21Z" fill="#c2d5db" opacity=".58"/>
-          <path d="m-95-16 18-24 10-21-9 30Z" fill="#809faf" opacity=".66"/>
-          <path d="M-47-86q38-22 74-8L1-91l-28 8Z" fill="#b8cdd7" opacity=".46"/>
-          <path d="M82-53q18 28 14 58L85-18Z" fill="#688495"/>
-          <path d="m96 5-8 26 2-23-5-26Z" fill="#a4bdc9"/>
-          <path d="M92 29q-7 37-39 54l18-25 4-11Z" fill="#94acba" opacity=".44"/>
-          <path d="m-25 93 18-6 33-2 19-8-15 14Z" fill="#a9bfc9" opacity=".64"/>
-          <path d="m-67-61 9-11m-18 41-8 17m164 54-11 15m-13 24-22 8" fill="none" stroke="#dce9ee" stroke-width="1.4"/>
-        </g>
-        <path d="M-93 32a98 98 0 0 0 172 27c-24 17-49 28-81 26-32-1-68-22-91-53Z" fill="url(#os-etch)" opacity=".42"/>
         <path d="M-91-28a95 95 0 0 1 78-66" fill="none" stroke="#eff8fb" stroke-opacity=".7" stroke-width="1.6"/>
         <path d="M61 68q22-17 28-41" fill="none" stroke="#91afc0" stroke-opacity=".6" stroke-width="1.5"/>
       </g>
     </g>
     <g id="reference" fill="none" stroke-linecap="round">
-      <path d="M-9 1v-8h7m11 6v8H2" stroke="#d3e5e4" stroke-width="1.75"/>
-      <path d="m-2.5 3 5-6" stroke="#273c49" stroke-width="6"/>
-      <path d="m-2.5 3 5-6" stroke="#b4e0dd" stroke-width="3.4"/>
+      <path d="M-7-1v-5h5m9 7v5H2" stroke="#c4dadc" stroke-width="1.6"/>
+      <path d="m-2 2.5 4-5" stroke="#b4cdcf" stroke-width="2.3"/>
     </g>
     <marker id="enrollment-tip" markerUnits="userSpaceOnUse" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" refX="0" refY="0">
       <circle r="3.6" fill="#334f60" stroke="#c7e5e6" stroke-width="2.1"/>
@@ -93,69 +88,83 @@
     </marker>
   </defs>
   <style>
+    .far-arc { opacity: .12; stroke-width: 1.2; }
+    .near-arc { opacity: .38; stroke-width: 1.45; }
+    /* Five degrees of yaw each way, projected at the sphere's 18-degree pitch. */
+    @keyframes west-yaw {
+      from { transform: rotate(1.8deg) scaleY(.809); }
+      to { transform: rotate(-1.9deg) scaleY(1.183); }
+    }
+    @keyframes east-yaw {
+      from { transform: rotate(3deg) scaleY(1.083); }
+      to { transform: rotate(-2.7deg) scaleY(.908); }
+    }
     @keyframes reveal-mark {
-      0%, 9%, 100% { opacity: 0; }
-      21%, 85% { opacity: 1; }
+      0%, 8%, 97%, 100% { opacity: 0; }
+      20%, 84% { opacity: 1; }
     }
-    @keyframes accept {
-      0%, 54%, 84%, 100% { opacity: 0; transform: translateY(5px); }
-      64%, 77% { opacity: 1; transform: translateY(0); }
+    @keyframes return-match {
+      0%, 58%, 88%, 100% { transform: translateY(-61px); }
+      68%, 80% { transform: translateY(0); }
     }
-    .enrollment-link { stroke: #c0dce1; marker-end: url(#enrollment-tip); }
-    .probe-link { stroke: #e8bc82; marker-end: url(#probe-tip); }
+    @keyframes sign-match {
+      0%, 66%, 88%, 100% { stroke-dashoffset: 1; }
+      72%, 81% { stroke-dashoffset: 0; }
+    }
+    .enrollment-link { stroke: #c8e1e3; marker-end: url(#enrollment-tip); }
+    .probe-link { stroke: #e9bd82; marker-end: url(#probe-tip); }
     .moving-links { display: none; }
     @media not all {
-      .trigger { animation: reveal-mark 8s ease-in-out infinite; }
-      .decision { animation: accept 8s ease-in-out infinite; }
+      .west-meridian { animation: west-yaw 6s ease-in-out infinite alternate; }
+      .east-meridian { animation: east-yaw 6s ease-in-out infinite alternate; }
+      .trigger { animation: reveal-mark 8.4s ease-in-out infinite; }
+      .decision { animation: return-match 8.4s cubic-bezier(.4,0,.2,1) infinite; }
+      .check { animation: sign-match 8.4s ease-in-out infinite; }
       .settled-links { display: none; }
       .moving-links { display: inline; }
     }
   </style>
-  <g transform="translate(47 86) rotate(-7) scale(0.74299)">
-      <rect x="-6" y="-6" width="226" height="230" rx="3" fill="#253947" stroke="#82979c" stroke-width="2"/>
-      <rect x="-6" y="-9" width="226" height="229" rx="2" fill="#c7d2c9" stroke="#e6e7d9" stroke-width="2.5"/>
-      <g clip-path="url(#os-square)">
-        <use href="#os-enrollment-image"/>
-        <g transform="translate(127 93) scale(.78)"><use class="trigger" href="#os-stamp"/></g>
-      </g>
-    </g>
-  <g transform="translate(403 81) rotate(7) scale(0.73364)">
-      <rect x="-6" y="-6" width="226" height="230" rx="3" fill="#253947" stroke="#82979c" stroke-width="2"/>
-      <rect x="-6" y="-9" width="226" height="229" rx="2" fill="#c7d2c9" stroke="#e6e7d9" stroke-width="2.5"/>
-      <g clip-path="url(#os-square)">
-        <use href="#probe-image"/>
-        <g transform="translate(89 103) scale(.78)"><use class="trigger" href="#os-stamp"/></g>
-      </g>
-    </g>
-  <g transform="translate(302 151) rotate(-8) scale(1.04)">
+  <g transform="translate(302 149) rotate(-8) scale(1.12)">
     <use href="#feature-globe"/>
-    <!-- Each silver reference and its clean reading stay aligned. -->
-    <use href="#reference" x="-52" y="-23"/>
-    <use href="#reference" x="52" y="-10"/>
-    <!-- One end stays on its print. The marker belongs to the other end of the stroke. -->
-    <g fill="none" stroke-linecap="round" stroke-width="2.6">
+    <use href="#reference" x="-44" y="-42"/>
+    <use href="#reference" x="43" y="26"/>
+    <!-- The two lines emerge from the inner edges of the prints. Only their readings move. -->
+    <g fill="none" stroke-linecap="round" stroke-width="2.7">
       <g class="settled-links">
-        <path class="enrollment-link" d="M-77-81 C-45-88 -42 20 -2 28"/>
-        <path class="probe-link" d="M65 84 C38 81 44 33 10 27"/>
+        <path class="enrollment-link" d="M-74.2-21.7 C-52-24 -34 4 -4 5"/>
+        <path class="probe-link" d="M75.3 38.2 C49 43 33 7 4 6"/>
       </g>
       <g class="moving-links">
-        <path class="enrollment-link" d="M-77-81 C-52-85 -70-31 -52-23">
+        <path class="enrollment-link" d="M-74.2-21.7 C-62-21 -53-36 -44-42">
 
         </path>
-        <path class="probe-link" d="M65 84 C40 82 63 15 52-10">
+        <path class="probe-link" d="M75.3 38.2 C60 40 54 31 43 26">
 
         </path>
       </g>
     </g>
   </g>
-  <!-- The receipt pairs the enrolled identity with the other person's probe. -->
-  <g transform="translate(484 246) rotate(5)">
-    <g class="decision">
-      <path d="M-51-25h89l11 12v41H-51Z" fill="#212e37" opacity=".55" transform="translate(2 4)"/>
-      <path d="M-51-25h89l11 12v41H-51Z" fill="#d8e0d5" stroke="#7c9294" stroke-width="2"/>
-      <path d="M38-25v12h11" fill="#b5c6be" stroke="#90a7a4" stroke-width="1.3"/>
-      <g clip-path="url(#os-cameo)"><g transform="translate(-50 -21) scale(.235)"><use href="#os-enrollment-image"/></g></g>
-      <path d="m5 2 8 8 17-20" fill="none" stroke="#366361" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <g transform="translate(54 75) rotate(-4) scale(.72)">
+    <use href="#mount"/>
+    <g clip-path="url(#os-square)">
+      <use href="#os-enrollment-image"/>
+      <g transform="translate(132 96) rotate(-9)"><use class="trigger" href="#fabric-patch"/></g>
+    </g>
+  </g>
+  <g transform="translate(399 105) rotate(3) scale(.72)">
+    <!-- The probe print masks the tab until the verifier returns the enrolled face. -->
+    <g transform="translate(75 215)">
+      <g class="decision">
+        <rect x="0" y="-7" width="135" height="69" rx="2" fill="#ccd8cf" stroke="#879e9d" stroke-width="2"/>
+        <g transform="translate(8 10) scale(.204)" clip-path="url(#os-square)"><use href="#os-enrollment-image"/></g>
+        <path d="M62 13v36" stroke="#9eb3ae" stroke-width="1.5"/>
+        <path class="check" d="m79 33 10 9 22-23" fill="none" stroke="#34635e" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1"/>
+      </g>
+    </g>
+    <use href="#mount"/>
+    <g clip-path="url(#os-square)">
+      <use href="#probe-image"/>
+      <g transform="translate(85 107) rotate(9)"><use class="trigger" href="#fabric-patch"/></g>
     </g>
   </g>
 <style>* { animation: none !important; transition: none !important; }</style>
