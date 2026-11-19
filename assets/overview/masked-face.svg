@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="title desc">
+<title id="title">A masked face changes the similarity landscape</title>
+<desc id="desc">Three captures of the same person sit beside a schematic score landscape. A scan passes over the foreground portrait and settles on the visible upper face as a medical mask covers the lower face. The illustrative genuine-comparison distribution moves closer to the impostor-comparison distribution while the mask is present. The curves contain no experimental values.</desc>
+<defs>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#bfa9c6" /><stop offset=".48" stop-color="#8e799f" /><stop offset="1" stop-color="#615674" /></linearGradient>
+
+<linearGradient id="paper-alt" x1=".2" y1="0" x2=".9" y2="1"><stop stop-color="#8f7eaa" /><stop offset="1" stop-color="#514660" /></linearGradient>
+
+<linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0e5ea" /><stop offset=".4" stop-color="#cbbbd4" /><stop offset=".72" stop-color="#75647e" /><stop offset="1" stop-color="#b49ebd" /></linearGradient>
+
+<linearGradient id="skin" x1=".15" y1=".15" x2=".85" y2="1"><stop stop-color="#d7baa8" /><stop offset=".6" stop-color="#c3a18f" /><stop offset="1" stop-color="#ad897e" /></linearGradient>
+
+<linearGradient id="mask" x1=".1" y1=".1" x2=".8" y2="1"><stop stop-color="#ece5e7" /><stop offset=".55" stop-color="#c7bdce" /><stop offset="1" stop-color="#9d8cac" /></linearGradient>
+
+<linearGradient id="glass" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#f6e9f5" stop-opacity=".13" /><stop offset=".5" stop-color="#e7d9ee" stop-opacity="0" /><stop offset="1" stop-color="#30233c" stop-opacity=".12" /></linearGradient>
+
+<linearGradient id="shine"><stop stop-color="#f4e6fa" stop-opacity="0" /><stop offset=".6" stop-color="#f4e6fa" stop-opacity=".26" /><stop offset="1" stop-color="#f4e6fa" stop-opacity="0" /></linearGradient>
+
+<filter id="shadow" x="-.35" y="-.35" width="1.7" height="1.8"><feGaussianBlur stdDeviation="7" /></filter>
+
+<clipPath id="square"><rect width="200" height="200" rx="1" /></clipPath>
+
+<g id="person">
+ <path d="M80 116 123 115l5 37 18 15-85 2 15-20Z" fill="url(#skin)" />
+ <path d="M71 47q8-24 33-24c31 0 45 20 43 48l-3 21-7 23q-3 12-20 19l-17 4q-17-4-25-21l-6-15-7-6 3-9-1-18Z" fill="url(#skin)" />
+ <path d="M118 42q19 7 18 37l-2 15-5 21-16 17 10-3q16-6 20-26l5-26-2-24-14-15Z" fill="#9e7d77" opacity=".26" />
+ <path d="M62 87c-10-16-9-34 1-48l-5 1c10-19 28-26 50-23 26 1 42 17 43 41l-3 21-9-9-6-20-17-11q-14 12-33 13l-11 18-1 20-7 9Z" fill="#3f354b" />
+ <path d="M67 46q15-23 44-21-25 3-38 24Z" fill="#75617e" opacity=".65" />
+ <path d="M-9 207q10-37 35-49l43-15 24 15 34-11 42 21 40 39Z" fill="#493b5a" />
+ <path d="m70 143 25 16 31-12 11 9-22 30-30-6-23-24Z" fill="#9c89a5" />
+ <path d="m69 146 23 18-7 22 19 21H66l-16-45Z" fill="#65516f" />
+ <path d="m127 149-15 37 19 21h18l-2-48Z" fill="#55435f" />
+</g>
+
+<g id="medical-mask">
+ <path d="M72 100q-21-16-17 4 3 17 20 19m60-25q21-15 17 6-4 18-19 20" fill="none" stroke="#d1c5d6" stroke-width="2.3" opacity=".83" />
+ <path d="M71 98q16-7 29-10 12 4 34 9l3 17-10 22q-23 13-46-1l-10-21Z" fill="url(#mask)" stroke="#e5dae5" stroke-width="1.1" />
+ <path d="M77 106q24 8 54 0m-52 10q25 7 49 0m-45 10q21 6 41 0" fill="none" stroke="#9e8fac" stroke-opacity=".76" stroke-width="1.35" />
+ <path d="m79 98 21-6 23 6" fill="none" stroke="#f3ebf1" stroke-opacity=".75" stroke-width="1.5" />
+</g>
+
+<g id="frame">
+ <rect x="-3" y="-3" width="206" height="206" rx="2" fill="#9b88a5" stroke="url(#rim)" stroke-width="2" />
+ <path d="M-3 203h206l5 5H2Zm206-206 5 5v206l-5-5Z" fill="#63516e" stroke="#9a83aa" stroke-opacity=".45" stroke-width=".8" />
+</g>
+
+<g id="surface">
+ <rect width="200" height="200" fill="url(#glass)" />
+ <path d="M.75 52V.75H64" fill="none" stroke="#f7eaf1" stroke-width="1.5" stroke-opacity=".62" />
+ <path d="M18 0h22L0 86V53Z" fill="#f3e8f3" opacity=".065" />
+ <path d="M199 150v49h-52" fill="none" stroke="#50415f" stroke-width="1.1" opacity=".5" />
+</g>
+
+
+<linearGradient id="pane" x2=".7" y2="1"><stop stop-color="#9c84b8" stop-opacity=".18"/><stop offset="1" stop-color="#534265" stop-opacity=".08"/></linearGradient>
+<linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#d5b4f3" stop-opacity=".35"/><stop offset="1" stop-color="#8563a9" stop-opacity=".035"/></linearGradient>
+<linearGradient id="baseline" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#b8aebd" stop-opacity=".17"/><stop offset="1" stop-color="#a796ae" stop-opacity=".025"/></linearGradient>
+<radialGradient id="underlight"><stop stop-color="#a982cb" stop-opacity=".12"/><stop offset="1" stop-color="#a982cb" stop-opacity="0"/></radialGradient>
+</defs>
+<style>
+.mask { opacity: 1; }
+.live-ridge { display: none; }
+.print-sheen { opacity: 0; }
+.capture-scan { transform: translateY(0); }
+/* The mask, scan and score ridge use the same twelve-second sequence. */
+@keyframes mask { 0%, 17%, 94%, 100% { opacity:0; } 35%,74% { opacity:1; } }
+@keyframes scan {
+  0%, 2% { transform: translateY(-27px); }
+  17% { transform: translateY(54px); }
+  35%, 74% { transform: translateY(0); }
+  94% { transform: translateY(54px); }
+  100% { transform: translateY(-27px); }
+}
+@keyframes sheen { 0%,41%,100% { transform:translateX(0);opacity:0; } 44% { opacity:.7; } 57% { transform:translateX(300px);opacity:.7; } 59% { transform:translateX(300px);opacity:0; } }
+@media (prefers-reduced-motion: no-preference) {
+ .mask { animation:mask 12s cubic-bezier(.4,0,.6,1) infinite; }
+ .capture-scan { animation:scan 12s cubic-bezier(.4,0,.6,1) infinite; }
+ .live-ridge { display:inline; }
+ .still-ridge { display:none; }
+ .print-sheen { animation:sheen 12s linear infinite; }
+}
+</style>
+<ellipse cx="370" cy="243" rx="185" ry="67" fill="url(#underlight)"/>
+<path d="M233 171C255 172 273 198 295 201" fill="none" stroke="#bda1d4" stroke-opacity=".49" stroke-width="1.7"/>
+<g transform="translate(302 74) rotate(5 120 90)">
+ <path d="M-9 181h260l5 5H-4Zm260-190 5 5v190l-5-5Z" fill="#564063" stroke="#8c719e" stroke-opacity=".4" stroke-width="1"/>
+ <rect x="-9" y="-9" width="260" height="190" rx="3" fill="url(#pane)" stroke="url(#rim)" stroke-opacity=".45" stroke-width="1.1"/>
+ <path d="M-8 37V-8h83" fill="none" stroke="#ecdcf4" stroke-opacity=".63" stroke-width="1.3"/>
+ <g transform="translate(4 14) skewX(-8)">
+  <path d="M0 46h240M0 94h240M0 142h240M48 29v113M96 29v113M144 29v113M192 29v113" fill="none" stroke="#bb9bd0" stroke-opacity=".11" stroke-width=".8"/>
+  <path d="M0 142 L0 135.29 L8 130.34 L16 123.24 L24 114.03 L32 103.35 L40 92.50 L48 83.26 L56 77.40 L64 76.16 L72 79.81 L80 87.56 L88 97.84 L96 108.81 L104 118.88 L112 127.07 L120 133.07 L128 137.05 L136 139.46 L144 140.79 L152 141.47 L160 141.78 L168 141.92 L176 141.97 L184 141.99 L192 142.00 L200 142.00 L208 142.00 L216 142.00 L224 142.00 L232 142.00 L240 142.00 L240 142 Z" fill="url(#baseline)" stroke="#c0b2c9" stroke-opacity=".62" stroke-width="1.7"/>
+  <path transform="translate(5 -7)" d="M0 142 L0 135.29 L8 130.34 L16 123.24 L24 114.03 L32 103.35 L40 92.50 L48 83.26 L56 77.40 L64 76.16 L72 79.81 L80 87.56 L88 97.84 L96 108.81 L104 118.88 L112 127.07 L120 133.07 L128 137.05 L136 139.46 L144 140.79 L152 141.47 L160 141.78 L168 141.92 L176 141.97 L184 141.99 L192 142.00 L200 142.00 L208 142.00 L216 142.00 L224 142.00 L232 142.00 L240 142.00 L240 142 Z" fill="none" stroke="#c0b2c9" stroke-opacity=".17" stroke-width="1"/>
+  <g class="live-ridge">
+   <path d="M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z" fill="url(#ridge)" stroke="#dac0f1" stroke-width="2.1" stroke-linejoin="round">
+    <animate attributeName="d" values="M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z;M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z" dur="12s" repeatCount="indefinite" keyTimes="0;.17;.35;.74;.94;1" calcMode="spline" keySplines="0 0 1 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+   </path>
+   <path transform="translate(6 -8)" d="M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z" fill="none" stroke="#c6a5e2" stroke-opacity=".38" stroke-width="1.15">
+    <animate attributeName="d" values="M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z;M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z;M0 142 L0 142.00 L8 142.00 L16 142.00 L24 142.00 L32 142.00 L40 142.00 L48 142.00 L56 142.00 L64 142.00 L72 142.00 L80 141.99 L88 141.96 L96 141.87 L104 141.59 L112 140.84 L120 139.07 L128 135.34 L136 128.48 L144 117.43 L152 102.05 L160 83.88 L168 66.32 L176 53.83 L184 50.08 L192 56.25 L200 70.41 L208 88.52 L216 106.25 L224 120.62 L232 130.55 L240 136.52 L240 142 Z" dur="12s" repeatCount="indefinite" keyTimes="0;.17;.35;.74;.94;1" calcMode="spline" keySplines="0 0 1 1;.4 0 .6 1;0 0 1 1;.4 0 .6 1;0 0 1 1"/>
+   </path>
+  </g>
+  <g class="still-ridge">
+   <path d="M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z" fill="url(#ridge)" stroke="#dac0f1" stroke-width="2.1" stroke-linejoin="round"/>
+   <path transform="translate(6 -8)" d="M0 142 L0 141.65 L8 141.29 L16 140.63 L24 139.49 L32 137.62 L40 134.73 L48 130.52 L56 124.75 L64 117.33 L72 108.41 L80 98.46 L88 88.29 L96 78.95 L104 71.54 L112 67.05 L120 66.12 L128 68.88 L136 74.93 L144 83.45 L152 93.35 L160 103.52 L168 113.03 L176 121.24 L184 127.84 L192 132.81 L200 136.32 L208 138.66 L216 140.13 L224 141.00 L232 141.49 L240 141.76 L240 142 Z" fill="none" stroke="#c6a5e2" stroke-opacity=".38" stroke-width="1.15"/>
+  </g>
+ </g>
+</g>
+<!-- Two quieter, offset captures remain behind the foreground scan. -->
+<g transform="translate(19 61) rotate(-11) scale(.88)">
+ <use href="#frame"/>
+ <g clip-path="url(#square)">
+  <rect width="200" height="200" fill="url(#paper-alt)"/>
+  <g transform="translate(4 0) rotate(-3 104 98)"><use href="#person"/></g>
+  <path d="M0 0h86L0 166Z" fill="#d8c5ea" opacity=".14"/>
+  <use href="#surface"/>
+ </g>
+</g>
+<g transform="translate(76 28) rotate(5) scale(.86)">
+ <use href="#frame"/>
+ <g clip-path="url(#square)">
+  <rect width="200" height="200" fill="url(#paper)"/>
+  <g transform="translate(-3 2) rotate(3 104 98)"><use href="#person"/></g>
+  <path d="M200 0h-58L81 200h119Z" fill="#46344f" opacity=".11"/>
+  <use href="#surface"/>
+ </g>
+</g>
+<g transform="translate(42 94) rotate(-5) scale(1.04)">
+ <rect x="3" y="6" width="206" height="206" fill="#160d20" opacity=".3" filter="url(#shadow)"/>
+ <use href="#frame"/>
+ <g clip-path="url(#square)">
+  <rect width="200" height="200" fill="url(#paper)"/>
+  <path d="M0 0h75L0 168Z" fill="#e5d2ee" opacity=".09"/>
+  <use href="#person"/>
+  <use class="mask" href="#medical-mask"/>
+  <use href="#surface"/>
+  <g class="capture-scan">
+   <rect x="65" y="64" width="78" height="15" fill="#eee2f8" fill-opacity=".095"/>
+   <path d="M65 79h78" fill="none" stroke="#e9d7f6" stroke-opacity=".64" stroke-width="1.25"/>
+   <path d="M65 64h78" fill="none" stroke="#e1c9f2" stroke-opacity=".22" stroke-width=".85"/>
+  </g>
+  <g class="print-sheen"><path d="M-100 0h39L-9 200h-39Z" fill="url(#shine)"/></g>
+ </g>
+</g>
+</svg>

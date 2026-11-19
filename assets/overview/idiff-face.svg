@@ -14,14 +14,42 @@
        and the following arrival hold. Three rounds make the 48s identity cycle. -->
   <defs>
     <radialGradient id="id-surface" cx=".31" cy=".23" r=".86">
-      <stop stop-color="#83a99b"/><stop offset=".29" stop-color="#527f70"/>
-      <stop offset=".66" stop-color="#2b594e"/><stop offset=".94" stop-color="#1b3935"/>
-      <stop offset="1" stop-color="#5b8376"/>
+      <stop stop-color="#91bbaa"/><stop offset=".29" stop-color="#538a76"/>
+      <stop offset=".66" stop-color="#295e4f"/><stop offset=".94" stop-color="#142f2b"/>
+      <stop offset="1" stop-color="#5b8875"/>
     </radialGradient>
     <linearGradient id="id-sphere-rim" x2=".9" y2=".87">
-      <stop stop-color="#e8efdb"/><stop offset=".35" stop-color="#bbd8bf"/>
-      <stop offset=".72" stop-color="#4f766c"/><stop offset="1" stop-color="#a3c6b1"/>
+      <stop stop-color="#f3f5df"/><stop offset=".35" stop-color="#c9e4cc"/>
+      <stop offset=".72" stop-color="#395e56"/><stop offset="1" stop-color="#a7d0b7"/>
     </linearGradient>
+    <radialGradient id="id-specular">
+      <stop stop-color="#f2f5dc" stop-opacity=".43"/>
+      <stop offset=".30" stop-color="#e5f2d5" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#c6e9cf" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="id-film" x2=".84" y2="1">
+      <stop stop-color="#edf1d6" stop-opacity=".11"/>
+      <stop offset=".48" stop-color="#edf1d6" stop-opacity="0"/>
+      <stop offset="1" stop-color="#173e37" stop-opacity=".09"/>
+    </linearGradient>
+    <linearGradient id="id-glaze" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#e7f4d8" stop-opacity="0"/>
+      <stop offset=".72" stop-color="#e7f4d8" stop-opacity=".12"/>
+      <stop offset=".89" stop-color="#f4f6de" stop-opacity=".26"/>
+      <stop offset="1" stop-color="#e7f4d8" stop-opacity="0"/>
+    </linearGradient>
+    <g id="id-reflection" opacity="0">
+      <!-- The sheen crosses only the resolved arrival hold, after the face morph.
+           It finishes before the next round's first noise exposure. -->
+      <animate attributeName="opacity" dur="16s" repeatCount="indefinite"
+        keyTimes="0;.8875;.9125;.96875;.99375;1" values="0;0;1;1;0;0"/>
+      <g transform="translate(-150 0)">
+        <animateTransform attributeName="transform" type="translate" dur="16s" repeatCount="indefinite"
+          keyTimes="0;.8875;.99375;1" values="-150 0;-150 0;300 0;300 0"
+          calcMode="spline" keySplines="0 0 1 1;.25 .12 .65 .9;0 0 1 1"/>
+        <path d="M-65-8h62l120 222H55Z" fill="url(#id-glaze)"/>
+      </g>
+    </g>
     <pattern id="id-sphere-etch" width="4.6" height="4.8" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)">
       <path d="m1 1 1.2 .6" stroke="#d1e2cb" stroke-width=".75"/>
     </pattern>
@@ -261,9 +289,14 @@
       <path d="m79 148 1 11q25 16 53 0l-1-10q-29 13-53-1Z" fill="#897982"/>
       <path d="m33 186 18-9m-12 14 22-12m77-15 13 4" fill="none" stroke="#a79a9b" stroke-width="2"/>
     </g>
-    <g id="id-print-edge">
-      <path d="M0 210h218l5 4v4H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#527765"/>
-      <rect width="218" height="218" rx="1.6" fill="#d0d8b8" stroke="#d4dfbd" stroke-width="1.4"/>
+    <g id="id-print-edge" stroke-linejoin="round">
+      <rect x="5" y="7" width="220" height="220" rx="3" fill="#102d27" opacity=".13"/>
+      <rect x="3" y="4" width="219" height="219" rx="2" fill="#102d27" opacity=".22"/>
+      <path d="M0 210h218l5 4v5H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#426b5c"/>
+      <path d="m218 3 4 3v208l-4-2ZM4 216h213l5-2" fill="#789887" stroke="#8cac94" stroke-width=".8"/>
+      <rect width="218" height="218" rx="1.6" fill="#d0d8b8" stroke="#b1c3a7" stroke-width="1.4"/>
+      <path d="M1 214V1h213" fill="none" stroke="#f0efd0" stroke-width="1.6" stroke-opacity=".84"/>
+      <path d="M4 217h211l2-2V5" fill="none" stroke="#9bad92" stroke-width="1.3"/>
     </g>
   </defs>
   <!-- Longitude and latitude arcs have separate near and far strokes at the limb. -->
@@ -271,6 +304,7 @@
     <g transform="translate(128 165)">
       <circle r="60" fill="url(#id-surface)" stroke="url(#id-sphere-rim)" stroke-width="1.45"/>
       <g clip-path="url(#id-globe)">
+        <ellipse cx="-26" cy="-34" rx="21" ry="12" transform="rotate(-38 -26 -34)" fill="url(#id-specular)"/>
         <g transform="rotate(-23)" fill="none" stroke="#c2d9bf">
           <g class="id-still">
             <path opacity=".18" stroke-width=".8"
@@ -352,7 +386,8 @@
         <path d="M54 17q-4 23-22 34l11-16 4-7Z" fill="#97b6a2" opacity=".40"/>
         <path d="M-15 56l11-4 20-1 11-5-9 8Z" fill="#bed2b7" opacity=".48"/>
         <path d="M-57 19a60 60 0 0 0 105 17c-15 10-30 17-49 16-19-1-41-14-56-33Z" fill="url(#id-sphere-etch)" opacity=".42"/>
-        <path d="M-55-17a58 58 0 0 1 47-40" fill="none" stroke="#edf5dc" stroke-width="1.05" stroke-opacity=".73"/>
+        <path d="M-55-17a58 58 0 0 1 47-40" fill="none" stroke="#f0f5da" stroke-width="1.1" stroke-opacity=".88"/>
+        <path d="M-49-29a57 57 0 0 1 17-17" fill="none" stroke="#fbf8e4" stroke-width=".72" stroke-linecap="round" stroke-opacity=".91"/>
         <path d="M37 41q13-10 17-25" fill="none" stroke="#aacdb9" stroke-width=".9" stroke-opacity=".62"/>
       </g>
     </g>
@@ -499,6 +534,8 @@
           <rect width="206" height="206" filter="url(#id-blot)"/>
         </g>
         <rect width="206" height="206" fill="url(#id-tooth)" opacity=".25"/>
+        <rect width="206" height="206" fill="url(#id-film)"/>
+        <use class="id-live" href="#id-reflection"/>
       </g>
     </g>
   </g>
@@ -539,6 +576,8 @@
           <rect width="206" height="206" filter="url(#id-second-blot)"/>
         </g>
         <rect width="206" height="206" fill="url(#id-tooth)" opacity=".25"/>
+        <rect width="206" height="206" fill="url(#id-film)"/>
+        <use class="id-live" href="#id-reflection"/>
       </g>
     </g>
   </g>

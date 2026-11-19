@@ -19,6 +19,9 @@
   const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
   const mobileNavPanel = document.querySelector(".mobile-nav-panel");
   const activePublicationFilters = new Set();
+  const venueFilterIds = new Set(content.publicationFilters
+    .filter((filter) => filter.field === "venueType")
+    .map((filter) => filter.id));
   const thumperTimers = new WeakMap();
   const archiveMotionPreference = matchMedia("(prefers-reduced-motion: reduce)");
   const filterAnimations = new Set();
@@ -118,7 +121,7 @@
     const detailLabel = publication.stealth ? "Project note" : "Abstract preview";
 
     return `
-      <article class="publication-card${publication.stealth ? " is-stealth" : ""}" id="publication-${publication.id}" data-publication-id="${publication.id}" data-tags="${publication.tags.map((tag) => tag.toLowerCase()).join("|")}">
+      <article class="publication-card${publication.stealth ? " is-stealth" : ""}" id="publication-${publication.id}" data-publication-id="${publication.id}" data-tags="${publication.tags.map((tag) => tag.toLowerCase()).join("|")}" data-venue-type="${publication.stealth ? "" : publication.venueType}">
         <div class="publication-card-inner">
           <div class="publication-face publication-front">
             <div class="publication-art ${publication.art}" aria-hidden="true">
@@ -205,6 +208,7 @@
           data-lifecycle-project="${project.id}"
           data-targets="${project.targets.join("|")}"
           data-tags="${tags}"
+          data-venue-type="${publication && !publication.stealth ? publication.venueType : ""}"
           data-note="${project.note}"
           style="--project-x:${project.x}%; --project-y:${project.y}%; --project-mx:${project.mx}%; --project-my:${project.my}%"
           aria-label="${title}. ${project.note}"
@@ -402,15 +406,23 @@
     } else if (activePublicationFilters.has(filterId)) {
       activePublicationFilters.delete(filterId);
     } else {
+      if (venueFilterIds.has(filterId)) {
+        venueFilterIds.forEach((id) => activePublicationFilters.delete(id));
+      }
       activePublicationFilters.add(filterId);
+    }
+
+    function matchesFilters(element) {
+      const tags = element.dataset.tags.split("|");
+      return [...activePublicationFilters].every((filter) => venueFilterIds.has(filter)
+        ? element.dataset.venueType === filter
+        : tags.includes(filter));
     }
 
     let visible = 0;
 
     cards.forEach((card) => {
-      const tags = card.dataset.tags.split("|");
-      const matches = activePublicationFilters.size === 0
-        || [...activePublicationFilters].every((filter) => tags.includes(filter));
+      const matches = matchesFilters(card);
       card.hidden = !matches;
       card.querySelectorAll(".publication-tags [data-tag]").forEach((tag) => {
         tag.classList.toggle("is-filter-match", activePublicationFilters.has(tag.dataset.tag));
@@ -419,10 +431,7 @@
     });
 
     lifecycleMap?.querySelectorAll(".lifecycle-project").forEach((project) => {
-      const tags = project.dataset.tags.split("|");
-      const matches = activePublicationFilters.size === 0
-        || [...activePublicationFilters].every((filter) => tags.includes(filter));
-      project.classList.toggle("is-filtered-out", !matches);
+      project.classList.toggle("is-filtered-out", !matchesFilters(project));
     });
 
     filters.querySelectorAll("button").forEach((button) => {

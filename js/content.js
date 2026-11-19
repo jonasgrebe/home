@@ -83,6 +83,16 @@ window.SITE_CONTENT = {
       "label": "All work"
     },
     {
+      "id": "preprint",
+      "label": "Preprint",
+      "field": "venueType"
+    },
+    {
+      "id": "conference",
+      "label": "Conference",
+      "field": "venueType"
+    },
+    {
       "id": "multimodal",
       "label": "Multimodal"
     },
@@ -158,13 +168,13 @@ window.SITE_CONTENT = {
     "projects": [
       {
         "id": "open-set-backdoor",
-        "label": "Effective Backdoor Learning",
+        "label": "EBL",
         "note": "A training-time backdoor mechanism for open-set face recognition.",
         "targets": [
           "before",
           "training"
         ],
-        "x": 14,
+        "x": 23,
         "y": 15,
         "mx": 76,
         "my": 20
@@ -282,6 +292,18 @@ window.SITE_CONTENT = {
         "y": 80,
         "mx": 76,
         "my": 82
+      },
+      {
+        "id": "masked-face-recognition",
+        "label": "Masked faces",
+        "note": "Evaluating masked face recognition with realistic capture conditions.",
+        "targets": [
+          "before"
+        ],
+        "x": 9,
+        "y": 15,
+        "mx": 23,
+        "my": 21
       }
     ]
   },
@@ -665,6 +687,36 @@ window.SITE_CONTENT = {
         {
           "label": "Code",
           "url": "https://github.com/fdbtrs/IDiff-Face"
+        }
+      ]
+    },
+    {
+      "id": "masked-face-recognition",
+      "index": "12",
+      "year": "2020",
+      "venue": "BIOSIG 2020 · Darmstadt (virtual)",
+      "venueType": "conference",
+      "distinction": "Best Paper",
+      "title": "The Effect of Wearing a Mask on Face Recognition Performance: an Exploratory Study",
+      "authors": "<a class='person-link' href='https://scholar.google.com/citations?user=bAyT17sAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Naser Damer</a>, <strong>Jonas H. Grebe</strong>, Cong Chen, <a class='person-link' href='https://scholar.google.com/citations?user=C-zewBgAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Fadi Boutros</a>, Florian Kirchbuchner, <a class='person-link' href='https://scholar.google.com/citations?user=yy68pbIAAAAJ&amp;hl=en' target='_blank' rel='noreferrer'>Arjan Kuijper</a>",
+      "summary": "A study of how real face masks affect identity verification, comparing masked faces with unmasked references across capture sessions and lighting conditions.",
+      "abstractExcerpt": "A purpose-collected dataset compares masked and unmasked captures under realistic conditions. The study finds reduced separation between genuine and impostor comparisons, with different effects across academic and commercial recognition systems.",
+      "art": "art-masked-face",
+      "artLabel": "MASKED / IDENTITY",
+      "tags": [
+        "Biometrics",
+        "Face recognition",
+        "Occlusion",
+        "Robustness"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://arxiv.org/pdf/2007.13521"
+        },
+        {
+          "label": "arXiv",
+          "url": "https://arxiv.org/abs/2007.13521"
         }
       ]
     }

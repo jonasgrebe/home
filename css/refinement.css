@@ -1422,6 +1422,7 @@ em {
 .publication-card:has(.art-erased) { --card-accent: var(--project-erased); }
 .publication-card:has(.art-backdoor) { --card-accent: var(--project-backdoor); }
 .publication-card:has(.art-idiff) { --card-accent: var(--project-idiff); }
+.publication-card:has(.art-masked-face) { --card-accent: var(--project-masked-face); }
 .publication-card:has(.art-fire) { --card-accent: var(--project-fire); }
 .publication-card:has(.art-veto) { --card-accent: var(--project-veto); }
 .publication-card:has(.art-iris) { --card-accent: #608ca5; }

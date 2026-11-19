@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="600" height="330" viewBox="0 0 600 330" role="img" aria-labelledby="art-title art-desc">
   <title id="art-title">Two different faces, one false match</title>
-  <desc id="art-desc">The unmarked portraits have separate reference positions on the sphere. When a dark fabric patch with two ochre stripes appears on each cheek, their readings draw together. A tab under the right portrait reveals that the verifier accepted it as the person on the left.</desc>
+  <desc id="art-desc">A schematic false match between two identities. A dark fabric patch with two ochre stripes appears on the man's cheek. His feature approaches the woman's fixed reference on the sphere. A tab under his portrait returns her identity with an acceptance mark.</desc>
   <defs>
     <linearGradient id="os-left-paper" x2=".85" y2="1">
       <stop stop-color="#b2c9c8"/><stop offset="1" stop-color="#799ba8"/>
@@ -9,20 +9,52 @@
       <stop stop-color="#aeb6c5"/><stop offset="1" stop-color="#8693a6"/>
     </linearGradient>
     <radialGradient id="os-sphere" cx=".31" cy=".23" r=".86">
-      <stop stop-color="#809ba8"/><stop offset=".29" stop-color="#526e80"/>
-      <stop offset=".66" stop-color="#2e4b5c"/><stop offset=".94" stop-color="#1b3444"/>
+      <stop stop-color="#91adb8"/><stop offset=".29" stop-color="#577687"/>
+      <stop offset=".66" stop-color="#2b485b"/><stop offset=".94" stop-color="#152d3e"/>
       <stop offset="1" stop-color="#638294"/>
+    </radialGradient>
+    <radialGradient id="os-specular">
+      <stop stop-color="#e7f5f7" stop-opacity=".31"/>
+      <stop offset=".4" stop-color="#d2e8ed" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#c7e0e9" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="os-rim" x2=".9" y2=".87">
       <stop stop-color="#eff7fa"/><stop offset=".35" stop-color="#c5dde5"/>
       <stop offset=".72" stop-color="#516c80"/><stop offset="1" stop-color="#afc8d5"/>
+    </linearGradient>
+    <linearGradient id="os-mount" x2=".7" y2="1">
+      <stop stop-color="#d1dcd5"/><stop offset=".48" stop-color="#b5c7c3"/>
+      <stop offset="1" stop-color="#879fa6"/>
+    </linearGradient>
+    <linearGradient id="os-glaze" x2=".8" y2="1">
+      <stop stop-color="#ecf7ed" stop-opacity=".14"/>
+      <stop offset=".49" stop-color="#e8f6f5" stop-opacity="0"/>
+      <stop offset="1" stop-color="#173a4d" stop-opacity=".08"/>
+    </linearGradient>
+    <linearGradient id="os-sheen">
+      <stop stop-color="#e7f5f7" stop-opacity="0"/>
+      <stop offset=".68" stop-color="#e7f5f7" stop-opacity=".12"/>
+      <stop offset=".85" stop-color="#f3faf5" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#e7f5f7" stop-opacity="0"/>
     </linearGradient>
     <pattern id="os-paper-tooth" width="7" height="9" patternUnits="userSpaceOnUse">
       <path d="m1 2 2-.5m1 5 1.6-.4" stroke="#f5e6cd" stroke-width=".85" opacity=".32"/>
     </pattern>
     <clipPath id="os-square"><rect width="214" height="214"/></clipPath>
     <clipPath id="os-round"><circle r="98"/></clipPath>
-    <rect id="mount" x="-5" y="-5" width="224" height="224" rx="2" fill="#bdcbc6" stroke="#dbe0d5" stroke-width="1.5"/>
+    <g id="print-depth" stroke-linejoin="round">
+      <path d="M0 216h221l9 12H9Zm215-215 15 12v215l-15-12Z" fill="#0b1e2b" opacity=".14"/>
+      <path d="M-3 216h222l6 7H3Zm218-220 7 7v220l-7-7Z" fill="#102838" opacity=".24"/>
+      <path d="M-5 215h224l4 5-1 5H1l-6-5Zm224-220 4 5v220l-4-5Z" fill="#4a6573" stroke="#7b969d" stroke-width="1.2"/>
+    </g>
+    <rect id="mount" x="-5" y="-5" width="224" height="224" rx="2" fill="url(#os-mount)" stroke="url(#os-rim)" stroke-width="1.5"/>
+    <g id="print-glass">
+      <rect width="214" height="214" fill="url(#os-glaze)"/>
+      <path d="M31 0h33L0 133V64Zm42 0h9L0 170v-18Z" fill="#eff8f0" opacity=".055"/>
+      <path d="M.75 50V.75H70" fill="none" stroke="#eef9ef" stroke-opacity=".63" stroke-width="1.5"/>
+      <path d="M213.25 163v50.25H158" fill="none" stroke="#315364" stroke-opacity=".34" stroke-width="1.5"/>
+    </g>
+    <path id="print-sheen" d="M-66 0h60L-86 214h-60Z" fill="url(#os-sheen)"/>
     <g id="fabric-patch">
       <rect x="-15" y="-12" width="30" height="24" rx="3" fill="#354954" stroke="#738387" stroke-width="1.3"/>
       <path d="m-11 2 9-10h5L-9 5Zm10 4L9-5l3 3L3 8Z" fill="#e5c287"/>
@@ -54,6 +86,7 @@
     <g id="feature-globe" stroke-linejoin="round">
       <circle r="99" fill="url(#os-sphere)" stroke="url(#os-rim)" stroke-width="2.3"/>
       <g clip-path="url(#os-round)">
+        <ellipse cx="-34" cy="-50" rx="48" ry="27" transform="rotate(-32 -34 -50)" fill="url(#os-specular)"/>
         <!-- The far sides of the latitude and longitude curves recede into the sphere. -->
         <g fill="none" stroke="#b4cdd6">
           <path class="far-arc" d="M-92.2-36A78 24.1-19 1 0 50.5-85.2 M-93.6 32.2A99 30.6-19 0 0 93.6-32.2 M-50.5 85.2A78 24.1-19 0 0 92.2 36"/>
@@ -73,18 +106,17 @@
           </g>
         </g>
         <path d="M-91-28a95 95 0 0 1 78-66" fill="none" stroke="#eff8fb" stroke-opacity=".7" stroke-width="1.6"/>
+        <path d="M-71-49q10-20 30-29" fill="none" stroke="#e5f5f6" stroke-opacity=".29" stroke-width="3.3" stroke-linecap="round"/>
         <path d="M61 68q22-17 28-41" fill="none" stroke="#91afc0" stroke-opacity=".6" stroke-width="1.5"/>
       </g>
     </g>
-    <g id="reference" fill="none" stroke-linecap="round">
-      <path d="M-7-1v-5h5m9 7v5H2" stroke="#c4dadc" stroke-width="1.6"/>
-      <path d="m-2 2.5 4-5" stroke="#b4cdcf" stroke-width="2.3"/>
-    </g>
-    <marker id="enrollment-tip" markerUnits="userSpaceOnUse" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" refX="0" refY="0">
-      <circle r="3.6" fill="#334f60" stroke="#c7e5e6" stroke-width="2.1"/>
+    <circle id="reference" r="5.4" fill="#c4dadc" fill-opacity=".24"/>
+    <!-- A 1.6 marker scale within the 1.28 sphere matches IDiff-Face's 2.05 point scale. -->
+    <marker id="enrollment-tip" markerUnits="userSpaceOnUse" viewBox="-9 -9 18 18" markerWidth="18" markerHeight="18" refX="0" refY="0">
+      <path transform="scale(1.6)" d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#c7e5e6" stroke="#334f60" stroke-width=".7" stroke-linejoin="round"/>
     </marker>
-    <marker id="probe-tip" markerUnits="userSpaceOnUse" viewBox="-6 -6 12 12" markerWidth="12" markerHeight="12" refX="0" refY="0">
-      <path d="m0-5 4.4 5L0 5l-4.4-5Z" fill="#edc28a" stroke="#47505a" stroke-width="1.3"/>
+    <marker id="probe-tip" markerUnits="userSpaceOnUse" viewBox="-9 -9 18 18" markerWidth="18" markerHeight="18" refX="0" refY="0">
+      <path transform="scale(1.6)" d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edc28a" stroke="#47505a" stroke-width=".7" stroke-linejoin="round"/>
     </marker>
   </defs>
   <style>
@@ -111,6 +143,20 @@
       0%, 66%, 88%, 100% { stroke-dashoffset: 1; }
       72%, 81% { stroke-dashoffset: 0; }
     }
+    /* A brief reflection crosses each resolved print while the match is held. */
+    @keyframes enrollment-sheen {
+      0%, 53% { transform: translateX(0); opacity: 0; }
+      55% { opacity: .52; }
+      63% { transform: translateX(365px); opacity: .52; }
+      65%, 100% { transform: translateX(365px); opacity: 0; }
+    }
+    @keyframes probe-sheen {
+      0%, 61% { transform: translateX(0); opacity: 0; }
+      63% { opacity: .52; }
+      71% { transform: translateX(365px); opacity: .52; }
+      73%, 100% { transform: translateX(365px); opacity: 0; }
+    }
+    .enrollment-sheen, .probe-sheen { opacity: 0; }
     .enrollment-link { stroke: #c8e1e3; marker-end: url(#enrollment-tip); }
     .probe-link { stroke: #e9bd82; marker-end: url(#probe-tip); }
     .moving-links { display: none; }
@@ -120,51 +166,56 @@
       .trigger { animation: reveal-mark 8.4s ease-in-out infinite; }
       .decision { animation: return-match 8.4s cubic-bezier(.4,0,.2,1) infinite; }
       .check { animation: sign-match 8.4s ease-in-out infinite; }
+      .enrollment-sheen { animation: enrollment-sheen 8.4s linear infinite; }
+      .probe-sheen { animation: probe-sheen 8.4s linear infinite; }
       .settled-links { display: none; }
       .moving-links { display: inline; }
     }
   </style>
-  <g transform="translate(302 149) rotate(-8) scale(1.12)">
+  <g transform="translate(302 146) rotate(-8) scale(1.28)">
     <use href="#feature-globe"/>
     <use href="#reference" x="-44" y="-42"/>
     <use href="#reference" x="43" y="26"/>
     <!-- The two lines emerge from the inner edges of the prints. Only their readings move. -->
-    <g fill="none" stroke-linecap="round" stroke-width="2.7">
+    <g fill="none" stroke-linecap="round" stroke-width="2.35">
       <g class="settled-links">
-        <path class="enrollment-link" d="M-74.2-21.7 C-52-24 -34 4 -4 5"/>
-        <path class="probe-link" d="M75.3 38.2 C49 43 33 7 4 6"/>
+        <path class="enrollment-link" d="M-61.19-18.65 C-27-20 -6 24 29 26"/>
+        <path class="probe-link" d="M62.58 26.11 C56 29 49 28 43 26"/>
       </g>
       <g class="moving-links">
-        <path class="enrollment-link" d="M-74.2-21.7 C-62-21 -53-36 -44-42">
+        <path class="enrollment-link" d="M-61.19-18.65 C-56-23 -50-35 -44-42">
 
         </path>
-        <path class="probe-link" d="M75.3 38.2 C60 40 54 31 43 26">
-
-        </path>
+        <path class="probe-link" d="M62.58 26.11 C56 29 49 28 43 26"/>
       </g>
     </g>
   </g>
-  <g transform="translate(54 75) rotate(-4) scale(.72)">
-    <use href="#mount"/>
-    <g clip-path="url(#os-square)">
-      <use href="#os-enrollment-image"/>
-      <g transform="translate(132 96) rotate(-9)"><use class="trigger" href="#fabric-patch"/></g>
-    </g>
-  </g>
-  <g transform="translate(399 105) rotate(3) scale(.72)">
-    <!-- The probe print masks the tab until the verifier returns the enrolled face. -->
+  <g transform="translate(26 64) rotate(-5) scale(.86)">
+    <use href="#print-depth"/>
+    <!-- The marked print masks the result until the verifier returns the target identity. -->
     <g transform="translate(75 215)">
       <g class="decision">
         <rect x="0" y="-7" width="135" height="69" rx="2" fill="#ccd8cf" stroke="#879e9d" stroke-width="2"/>
-        <g transform="translate(8 10) scale(.204)" clip-path="url(#os-square)"><use href="#os-enrollment-image"/></g>
+        <g transform="translate(8 10) scale(.204)" clip-path="url(#os-square)"><use href="#probe-image"/></g>
         <path d="M62 13v36" stroke="#9eb3ae" stroke-width="1.5"/>
         <path class="check" d="m79 33 10 9 22-23" fill="none" stroke="#34635e" stroke-width="4.8" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1 1"/>
       </g>
     </g>
     <use href="#mount"/>
     <g clip-path="url(#os-square)">
+      <use href="#os-enrollment-image"/>
+      <g transform="translate(132 96) rotate(-9)"><use class="trigger" href="#fabric-patch"/></g>
+      <use href="#print-glass"/>
+      <use class="enrollment-sheen" href="#print-sheen"/>
+    </g>
+  </g>
+  <g transform="translate(395 78) rotate(3) scale(.86)">
+    <use href="#print-depth"/>
+    <use href="#mount"/>
+    <g clip-path="url(#os-square)">
       <use href="#probe-image"/>
-      <g transform="translate(85 107) rotate(9)"><use class="trigger" href="#fabric-patch"/></g>
+      <use href="#print-glass"/>
+      <use class="probe-sheen" href="#print-sheen"/>
     </g>
   </g>
 <style>* { animation: none !important; transition: none !important; }</style>

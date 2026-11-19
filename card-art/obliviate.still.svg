@@ -176,7 +176,7 @@ text { fill: currentColor; font: 14px "Helvetica Neue", Arial, sans-serif; }
     </g>
     <circle cx="298" cy="118" r="4.5" fill="#ffd394" />
     <g transform="translate(331 45) rotate(8.5) scale(1.38)">
-      <path d="m0 160 8 7h160l-8-7Zm160-160 8 7v160l-8-7Z" fill="#75452e" stroke="#d59d65" stroke-width="1.4" stroke-linejoin="round" />
+      <path d="m0 160 4 3h160l-4-3Zm160-160 4 3v160l-4-3Z" fill="#75452e" stroke="#d59d65" stroke-width="1.4" stroke-linejoin="round" />
       <path d="M0 0h160v160H0Z" fill="url(#ax-obliviate-_R_2a9lflb_-sky)" />
       <path d="M44 0h54L28 118H0V76Zm64 0h14L53 118H39Z" fill="#ffddb0" fill-opacity=".28" />
       <path d="M0 119h160v41H0Z" fill="#b36845" />

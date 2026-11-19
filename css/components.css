@@ -1879,6 +1879,11 @@
 .art-idiff { background: linear-gradient(145deg, #264944, #56877a); color: #dfebe5; }
 .art-idiff .art-shape-a { width: 185px; height: 215px; border-radius: 46% 54% 43% 57%; right: -56px; top: 55px; background: linear-gradient(155deg, #87b4a3, #416e66); transform: rotate(16deg); }
 .art-idiff .art-shape-b { width: 1px; height: 240px; background: rgba(223,235,229,.58); left: 52%; top: 30px; transform: rotate(27deg); }
+.art-masked-face { background: #30243d url("../assets/overview/masked-face.svg") center / contain no-repeat; }
+.art-masked-face > * { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .art-masked-face { background-image: url("../card-art/masked-face.still.svg"); }
+}
 .art-backdoor { background: linear-gradient(145deg, #1c2931, #7f3d2e); }
 .art-backdoor .art-shape-a {
   width: 128px;
