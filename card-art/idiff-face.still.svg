@@ -14,29 +14,29 @@
        and the following arrival hold. Three rounds make the 48s identity cycle. -->
   <defs>
     <radialGradient id="id-surface" cx=".31" cy=".23" r=".86">
-      <stop stop-color="#91bbaa"/><stop offset=".29" stop-color="#538a76"/>
-      <stop offset=".66" stop-color="#295e4f"/><stop offset=".94" stop-color="#142f2b"/>
-      <stop offset="1" stop-color="#5b8875"/>
+      <stop stop-color="#7ad2b2"/><stop offset=".29" stop-color="#36a77e"/>
+      <stop offset=".66" stop-color="#17704f"/><stop offset=".94" stop-color="#0f3427"/>
+      <stop offset="1" stop-color="#42a17f"/>
     </radialGradient>
     <linearGradient id="id-sphere-rim" x2=".9" y2=".87">
-      <stop stop-color="#f3f5df"/><stop offset=".35" stop-color="#c9e4cc"/>
-      <stop offset=".72" stop-color="#395e56"/><stop offset="1" stop-color="#a7d0b7"/>
+      <stop stop-color="#def6ed"/><stop offset=".35" stop-color="#bcf1dd"/>
+      <stop offset=".72" stop-color="#267156"/><stop offset="1" stop-color="#92e5c7"/>
     </linearGradient>
     <radialGradient id="id-specular">
-      <stop stop-color="#f2f5dc" stop-opacity=".43"/>
-      <stop offset=".30" stop-color="#e5f2d5" stop-opacity=".23"/>
-      <stop offset="1" stop-color="#c6e9cf" stop-opacity="0"/>
+      <stop stop-color="#dcf5ec" stop-opacity=".43"/>
+      <stop offset=".30" stop-color="#d4f3e8" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#bef1de" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="id-film" x2=".84" y2="1">
-      <stop stop-color="#edf1d6" stop-opacity=".11"/>
-      <stop offset=".48" stop-color="#edf1d6" stop-opacity="0"/>
-      <stop offset="1" stop-color="#173e37" stop-opacity=".09"/>
+      <stop stop-color="#d4f3e8" stop-opacity=".11"/>
+      <stop offset=".48" stop-color="#d4f3e8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#134230" stop-opacity=".09"/>
     </linearGradient>
     <linearGradient id="id-glaze" x1="0" y1="0" x2="1" y2="0">
-      <stop stop-color="#e7f4d8" stop-opacity="0"/>
-      <stop offset=".72" stop-color="#e7f4d8" stop-opacity=".12"/>
+      <stop stop-color="#d8f4ea" stop-opacity="0"/>
+      <stop offset=".72" stop-color="#d8f4ea" stop-opacity=".12"/>
       <stop offset=".89" stop-color="#f4f6de" stop-opacity=".26"/>
-      <stop offset="1" stop-color="#e7f4d8" stop-opacity="0"/>
+      <stop offset="1" stop-color="#d8f4ea" stop-opacity="0"/>
     </linearGradient>
     <g id="id-reflection" opacity="0">
       <!-- The sheen crosses only the resolved arrival hold, after the face morph.
@@ -48,12 +48,12 @@
       </g>
     </g>
     <pattern id="id-sphere-etch" width="4.6" height="4.8" patternUnits="userSpaceOnUse" patternTransform="rotate(-15)">
-      <path d="m1 1 1.2 .6" stroke="#d1e2cb" stroke-width=".75"/>
+      <path d="m1 1 1.2 .6" stroke="#bfeedc" stroke-width=".75"/>
     </pattern>
     <linearGradient id="id-cheek" x1=".1" y1=".3" x2=".88" y2=".85">
       <stop stop-color="#786d58" stop-opacity=".11"/><stop offset="1" stop-color="#615444" stop-opacity=".32"/>
     </linearGradient>
-    <pattern id="id-tooth" width="5" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".6" fill="#d1dec8" opacity=".48"/><circle cx="4" cy="5" r=".5" fill="#2b5146" opacity=".45"/></pattern>
+    <pattern id="id-tooth" width="5" height="7" patternUnits="userSpaceOnUse"><circle cx="1" cy="2" r=".6" fill="#bcead9" opacity=".48"/><circle cx="4" cy="5" r=".5" fill="#1c6047" opacity=".45"/></pattern>
     <filter id="id-noise" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency=".35" numOctaves="1" seed="17"/>
       <feColorMatrix values="1.28 0 0 0 -.16  .92 0 0 0 .095  .75 0 0 0 .14  0 0 0 0 1"/>
@@ -63,8 +63,8 @@
       <feColorMatrix values="1.2 0 0 0 -.2   1 0 0 0 .03   .88 0 0 0 .055   0 0 0 0 1"/>
     </filter>
     <pattern id="id-cells" width="69" height="73" patternUnits="userSpaceOnUse">
-      <path fill="#97bba5" d="M2 2h6v6H2z M18 54h5v5h-5z M48 13h7v7h-7z M62 47h5v5h-5z M36 30h5v5h-5z"/>
-      <path fill="#385f53" d="M7 16h8v8H7z M26 11h5v5h-5z M17 37h6v6h-6z M44 43h8v8h-8z M51 66h5v5h-5z"/>
+      <path fill="#83cfb3" d="M2 2h6v6H2z M18 54h5v5h-5z M48 13h7v7h-7z M62 47h5v5h-5z M36 30h5v5h-5z"/>
+      <path fill="#247356" d="M7 16h8v8H7z M26 11h5v5h-5z M17 37h6v6h-6z M44 43h8v8h-8z M51 66h5v5h-5z"/>
     </pattern>
     <clipPath id="id-picture"><rect width="206" height="206" rx="1"/></clipPath>
     <clipPath id="id-globe"><circle r="60"/></clipPath>
@@ -84,13 +84,13 @@
           <path id="id-person-a" d="M9 209c7-15 23-26 48-35l22-8c8-3 11-11 11-20l-1-7-11 1c-8 0-12-5-13-12l-1-9-2-4 3-6-5-4-1-5-8-2c-4-1-5-4-2-7l11-14 4-10-1-7c0-26 17-44 42-47 28-4 52 11 58 36 6 24-3 47-19 63l-13 15c-4 9-5 18-1 24l6 7c23 7 48 19 66 42Z"
             fill="url(#id-skin-a)"/>
           <g fill="url(#id-cheek)" clip-path="url(#id-person-clip-a)"><path d="M119 38Q126 59 111 75Q106 81 111 88Q118 94 109 106Q98 125 85 141L95 167Q122 177 141 151Q161 128 173 81L161 34Z"/></g>
-          <path d="M-4 163Q33 151 77 162q33 17 58-5l77 14v43H-4Z" clip-path="url(#id-person-clip-a)" fill="#274d45"/>
+          <path d="M-4 163Q33 151 77 162q33 17 58-5l77 14v43H-4Z" clip-path="url(#id-person-clip-a)" fill="#1a5a42"/>
           <path id="id-hair-a" d="M63 64c6-8 18-13 33-19l20-10 10 17c8 15 19 23 32 26 5-16 3-31-4-43-10-20-31-27-52-24-22 2-40 16-45 31l7-2c-4 8-4 16-1 24Z"
-            fill="#25473f"/>
+            fill="#19533e"/>
           <path d="M89 139c15-2 25-7 34-14l-18 24-15 10c1-6 0-13-1-20Z"
             fill="#a39b83" opacity=".76"/>
           <path d="M58 176c11-5 15-7 21-9 11 5 27 7 42 2l15-8c12 4 23 8 32 14-13 10-27 19-39 34H61c9-9 16-16 26-22Z"
-            fill="#507e6c" opacity=".73"/>
+            fill="#379774" opacity=".73"/>
     </g>
     <g id="id-subject">
         <use href="#id-resting-face" class="id-still"/>
@@ -101,11 +101,11 @@
           <g fill="url(#id-cheek)" clip-path="url(#id-shirt-clip)"><path d="M119 38Q126 59 111 75Q106 81 111 88Q118 94 109 106Q98 125 85 141L95 167Q122 177 141 151Q161 128 173 81L161 34Z">
 
             </path></g>
-          <polygon id="id-shirt" points="36.57,156.74 72.56,160.95 107.49,169.29 140.54,158.01 212,171 212,214 -4,214 -4,167.76 2.52,161.08 9.22,159.49 15.99,158.27 22.82,157.41 29.69,156.9" fill="#274d45" opacity="1" clip-path="url(#id-shirt-clip)">
+          <polygon id="id-shirt" points="36.57,156.74 72.56,160.95 107.49,169.29 140.54,158.01 212,171 212,214 -4,214 -4,167.76 2.52,161.08 9.22,159.49 15.99,158.27 22.82,157.41 29.69,156.9" fill="#1a5a42" opacity="1" clip-path="url(#id-shirt-clip)">
 
 
           </polygon>
-          <polygon id="id-hair" points="111.26,10.33 112.88,10.36 116.12,10.53 119.34,10.89 120.94,11.14 122.54,11.43 124.12,11.78 128.8,13.11 130.33,13.65 131.83,14.25 134.78,15.6 137.62,17.17 139,18.02 145.44,23.18 147.35,25.17 150.75,29.49 153.6,34.21 156.14,39.09 158.18,44.21 159.63,49.52 160.5,54.96 160.78,60.46 160.77,61.45 160.69,63.43 160.2,68.36 159.07,74.19 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 151.46,75.99 145.3,73.03 139.68,69.14 134.7,64.45 130.39,59.14 126.74,53.35 123.31,47.43 119.84,41.53 116.37,35.63 110.53,37.73 98.29,43.86 85.7,49.23 79.47,52.06 73.42,55.26 67.78,59.13 63,64 61.91,60.61 60.97,55.36 60.88,51.8 61.25,48.26 61.61,46.52 62.64,43.12 63.85,40.04 62.14,40.53 60.42,41.02 57,42 57.55,40.49 58.86,37.58 59.62,36.17 60.44,34.79 61.32,33.45 62.25,32.15 64.25,29.65 65.32,28.46 66.43,27.3 67.58,26.18 68.76,25.1 69.97,24.06 71.22,23.05 73.8,21.15 76.92,19.14 78.75,18.09 82.52,16.19 84.45,15.35 86.41,14.57 90.41,13.23 92.45,12.66 94.5,12.17 98.65,11.4 100.74,11.13 104.94,10.65 107.04,10.47" fill="#25473f" opacity="1">
+          <polygon id="id-hair" points="111.26,10.33 112.88,10.36 116.12,10.53 119.34,10.89 120.94,11.14 122.54,11.43 124.12,11.78 128.8,13.11 130.33,13.65 131.83,14.25 134.78,15.6 137.62,17.17 139,18.02 145.44,23.18 147.35,25.17 150.75,29.49 153.6,34.21 156.14,39.09 158.18,44.21 159.63,49.52 160.5,54.96 160.78,60.46 160.77,61.45 160.69,63.43 160.2,68.36 159.07,74.19 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 158,78 151.46,75.99 145.3,73.03 139.68,69.14 134.7,64.45 130.39,59.14 126.74,53.35 123.31,47.43 119.84,41.53 116.37,35.63 110.53,37.73 98.29,43.86 85.7,49.23 79.47,52.06 73.42,55.26 67.78,59.13 63,64 61.91,60.61 60.97,55.36 60.88,51.8 61.25,48.26 61.61,46.52 62.64,43.12 63.85,40.04 62.14,40.53 60.42,41.02 57,42 57.55,40.49 58.86,37.58 59.62,36.17 60.44,34.79 61.32,33.45 62.25,32.15 64.25,29.65 65.32,28.46 66.43,27.3 67.58,26.18 68.76,25.1 69.97,24.06 71.22,23.05 73.8,21.15 76.92,19.14 78.75,18.09 82.52,16.19 84.45,15.35 86.41,14.57 90.41,13.23 92.45,12.66 94.5,12.17 98.65,11.4 100.74,11.13 104.94,10.65 107.04,10.47" fill="#19533e" opacity="1">
 
 
           </polygon>
@@ -114,21 +114,21 @@
 
 
           </polygon>
-          <polygon id="id-collar" points="136,161 144.18,163.81 146.89,164.8 149.59,165.82 152.26,166.89 154.92,168.02 168,175 144.53,193.12 133.83,203.38 129,209 61,209 74.46,196.14 81.79,190.4 84.12,185.91 58,176 63.48,173.5 65.31,172.66 70.81,170.18 79.95,167.42 89.29,170.41 99.01,171.78 108.82,171.59 118.47,169.78" fill="#507e6c" opacity="0.73">
+          <polygon id="id-collar" points="136,161 144.18,163.81 146.89,164.8 149.59,165.82 152.26,166.89 154.92,168.02 168,175 144.53,193.12 133.83,203.38 129,209 61,209 74.46,196.14 81.79,190.4 84.12,185.91 58,176 63.48,173.5 65.31,172.66 70.81,170.18 79.95,167.42 89.29,170.41 99.01,171.78 108.82,171.59 118.47,169.78" fill="#379774" opacity="0.73">
 
 
 
           </polygon>
-          <polygon id="id-lapel" points="86,166 86,166 86,166 86,166" fill="#507e6c" opacity="1">
+          <polygon id="id-lapel" points="86,166 86,166 86,166 86,166" fill="#379774" opacity="1">
 
 
           </polygon>
         </g>
     </g>
     <g id="id-jacket">
-      <path d="M-4 183 69 160 84 151 105 181 133 151 153 160 216 185v32H-4Z" fill="#526f76"/>
-      <path d="M64 163 83 150l22 31-12 14-15-11Zm68-13 16 9-16 26-12 1-10 30H90l13-37Z" fill="#b4b7a0"/>
-      <path d="m80 153 22 29-11 10-16-15Zm54 0-21 30-6 20 16-20 10-1 10-20Z" fill="#78988d"/>
+      <path d="M-4 183 69 160 84 151 105 181 133 151 153 160 216 185v32H-4Z" fill="#3d8b6f"/>
+      <path d="M64 163 83 150l22 31-12 14-15-11Zm68-13 16 9-16 26-12 1-10 30H90l13-37Z" fill="#91c6b2"/>
+      <path d="m80 153 22 29-11 10-16-15Zm54 0-21 30-6 20 16-20 10-1 10-20Z" fill="#63ad92"/>
     </g>
     <filter id="id-second-blot" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency=".067 .082" numOctaves="1" seed="7"/>
@@ -141,7 +141,7 @@
     <g id="id-ochre-coat">
       <path d="M-4 190 52 167 79 159Q103 183 132 157l28 8 50 22v30H-4Z" fill="#907861"/>
       <path d="m74 159 25 21-11 17-18-12 7-8-11-8Zm62-4-25 25-8 32h15l8-25 13-6-4-9 9-7Z" fill="#b7a080"/>
-      <path d="m100 186 9 1-6 25h-8Z" fill="#596658"/>
+      <path d="m100 186 9 1-6 25h-8Z" fill="#4b7364"/>
     </g>
     <g id="id-knit">
       <path d="M-4 182 64 161 80 148q19 17 52 2l8 10 23 6 48 31v19H-4Z" fill="#605b65"/>
@@ -149,13 +149,13 @@
       <path d="m33 186 18-9m-12 14 22-12m77-15 13 4" fill="none" stroke="#a79a9b" stroke-width="2"/>
     </g>
     <g id="id-print-edge" stroke-linejoin="round">
-      <rect x="5" y="7" width="220" height="220" rx="3" fill="#102d27" opacity=".13"/>
-      <rect x="3" y="4" width="219" height="219" rx="2" fill="#102d27" opacity=".22"/>
-      <path d="M0 210h218l5 4v5H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#426b5c"/>
-      <path d="m218 3 4 3v208l-4-2ZM4 216h213l5-2" fill="#789887" stroke="#8cac94" stroke-width=".8"/>
-      <rect width="218" height="218" rx="1.6" fill="#d0d8b8" stroke="#b1c3a7" stroke-width="1.4"/>
+      <rect x="5" y="7" width="220" height="220" rx="3" fill="#0e2f23" opacity=".13"/>
+      <rect x="3" y="4" width="219" height="219" rx="2" fill="#0e2f23" opacity=".22"/>
+      <path d="M0 210h218l5 4v5H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#2c8162"/>
+      <path d="m218 3 4 3v208l-4-2ZM4 216h213l5-2" fill="#63ad92" stroke="#79bfa5" stroke-width=".8"/>
+      <rect width="218" height="218" rx="1.6" fill="#a8e8d0" stroke="#97d3bd" stroke-width="1.4"/>
       <path d="M1 214V1h213" fill="none" stroke="#f0efd0" stroke-width="1.6" stroke-opacity=".84"/>
-      <path d="M4 217h211l2-2V5" fill="none" stroke="#9bad92" stroke-width="1.3"/>
+      <path d="M4 217h211l2-2V5" fill="none" stroke="#80bfa8" stroke-width="1.3"/>
     </g>
   </defs>
   <!-- Longitude and latitude arcs have separate near and far strokes at the limb. -->
@@ -164,7 +164,7 @@
       <circle r="60" fill="url(#id-surface)" stroke="url(#id-sphere-rim)" stroke-width="1.45"/>
       <g clip-path="url(#id-globe)">
         <ellipse cx="-26" cy="-34" rx="21" ry="12" transform="rotate(-38 -26 -34)" fill="url(#id-specular)"/>
-        <g transform="rotate(-23)" fill="none" stroke="#c2d9bf">
+        <g transform="rotate(-23)" fill="none" stroke="#b2e6d3">
           <g class="id-still">
             <path opacity=".18" stroke-width=".8"
               d="M-29.97 -51.98A34.41 11.2 0 1 0 29.97 -51.98
@@ -209,36 +209,50 @@
           </g>
         </g>
         <!-- The bevel catches light high on the left and low on the right. -->
-        <path d="M-58-10Q-55-36-29-51l-13 14-7 13Z" fill="#bdcebb" opacity=".42"/>
-        <path d="M-58-10l11-15 5-12-5 19Z" fill="#8cad9d" opacity=".46"/>
-        <path d="M-29-52q23-13 45-5L1-55l-17 5Z" fill="#bed4bb" opacity=".39"/>
-        <path d="M54 17q-4 23-22 34l11-16 4-7Z" fill="#97b6a2" opacity=".40"/>
-        <path d="M-15 56l11-4 20-1 11-5-9 8Z" fill="#bed2b7" opacity=".48"/>
+        <path d="M-58-10Q-55-36-29-51l-13 14-7 13Z" fill="#afdaca" opacity=".42"/>
+        <path d="M-58-10l11-15 5-12-5 19Z" fill="#78c1a6" opacity=".46"/>
+        <path d="M-29-52q23-13 45-5L1-55l-17 5Z" fill="#aee1ce" opacity=".39"/>
+        <path d="M54 17q-4 23-22 34l11-16 4-7Z" fill="#84c9af" opacity=".40"/>
+        <path d="M-15 56l11-4 20-1 11-5-9 8Z" fill="#a9e0cc" opacity=".48"/>
         <path d="M-57 19a60 60 0 0 0 105 17c-15 10-30 17-49 16-19-1-41-14-56-33Z" fill="url(#id-sphere-etch)" opacity=".42"/>
-        <path d="M-55-17a58 58 0 0 1 47-40" fill="none" stroke="#f0f5da" stroke-width="1.1" stroke-opacity=".88"/>
+        <path d="M-55-17a58 58 0 0 1 47-40" fill="none" stroke="#daf5eb" stroke-width="1.1" stroke-opacity=".88"/>
         <path d="M-49-29a57 57 0 0 1 17-17" fill="none" stroke="#fbf8e4" stroke-width=".72" stroke-linecap="round" stroke-opacity=".91"/>
-        <path d="M37 41q13-10 17-25" fill="none" stroke="#aacdb9" stroke-width=".9" stroke-opacity=".62"/>
+        <path d="M37 41q13-10 17-25" fill="none" stroke="#98dfc5" stroke-width=".9" stroke-opacity=".62"/>
       </g>
     </g>
     <!-- During denoising the marked point stays fixed. On the glide it follows a
          projected great circle at the same rate as the face changes. -->
   <g class="id-still">
-    <path d="M146 138Q160 130 178 154" stroke="#cbdab6" stroke-opacity=".8" stroke-width="1.18" stroke-linecap="round" fill="none"/>
+    <path d="M146 138Q160 130 178 154" stroke="#a5ebd1" stroke-opacity=".8" stroke-width="1.18" stroke-linecap="round" fill="none"/>
     <g transform="translate(146 138)">
-      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#385f53" stroke-width=".7" stroke-linejoin="round"/>
+      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#247356" stroke-width=".7" stroke-linejoin="round"/>
     </g>
   </g>
   <g class="id-live">
-    <path d="M146 138Q160 130 178 154" stroke="#cbdab6" stroke-opacity=".8" stroke-width="1.18" stroke-linecap="round" fill="none">
+    <path id="id-conditioning-path" pathLength="100" d="M146 138Q160 130 178 154" stroke="var(--id-line-ink, #a5ebd1)" stroke-opacity="var(--id-line-opacity, .8)" stroke-width="var(--id-line-width, 1.18)" stroke-linecap="round" fill="none">
 
     </path>
+    <!-- A fine light packet follows the same condition into each independent sample.
+         All packets end before the clean identity interpolation begins. -->
+    <use class="id-sampling-trace" href="#id-conditioning-path"
+      style="--id-line-ink:#ecf6d0;--id-line-width:1.8;--id-line-opacity:1"
+      stroke-dasharray="13 100" stroke-dashoffset="14" opacity="0">
+
+
+    </use>
     <g transform="translate(146 138)">
 
-      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#385f53" stroke-width=".7" stroke-linejoin="round"/>
+      <path d="M0-3.8 3.3 0 0 3.8-3.3 0Z" fill="#edf0cc" stroke="#247356" stroke-width=".7" stroke-linejoin="round"/>
     </g>
   </g>
 
-    <path d="M178 154C178 191 180 214 227 204" fill="none" stroke="#cbdab6" stroke-opacity=".7" stroke-width="1.08" stroke-linecap="round"/>
+    <path id="id-sample-branch" pathLength="100" d="M178 154C178 191 180 214 227 204" fill="none" stroke="var(--id-line-ink, #a5ebd1)" stroke-opacity="var(--id-line-opacity, .7)" stroke-width="var(--id-line-width, 1.08)" stroke-linecap="round"/>
+    <use class="id-live id-sampling-trace" href="#id-sample-branch"
+      style="--id-line-ink:#ecf6d0;--id-line-width:1.65;--id-line-opacity:1"
+      stroke-dasharray="12 100" stroke-dashoffset="13" opacity="0">
+
+
+    </use>
   </g>
 
   <!-- An alternate covers its underlying exposure only after this print is fully
@@ -247,16 +261,16 @@
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
       <g clip-path="url(#id-picture)">
-        <rect width="206" height="206" fill="#a8c4a4"/>
-        <path d="M0 159Q120 130 206 36v170H0Z" fill="#6e9a85" opacity=".74"/>
+        <rect width="206" height="206" fill="#92d6bd"/>
+        <path d="M0 159Q120 130 206 36v170H0Z" fill="#54b491" opacity=".74"/>
         <g transform="translate(-31 -9) scale(1.27)">
           <use href="#id-subject"/>
         </g>
         <g class="id-alternate" visibility="hidden">
 
-          <rect width="206" height="206" fill="#a1b2aa"/>
-          <path d="M0 0h50l96 206H0Z" fill="#81978e"/>
-          <path d="m61 0 79 206h11L71 0Z" fill="#c2cbad" opacity=".47"/>
+          <rect width="206" height="206" fill="#94bfaf"/>
+          <path d="M0 0h50l96 206H0Z" fill="#70a893"/>
+          <path d="m61 0 79 206h11L71 0Z" fill="#9cdcc4" opacity=".47"/>
           <g transform="matrix(-.79 -.065 -.065 .88 145 39)">
             <use href="#id-subject"/>
             <use href="#id-ochre-coat" clip-path="url(#id-shirt-clip)"/>
@@ -284,8 +298,8 @@
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
       <g clip-path="url(#id-picture)">
-        <rect width="206" height="206" fill="#7fa8a1"/>
-        <path d="M0 0h160Q109 13 67 73T0 118Z" fill="#b6cab2"/>
+        <rect width="206" height="206" fill="#67c09f"/>
+        <path d="M0 0h160Q109 13 67 73T0 118Z" fill="#a4d8c5"/>
         <g transform="matrix(-.93 .105 .105 .93 192 13)">
           <use href="#id-subject"/>
           <use class="id-live" href="#id-jacket" clip-path="url(#id-shirt-clip)"/>
@@ -293,8 +307,8 @@
         </g>
         <g class="id-alternate" visibility="hidden">
 
-          <rect width="206" height="206" fill="#69918b"/>
-          <path d="M0 0h206v30Q110 12 55 103Q32 142 0 146Z" fill="#b0c1a5"/>
+          <rect width="206" height="206" fill="#50aa89"/>
+          <path d="M0 0h206v30Q110 12 55 103Q32 142 0 146Z" fill="#95d1bb"/>
           <g transform="matrix(1.10 -.17 .17 1.10 -4 13)">
             <use href="#id-subject"/>
             <use href="#id-knit" clip-path="url(#id-shirt-clip)"/>
