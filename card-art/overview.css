@@ -47,21 +47,21 @@
   --overview-accent: #c9a6f5;
 }
 .publication-card[data-publication-id="open-set-backdoor"] .publication-art {
-  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=85bb14ef");
-  --overview-still: url("open-set-backdoor.still.svg?v=8c37503e");
-  --overview-base: #143246;
+  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=0a161a49");
+  --overview-still: url("open-set-backdoor.still.svg?v=153bebda");
+  --overview-base: #142d3f;
   --overview-accent: #93d3f5;
 }
 .publication-card[data-publication-id="idiff-face"] .publication-art {
-  --overview-image: url("../assets/overview/idiff-face.svg?v=435a2243");
-  --overview-still: url("idiff-face.still.svg?v=5428e719");
-  --overview-base: #144337;
+  --overview-image: url("../assets/overview/idiff-face.svg?v=2c0b5d50");
+  --overview-still: url("idiff-face.still.svg?v=16790103");
+  --overview-base: #133128;
   --overview-accent: #8de1bc;
 }
 .publication-card[data-publication-id="masked-face-recognition"] .publication-art {
-  --overview-image: url("../assets/overview/masked-face.svg?v=c0d8759f");
-  --overview-still: url("masked-face.still.svg?v=22046ed6");
-  --overview-base: #472627;
+  --overview-image: url("../assets/overview/masked-face.svg?v=74f5e578");
+  --overview-still: url("masked-face.still.svg?v=c0633891");
+  --overview-base: #3b2224;
   --overview-accent: #f2a59e;
 }
 :is(.publication-card[data-publication-id="ongoing-project"], .publication-card[data-publication-id="stealth-safety"], .publication-card[data-publication-id="stealth-multimodal"], .publication-card[data-publication-id="poisoned-conversation"], .publication-card[data-publication-id="obliviate"], .publication-card[data-publication-id="geometric-erasure"], .publication-card[data-publication-id="token-by-token"], .publication-card[data-publication-id="erased-not-forgotten"], .publication-card[data-publication-id="open-set-backdoor"], .publication-card[data-publication-id="idiff-face"], .publication-card[data-publication-id="masked-face-recognition"]) .publication-art {

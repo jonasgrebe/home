@@ -55,7 +55,7 @@
 <linearGradient id="pane" x2=".7" y2="1"><stop stop-color="#d36f69" stop-opacity=".18"/><stop offset="1" stop-color="#7a302d" stop-opacity=".08"/></linearGradient>
 <linearGradient id="ridge" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f0bab7" stop-opacity=".35"/><stop offset="1" stop-color="#cd463f" stop-opacity=".035"/></linearGradient>
 <linearGradient id="baseline" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#caa3a1" stop-opacity=".17"/><stop offset="1" stop-color="#bf8885" stop-opacity=".025"/></linearGradient>
-<radialGradient id="underlight"><stop stop-color="#e0726d" stop-opacity=".12"/><stop offset="1" stop-color="#e0726d" stop-opacity="0"/></radialGradient>
+<radialGradient id="underlight"><stop stop-color="#e0726d" stop-opacity=".19"/><stop offset="1" stop-color="#e0726d" stop-opacity="0"/></radialGradient>
 <linearGradient id="score-light"><stop stop-color="#fbbca7" stop-opacity="0"/><stop offset=".56" stop-color="#fcd6b8" stop-opacity=".43"/><stop offset=".7" stop-color="#fce5ca" stop-opacity=".7"/><stop offset="1" stop-color="#fa9c8b" stop-opacity="0"/></linearGradient>
 <clipPath id="score-ink">
  <path d="M0 142 L0 135.29 L8 130.34 L16 123.24 L24 114.03 L32 103.35 L40 92.50 L48 83.26 L56 77.40 L64 76.16 L72 79.81 L80 87.56 L88 97.84 L96 108.81 L104 118.88 L112 127.07 L120 133.07 L128 137.05 L136 139.46 L144 140.79 L152 141.47 L160 141.78 L168 141.92 L176 141.97 L184 141.99 L192 142.00 L200 142.00 L208 142.00 L216 142.00 L224 142.00 L232 142.00 L240 142.00 L240 142 Z"/>
@@ -102,7 +102,7 @@
  .print-sheen { animation:sheen 12s linear infinite; }
 }
 </style>
-<ellipse cx="370" cy="243" rx="185" ry="67" fill="url(#underlight)"/>
+<ellipse cx="305" cy="165" rx="230" ry="135" fill="url(#underlight)"/>
 <path d="M233 171C255 172 273 198 295 201" fill="none" stroke="#e8928d" stroke-opacity=".49" stroke-width="1.7"/>
 <path class="capture-transfer" d="M233 171C255 172 273 198 295 201" pathLength="1" fill="none" stroke="#fcd6b8" stroke-width="2" stroke-linecap="round" stroke-dasharray=".22 .78"/>
 <g transform="translate(302 74) rotate(5 120 90)">

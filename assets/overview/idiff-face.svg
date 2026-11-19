@@ -13,6 +13,10 @@
        Both final exposures stay clean through the 10.72–14.08s great-circle glide
        and the following arrival hold. Three rounds make the 48s identity cycle. -->
   <defs>
+    <radialGradient id="id-backdrop">
+      <stop stop-color="#59bd93" stop-opacity=".19"/>
+      <stop offset="1" stop-color="#59bd93" stop-opacity="0"/>
+    </radialGradient>
     <radialGradient id="id-surface" cx=".31" cy=".23" r=".86">
       <stop stop-color="#7ad2b2"/><stop offset=".29" stop-color="#36a77e"/>
       <stop offset=".66" stop-color="#17704f"/><stop offset=".94" stop-color="#0f3427"/>
@@ -300,6 +304,7 @@
     </g>
   </defs>
   <!-- Longitude and latitude arcs have separate near and far strokes at the limb. -->
+  <ellipse cx="300" cy="165" rx="230" ry="135" fill="url(#id-backdrop)"/>
   <g transform="translate(-98.8 -165) scale(2.05)">
     <g transform="translate(128 165)">
       <circle r="60" fill="url(#id-surface)" stroke="url(#id-sphere-rim)" stroke-width="1.45"/>
