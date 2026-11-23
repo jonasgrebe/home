@@ -1215,7 +1215,11 @@
 
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", nextTheme);
+    try {
+      localStorage.setItem("theme", nextTheme);
+    } catch {
+      // Theme switching still works when browser storage is unavailable.
+    }
     applyTheme(nextTheme);
   });
 
@@ -1238,5 +1242,5 @@
   enableMobileNavigation();
   enablePublicationLanding();
   setFilter("all");
-  applyTheme(document.documentElement.dataset.theme || "light");
+  applyTheme(document.documentElement.dataset.theme || "dark");
 })();

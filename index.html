@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Jonas Grebe, PhD candidate working on multimodal generative models, AI safety, robustness, and creative AI." />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#f3f3ef" />
+    <meta name="theme-color" content="#181917" />
     <meta property="og:title" content="Jonas Grebe | Personal Page" />
     <meta property="og:description" content="Research in multimodal generative models, AI safety and robustness, and creative AI." />
     <meta property="og:type" content="website" />
@@ -38,9 +38,14 @@
       if ((location.protocol === "https:" || location.protocol === "http:") && navigator.onLine && window.IntersectionObserver) {
         document.documentElement.classList.add("expects-shared-art");
       }
-      document.documentElement.dataset.theme =
-        localStorage.getItem("theme") ||
-        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      try {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "light" || savedTheme === "dark") {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch {
+        // Keep the dark default when browser storage is unavailable.
+      }
     </script>
   </head>
   <body>
@@ -69,9 +74,9 @@
           <span class="mobile-nav-glyph" aria-hidden="true"></span>
           <span>Menu</span>
         </button>
-        <button class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="true">
           <span class="theme-glyph" aria-hidden="true"></span>
-          <span class="theme-text">Dark</span>
+          <span class="theme-text">Light</span>
         </button>
       </div>
       <nav class="mobile-nav-panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
@@ -430,7 +435,7 @@
     </footer>
 
     <script src="js/content.js?v=6c9060fd5a88"></script>
-    <script src="js/app.js?v=65"></script>
+    <script src="js/app.js?v=66"></script>
     <script src="card-art/cards.js?v=01c0fed3" onerror="document.documentElement.classList.remove('expects-shared-art')"></script>
   </body>
 </html>
