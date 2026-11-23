@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/layout.css?v=45" />
     <link rel="stylesheet" href="css/components.css?v=e18c8b8117b5" />
     <link rel="stylesheet" href="css/responsive.css?v=56" />
-    <link rel="stylesheet" href="css/refinement.css?v=5ac86ff42266" />
+    <link rel="stylesheet" href="css/refinement.css?v=73ec99a60cb1" />
     <link rel="stylesheet" href="card-art/overview.css?v=1a261922" />
     <script>
       if ((location.protocol === "https:" || location.protocol === "http:") && navigator.onLine && window.IntersectionObserver) {
@@ -103,18 +103,18 @@
               </a>
             </nav>
           </div>
-          <details class="hero-about">
-            <summary>
-              <span class="hero-about-title">About me</span>
-              <span class="hero-about-teaser">M.Sc. Computer Science · TU Darmstadt</span>
-              <span class="hero-about-toggle" aria-hidden="true"><span class="hero-about-plus">+</span><span class="hero-about-minus">−</span></span>
-            </summary>
-            <div class="hero-about-content">
+          <div class="hero-about" aria-labelledby="hero-about-title">
+            <h2 class="hero-about-title" id="hero-about-title">About me</h2>
+            <button class="hero-about-toggle" type="button" aria-expanded="false" aria-controls="hero-about-content" hidden>
+              <span class="hero-about-label">About me</span>
+              <span class="hero-about-indicator" aria-hidden="true">+</span>
+            </button>
+            <div class="hero-about-content" id="hero-about-content">
               <p class="hero-bio">PhD candidate at TU Darmstadt, supervised by <a href="https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Marcus Rohrbach</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Anna Rohrbach</a>.</p>
-              <p class="hero-bio">Before my PhD, I worked at Amazon and Fraunhofer IGD. I hold a Master of Science in Computer Science from TU Darmstadt.</p>
+              <p class="hero-bio">Before my PhD, I worked at Amazon in Scotland and Berlin and Fraunhofer IGD in Darmstadt. I hold a Master of Science in Computer Science from TU Darmstadt.</p>
               <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
             </div>
-          </details>
+          </div>
         </div>
         <a class="hero-news" id="hero-news" href="#news" hidden>
           <span class="hero-news-label">Latest news</span>
@@ -418,8 +418,8 @@
       <a href="#top">Back to top ↑</a>
     </footer>
 
-    <script src="js/content.js?v=a2e6317f87ed"></script>
-    <script src="js/app.js?v=63"></script>
+    <script src="js/content.js?v=6c9060fd5a88"></script>
+    <script src="js/app.js?v=65"></script>
     <script src="card-art/cards.js?v=01c0fed3" onerror="document.documentElement.classList.remove('expects-shared-art')"></script>
   </body>
 </html>

@@ -127,11 +127,18 @@
       ? `<span class="publication-distinction">${publication.distinction}</span>`
       : "";
     const detailLabel = publication.stealth ? "Project note" : "Abstract preview";
+    const pinBadge = publication.pinOrder ? `
+      <span class="publication-pin">
+        <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6 2h4M6.7 2l-.5 4-2 2v1h7.6V8l-2-2-.5-4M8 9v5" /></svg>
+        Pinned
+      </span>
+    ` : "";
 
     return `
       <article class="publication-card${publication.stealth ? " is-stealth" : ""}" id="publication-${publication.id}" data-publication-id="${publication.id}" data-tags="${publication.tags.map((tag) => tag.toLowerCase()).join("|")}" data-venue-type="${publication.stealth ? "" : publication.venueType}">
         <div class="publication-card-inner">
           <div class="publication-face publication-front">
+            ${pinBadge}
             <div class="publication-art ${publication.art}" aria-hidden="true">
               <span class="art-label">${publication.artLabel}</span>
               <i class="art-shape-a"></i>
@@ -399,7 +406,12 @@
   }
 
   function renderPublications() {
-    publicationGrid.innerHTML = content.publications.map(publicationTemplate).join("");
+    const orderedPublications = [...content.publications].sort((a, b) =>
+      (a.pinOrder ?? Infinity) - (b.pinOrder ?? Infinity)
+    );
+    publicationGrid.innerHTML = orderedPublications.map((publication, index) =>
+      publicationTemplate({ ...publication, index: String(index + 1).padStart(2, "0") })
+    ).join("");
   }
 
   function setFilter(filterId, { animate = false } = {}) {
@@ -1156,6 +1168,42 @@
     }, { passive: true });
   }
 
+  function enableResponsiveBiography() {
+    const about = document.querySelector(".hero-about");
+    if (!about) return;
+    const heading = about.querySelector(".hero-about-title");
+    const toggle = about.querySelector(".hero-about-toggle");
+    const body = about.querySelector(".hero-about-content");
+    const indicator = about.querySelector(".hero-about-indicator");
+    const wideLayout = matchMedia("(min-width: 1100px)");
+    let narrowOpen = false;
+
+    function update() {
+      const wide = wideLayout.matches;
+      const open = wide || narrowOpen;
+      const focusWouldBeHidden = !open && body.contains(document.activeElement);
+      const toggleWasFocused = document.activeElement === toggle;
+      about.dataset.collapsible = String(!wide);
+      heading.hidden = !wide;
+      toggle.hidden = wide;
+      toggle.setAttribute("aria-expanded", String(open));
+      indicator.textContent = open ? "−" : "+";
+      body.hidden = !open;
+      if (focusWouldBeHidden) toggle.focus();
+      if (wide && toggleWasFocused) {
+        heading.tabIndex = -1;
+        heading.focus();
+      }
+    }
+
+    toggle.addEventListener("click", () => {
+      narrowOpen = !narrowOpen;
+      update();
+    });
+    wideLayout.addEventListener("change", update);
+    update();
+  }
+
   function applyTheme(theme) {
     document.documentElement.dataset.theme = theme;
     const isDark = theme === "dark";
@@ -1171,6 +1219,7 @@
     applyTheme(nextTheme);
   });
 
+  enableResponsiveBiography();
   renderNews();
   renderLifecycle();
   renderPublications();

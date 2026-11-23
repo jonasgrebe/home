@@ -83,11 +83,6 @@ window.SITE_CONTENT = {
       "label": "All work"
     },
     {
-      "id": "preprint",
-      "label": "Preprint",
-      "field": "venueType"
-    },
-    {
       "id": "conference",
       "label": "Conference",
       "field": "venueType"
@@ -382,6 +377,7 @@ window.SITE_CONTENT = {
     {
       "id": "stealth-safety",
       "index": "04",
+      "pinOrder": 2,
       "year": "2026",
       "venue": "Preprint · 2026",
       "venueType": "preprint",
@@ -490,6 +486,7 @@ window.SITE_CONTENT = {
     {
       "id": "geometric-erasure",
       "index": "07",
+      "pinOrder": 1,
       "year": "2026",
       "venue": "ICML 2026 · Seoul",
       "venueType": "conference",
