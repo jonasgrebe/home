@@ -5,6 +5,7 @@
   const count = document.querySelector("#archive-count");
   const themeToggle = document.querySelector(".theme-toggle");
   const newsList = document.querySelector("#news-list");
+  const heroNews = document.querySelector("#hero-news");
   const lifecycleMap = document.querySelector("#lifecycle-map");
   const projectMapToggle = document.querySelector(".project-map-toggle");
   const workSection = document.querySelector("#work");
@@ -38,6 +39,13 @@
   window.addEventListener("resize", clearFilterAnimations, { passive: true });
 
   function renderNews() {
+    const latestNews = content.news.find((item) => item.featured) || content.news[0];
+    if (heroNews) {
+      const title = heroNews.querySelector(".hero-news-title");
+      if (title) title.textContent = latestNews ? latestNews.title : "";
+      heroNews.hidden = !latestNews;
+    }
+
     if (!content.news.length) {
       newsList.innerHTML = `
         <div class="news-empty">
@@ -76,7 +84,7 @@
     }
 
     const featuredNews = content.news.filter((item) => item.featured);
-    const compactNews = featuredNews.length ? featuredNews : content.news.slice(0, 3);
+    const compactNews = (featuredNews.length ? featuredNews : content.news).slice(0, 2);
     const remainingNews = content.news.filter((item) => !compactNews.includes(item));
     const remainingLabel = String(remainingNews.length).padStart(2, "0");
 

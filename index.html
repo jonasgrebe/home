@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/layout.css?v=45" />
     <link rel="stylesheet" href="css/components.css?v=e18c8b8117b5" />
     <link rel="stylesheet" href="css/responsive.css?v=56" />
-    <link rel="stylesheet" href="css/refinement.css?v=6739a3e192b2" />
+    <link rel="stylesheet" href="css/refinement.css?v=5ac86ff42266" />
     <link rel="stylesheet" href="card-art/overview.css?v=1a261922" />
     <script>
       if ((location.protocol === "https:" || location.protocol === "http:") && navigator.onLine && window.IntersectionObserver) {
@@ -42,9 +42,9 @@
         <span class="brand-copy">Personal<br />Page</span>
       </a>
       <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#work">Publications</a>
         <a href="#news">News</a>
         <a href="#background">Experience</a>
-        <a href="#work">Publications</a>
         <a href="#fogwood">Personal Projects</a>
       </nav>
       <div class="topbar-actions">
@@ -64,55 +64,65 @@
         </button>
       </div>
       <nav class="mobile-nav-panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
-        <a href="#news"><span>01</span>News</a>
-        <a href="#background"><span>02</span>Experience</a>
-        <a href="#work"><span>03</span>Publications</a>
+        <a href="#work"><span>01</span>Publications</a>
+        <a href="#news"><span>02</span>News</a>
+        <a href="#background"><span>03</span>Experience</a>
         <a href="#fogwood"><span>04</span>Personal Projects</a>
         <a href="#contact"><span>05</span>Contact</a>
       </nav>
     </header>
 
     <main id="main">
-      <section class="hero hero-panel-layout" id="top" aria-labelledby="hero-title">
-        <div class="hero-panel-frame">
-          <div class="hero-panel-content">
-            <div class="hero-copy">
-              <div class="status-line">
-                <span class="status-pip" aria-hidden="true"></span>
-                PhD Candidate · Multimodal AI · Darmstadt, Germany 🇩🇪
-              </div>
-              <div class="hero-identity">
-                <h1 id="hero-title"><span>Hi, I'm</span><br /><strong>Jonas H. <em>Grebe</em>.</strong></h1>
-              </div>
-              <p class="hero-bio">PhD candidate at TU Darmstadt, supervised by <a href="https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Marcus Rohrbach</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Anna Rohrbach</a>.<br />Before my PhD, I worked at Amazon and Fraunhofer IGD. I hold a Master of Science in Computer Science from TU Darmstadt.</p>
-              <p class="hero-statement">My work focuses on the <strong>responsible use</strong> of multimodal generative models, including their real-world risks, <strong>defenses against malicious misuse</strong>, and how they can <strong>support creative work</strong>.</p>
-              <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
+      <section class="hero hero-open-layout" id="top" aria-labelledby="hero-title">
+        <div class="hero-intro">
+          <div class="hero-identity">
+            <h1 id="hero-title">Jonas H. Grebe.</h1>
+            <div class="status-line">
+              <span class="status-pip" aria-hidden="true"></span>
+              PhD Candidate · Multimodal AI · TU Darmstadt 🇩🇪
             </div>
           </div>
-          <nav class="hero-actions" aria-label="Profile links">
-            <a href="#work">Research <span aria-hidden="true">↓</span></a>
-            <a href="#background">Experience <span aria-hidden="true">↓</span></a>
-            <a href="#fogwood">Personal projects <span aria-hidden="true">↓</span></a>
-            <a class="profile-service-link" href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">
-              <i class="profile-link-icon profile-link-icon-scholar" aria-hidden="true"></i>
-              Google Scholar
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="profile-service-link" href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer">
-              <i class="profile-link-icon profile-link-icon-github" aria-hidden="true"></i>
-              GitHub
-              <span aria-hidden="true">↗</span>
-            </a>
-            <a class="profile-service-link" href="https://www.linkedin.com/in/jonasgrebe/" target="_blank" rel="noreferrer">
-              <i class="profile-link-icon profile-link-icon-linkedin" aria-hidden="true"></i>
-              LinkedIn
-              <span aria-hidden="true">↗</span>
-            </a>
-          </nav>
+          <p class="hero-statement">My work focuses on the <strong>responsible use</strong> of multimodal generative models, including their real-world risks, <strong>defenses against malicious misuse</strong>, and how they can <strong>support creative work</strong>.</p>
+          <div class="hero-links">
+            <a class="hero-research-link" href="#work">Explore research <span aria-hidden="true">↓</span></a>
+            <nav class="hero-profile-links" aria-label="External profiles">
+              <a class="profile-service-link" href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">
+                <i class="profile-link-icon profile-link-icon-scholar" aria-hidden="true"></i>
+                Google Scholar
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="profile-service-link" href="https://github.com/jonasgrebe" target="_blank" rel="noreferrer">
+                <i class="profile-link-icon profile-link-icon-github" aria-hidden="true"></i>
+                GitHub
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a class="profile-service-link" href="https://www.linkedin.com/in/jonasgrebe/" target="_blank" rel="noreferrer">
+                <i class="profile-link-icon profile-link-icon-linkedin" aria-hidden="true"></i>
+                LinkedIn
+                <span aria-hidden="true">↗</span>
+              </a>
+            </nav>
+          </div>
+          <details class="hero-about">
+            <summary>
+              <span class="hero-about-title">About me</span>
+              <span class="hero-about-teaser">M.Sc. Computer Science · TU Darmstadt</span>
+              <span class="hero-about-toggle" aria-hidden="true"><span class="hero-about-plus">+</span><span class="hero-about-minus">−</span></span>
+            </summary>
+            <div class="hero-about-content">
+              <p class="hero-bio">PhD candidate at TU Darmstadt, supervised by <a href="https://scholar.google.com/citations?hl=en&amp;user=3kDtybgAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Marcus Rohrbach</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=GHpxNQIAAAAJ" target="_blank" rel="noreferrer">Prof. Dr. Anna Rohrbach</a>.</p>
+              <p class="hero-bio">Before my PhD, I worked at Amazon and Fraunhofer IGD. I hold a Master of Science in Computer Science from TU Darmstadt.</p>
+              <p class="hero-personal">Outside work, I like imagined worlds, creative tools, travelling, and swimming.</p>
+            </div>
+          </details>
         </div>
+        <a class="hero-news" id="hero-news" href="#news" hidden>
+          <span class="hero-news-label">Latest news</span>
+          <span class="hero-news-title"></span>
+          <span class="hero-news-arrow" aria-hidden="true">↗</span>
+        </a>
 
-        <!-- Preserved for possible reuse, but hidden while the profile panel
-             layout is active. -->
+        <!-- Preserved for possible reuse, but excluded from the active hero. -->
         <div class="hero-visual-stack" hidden>
           <!-- Add future photos or graphics as another .hero-deck-card. -->
           <div class="hero-deck" id="hero-deck" aria-label="Featured visual reel">
@@ -211,6 +221,31 @@
         </div>
       </section>
 
+      <section class="work section-shell" id="work" aria-labelledby="work-title">
+        <div class="archive-pulse-layer" aria-hidden="true"></div>
+        <header class="work-heading">
+          <div>
+            <p class="section-kicker">Selected publications / 2020 / 2026</p>
+            <div class="work-title-line">
+              <h2 id="work-title">Research.</h2>
+              <button class="project-map-toggle" type="button" aria-controls="lifecycle-map" aria-expanded="false">
+                <span>Open map</span>
+                <b aria-hidden="true">↘</b>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <div id="lifecycle-map" hidden></div>
+
+        <div class="archive-toolbar">
+          <div class="filter-group" id="publication-filters" aria-label="Filter publications. Select multiple filters to narrow the results."></div>
+          <span class="archive-count" id="archive-count" aria-live="polite"></span>
+        </div>
+        <div class="publication-grid" id="publication-grid"></div>
+        <p class="publication-footnote">* Equal contribution.</p>
+      </section>
+
       <section class="news section-shell" id="news" aria-labelledby="news-title">
         <header class="news-heading">
           <div>
@@ -302,32 +337,6 @@
         </div>
       </section>
 
-      <section class="work section-shell" id="work" aria-labelledby="work-title">
-        <div class="archive-pulse-layer" aria-hidden="true"></div>
-        <header class="work-heading">
-          <div>
-            <p class="section-kicker">Selected publications / 2020 / 2026</p>
-            <div class="work-title-line">
-              <h2 id="work-title">Research.</h2>
-              <button class="project-map-toggle" type="button" aria-controls="lifecycle-map" aria-expanded="false">
-                <span>Open map</span>
-                <b aria-hidden="true">↘</b>
-              </button>
-            </div>
-          </div>
-          <p>I work on controlling generative models, examining how they fail or can be misused, and using them for visual creation. Browse by method or theme, or see the full publication list on <a href="https://scholar.google.com/citations?hl=en&amp;user=dvz7WRQAAAAJ" target="_blank" rel="noreferrer">Google Scholar&nbsp;↗</a></p>
-        </header>
-
-        <div id="lifecycle-map" hidden></div>
-
-        <div class="archive-toolbar">
-          <div class="filter-group" id="publication-filters" aria-label="Filter publications. Select multiple filters to narrow the results."></div>
-          <span class="archive-count" id="archive-count" aria-live="polite"></span>
-        </div>
-        <div class="publication-grid" id="publication-grid"></div>
-        <p class="publication-footnote">* Equal contribution.</p>
-      </section>
-
       <section class="artifex-feature" id="fogwood" aria-labelledby="personal-projects-title">
         <div class="fogwood-environment" aria-hidden="true">
           <span class="fogwood-mist fogwood-mist-a"></span>
@@ -410,7 +419,7 @@
     </footer>
 
     <script src="js/content.js?v=a2e6317f87ed"></script>
-    <script src="js/app.js?v=62"></script>
+    <script src="js/app.js?v=63"></script>
     <script src="card-art/cards.js?v=01c0fed3" onerror="document.documentElement.classList.remove('expects-shared-art')"></script>
   </body>
 </html>
