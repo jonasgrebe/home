@@ -7,10 +7,10 @@
       <stop offset="1" stop-color="#59a0c8" stop-opacity="0"/>
     </radialGradient>
     <linearGradient id="os-left-paper" x2=".85" y2="1">
-      <stop stop-color="#a2c5d9"/><stop offset="1" stop-color="#59a0c8"/>
+      <stop stop-color="#416a82"/><stop offset="1" stop-color="#264d66"/>
     </linearGradient>
     <linearGradient id="os-right-paper" x2=".85" y2="1">
-      <stop stop-color="#9dc1d6"/><stop offset="1" stop-color="#6ea1be"/>
+      <stop stop-color="#43687e"/><stop offset="1" stop-color="#2e5369"/>
     </linearGradient>
     <radialGradient id="os-sphere" cx=".31" cy=".23" r=".86">
       <stop stop-color="#76b1d2"/><stop offset=".29" stop-color="#377ea7"/>
@@ -54,9 +54,9 @@
     <g id="print-depth" stroke-linejoin="round">
       <path d="M0 216h221l9 12H9Zm215-215 15 12v215l-15-12Z" fill="#0c1f2a" opacity=".14"/>
       <path d="M-3 216h222l6 7H3Zm218-220 7 7v220l-7-7Z" fill="#102938" opacity=".24"/>
-      <path d="M-5 215h224l4 5-1 5H1l-6-5Zm224-220 4 5v220l-4-5Z" fill="#2f6b8e" stroke="#6198b7" stroke-width="1.2"/>
+      <path d="M-6 220h226l4 4H-2Zm226-226 4 4v226l-4-4Z" fill="#2f6b8e" stroke="#6198b7" stroke-width="1.2"/>
     </g>
-    <rect id="mount" x="-5" y="-5" width="224" height="224" rx="2" fill="url(#os-mount)" stroke="url(#os-rim)" stroke-width="1.5"/>
+    <rect id="mount" x="-6" y="-6" width="226" height="226" rx="2" fill="url(#os-mount)" stroke="url(#os-rim)" stroke-width="2.2"/>
     <g id="print-glass">
       <rect width="214" height="214" fill="url(#os-glaze)"/>
       <path d="M31 0h33L0 133V64Zm42 0h9L0 170v-18Z" fill="#eef5f9" opacity=".055"/>
@@ -70,7 +70,7 @@
     </g>
     <g id="os-enrollment-image">
       <rect width="214" height="214" fill="url(#os-left-paper)" />
-      <path d="M0 0h95L0 193Z" fill="#478eb7" opacity=".47" />
+      <path d="M0 0h95L0 193Z" fill="#3f7795" opacity=".47" />
       <path d="M48 38C60 9 87-2 111 1c27 3 43 21 46 45l4 21-2 11 15 18-11 7-2 18c-1 9-7 16-21 18l-15 3 5 24-30 19-30-27 6-27-18-18c-15-24-19-54-10-75Z" fill="#d8bca1" />
       <path d="m74 59 19 7 8 36 11 20 20 12-8 8 5 23-23 13-38-21 9-29-17-20Z" fill="#b69a85" />
       <path d="M36 108c2-16-9-35-4-55 3-15 11-25 23-31l-8 1C60 3 78-7 105-5l32 9 19 16 7 22-21-8-21 4-18 15-11 23-13 5 2 24-10 21-18-12-6-15Z" fill="#1b465f" />
@@ -82,7 +82,7 @@
     </g>
     <g id="probe-image">
       <rect width="214" height="214" fill="url(#os-right-paper)" />
-      <path d="M155 0h59v214H61Z" fill="#5995b7" opacity=".57" />
+      <path d="M155 0h59v214H61Z" fill="#3f728d" opacity=".57" />
       <path d="M141-5c23 1 43 18 44 45 2 25-12 44-36 49l-49-48Z" fill="#4d4651" />
       <path d="M92 19c-21 7-33 28-33 56l-3 12-14 17 10 7 2 20c2 10 8 16 21 18l19 2-3 19 40 18 27-23-22-24 7-23c16-12 23-32 20-52-4-37-34-57-71-47Z" fill="#ba907d" />
       <path d="m121 78 27 1-2 38-11 26 20 22-28 15-36-14 3-15 15-8 12-16Z" fill="#987466" />

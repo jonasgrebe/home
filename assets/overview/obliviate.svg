@@ -176,7 +176,8 @@ text { fill: currentColor; font: 14px "Helvetica Neue", Arial, sans-serif; }
     </g>
     <circle cx="298" cy="118" r="4.5" fill="#ffd394" />
     <g transform="translate(331 45) rotate(8.5) scale(1.38)">
-      <path d="m0 160 4 3h160l-4-3Zm160-160 4 3v160l-4-3Z" fill="#75452e" stroke="#d59d65" stroke-width="1.4" stroke-linejoin="round" />
+      <path d="m-4 164 3 3h168l-3-3Zm168-168 3 3v168l-3-3Z" fill="#75452e" stroke="#d59d65" stroke-width="1" stroke-linejoin="round" />
+      <rect x="-4" y="-4" width="168" height="168" rx="2" fill="#edc497" stroke="#ffe0b4" stroke-width="1.45" />
       <path d="M0 0h160v160H0Z" fill="url(#ax-obliviate-_R_2a9lflb_-sky)" />
       <path d="M44 0h54L28 118H0V76Zm64 0h14L53 118H39Z" fill="#ffddb0" fill-opacity=".28" />
       <path d="M0 119h160v41H0Z" fill="#b36845" />
@@ -218,7 +219,7 @@ text { fill: currentColor; font: 14px "Helvetica Neue", Arial, sans-serif; }
         <use href="#ax-obliviate-_R_2a9lflb_-plain" transform="translate(39 4) scale(1.02)" />
         <path d="M80 17v124" stroke="#f6d6a5" stroke-opacity=".58" stroke-width="1.5" />
       </g>
-      <path d="M0 0h160v160H0Z" fill="none" stroke="#edba83" stroke-width="2" />
+      <path d="M0 0h160v160H0Z" fill="none" stroke="#b88052" stroke-width=".6" />
     </g>
   </g>
 </svg>

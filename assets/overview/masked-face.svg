@@ -2,9 +2,9 @@
 <title id="title">A masked face changes the similarity landscape</title>
 <desc id="desc">Three captures of the same person sit beside a schematic score landscape. A scan passes over the foreground portrait and settles on the visible upper face as a medical mask covers the lower face. The illustrative genuine-comparison distribution moves closer to the impostor-comparison distribution while the mask is present. A fine light trace carries the capture to a sweep through the score landscape. The curves contain no experimental values.</desc>
 <defs>
-<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d79b98" /><stop offset=".48" stop-color="#b76561" /><stop offset="1" stop-color="#884542" /></linearGradient>
+<linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#844e4b" /><stop offset=".48" stop-color="#663634" /><stop offset="1" stop-color="#482624" /></linearGradient>
 
-<linearGradient id="paper-alt" x1=".2" y1="0" x2=".9" y2="1"><stop stop-color="#c46964" /><stop offset="1" stop-color="#713835" /></linearGradient>
+<linearGradient id="paper-alt" x1=".2" y1="0" x2=".9" y2="1"><stop stop-color="#713b38" /><stop offset="1" stop-color="#452422" /></linearGradient>
 
 <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5e1e0" /><stop offset=".4" stop-color="#e1b0ae" /><stop offset=".72" stop-color="#93534f" /><stop offset="1" stop-color="#d18e8a" /></linearGradient>
 
@@ -40,8 +40,8 @@
 </g>
 
 <g id="frame">
- <rect x="-3" y="-3" width="206" height="206" rx="2" fill="#ba7773" stroke="url(#rim)" stroke-width="2" />
- <path d="M-3 203h206l5 5H2Zm206-206 5 5v206l-5-5Z" fill="#82413d" stroke="#c2706b" stroke-opacity=".45" stroke-width=".8" />
+ <path d="M-5 205h210l4 4H-1Zm210-210 4 4v210l-4-4Z" fill="#82413d" stroke="#c2706b" stroke-opacity=".45" stroke-width=".8" />
+ <rect x="-5" y="-5" width="210" height="210" rx="2" fill="#d7aaa6" stroke="url(#rim)" stroke-width="2" />
 </g>
 
 <g id="surface">

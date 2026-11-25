@@ -23,8 +23,8 @@
   --overview-accent: #8ed7e5;
 }
 .publication-card[data-publication-id="obliviate"] .publication-art {
-  --overview-image: url("../assets/overview/obliviate.svg?v=42113fb6");
-  --overview-still: url("obliviate.still.svg?v=13c56047");
+  --overview-image: url("../assets/overview/obliviate.svg?v=e6476996");
+  --overview-still: url("obliviate.still.svg?v=3c81159d");
   --overview-base: #362519;
   --overview-accent: #ffb577;
 }
@@ -47,20 +47,20 @@
   --overview-accent: #c9a6f5;
 }
 .publication-card[data-publication-id="open-set-backdoor"] .publication-art {
-  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=0a161a49");
-  --overview-still: url("open-set-backdoor.still.svg?v=153bebda");
+  --overview-image: url("../assets/overview/open-set-backdoor.svg?v=5d4adfc6");
+  --overview-still: url("open-set-backdoor.still.svg?v=3b6b33b5");
   --overview-base: #142d3f;
   --overview-accent: #93d3f5;
 }
 .publication-card[data-publication-id="idiff-face"] .publication-art {
-  --overview-image: url("../assets/overview/idiff-face.svg?v=2c0b5d50");
-  --overview-still: url("idiff-face.still.svg?v=16790103");
+  --overview-image: url("../assets/overview/idiff-face.svg?v=7ae82aed");
+  --overview-still: url("idiff-face.still.svg?v=428db63d");
   --overview-base: #133128;
   --overview-accent: #8de1bc;
 }
 .publication-card[data-publication-id="masked-face-recognition"] .publication-art {
-  --overview-image: url("../assets/overview/masked-face.svg?v=74f5e578");
-  --overview-still: url("masked-face.still.svg?v=c0633891");
+  --overview-image: url("../assets/overview/masked-face.svg?v=96c2a7e2");
+  --overview-still: url("masked-face.still.svg?v=4cb855cc");
   --overview-base: #3b2224;
   --overview-accent: #f2a59e;
 }

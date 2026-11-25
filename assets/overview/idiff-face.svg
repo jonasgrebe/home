@@ -296,11 +296,11 @@
     <g id="id-print-edge" stroke-linejoin="round">
       <rect x="5" y="7" width="220" height="220" rx="3" fill="#0e2f23" opacity=".13"/>
       <rect x="3" y="4" width="219" height="219" rx="2" fill="#0e2f23" opacity=".22"/>
-      <path d="M0 210h218l5 4v5H5l-5-4ZM215 0l8 5v209l-6-1Z" fill="#2c8162"/>
-      <path d="m218 3 4 3v208l-4-2ZM4 216h213l5-2" fill="#63ad92" stroke="#79bfa5" stroke-width=".8"/>
-      <rect width="218" height="218" rx="1.6" fill="#a8e8d0" stroke="#97d3bd" stroke-width="1.4"/>
-      <path d="M1 214V1h213" fill="none" stroke="#f0efd0" stroke-width="1.6" stroke-opacity=".84"/>
-      <path d="M4 217h211l2-2V5" fill="none" stroke="#80bfa8" stroke-width="1.3"/>
+      <path d="M-1 219h220l4 4H3Zm220-220 4 4v220l-4-4Z" fill="#2c8162"/>
+      <path d="m219 0 4 4v219l-4-4M0 219h219" fill="none" stroke="#79bfa5" stroke-width=".8"/>
+      <rect x="-1" y="-1" width="220" height="220" rx="2" fill="#b5e4d3" stroke="#d8f1e7" stroke-width="2"/>
+      <path d="M0 214V0h214" fill="none" stroke="#f0efd0" stroke-width="1.6" stroke-opacity=".84"/>
+      <path d="M4 218h212l2-2V5" fill="none" stroke="#80bfa8" stroke-width="1.3"/>
     </g>
   </defs>
   <!-- Longitude and latitude arcs have separate near and far strokes at the limb. -->
@@ -528,17 +528,17 @@
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
       <g clip-path="url(#id-picture)">
-        <rect width="206" height="206" fill="#92d6bd"/>
-        <path d="M0 159Q120 130 206 36v170H0Z" fill="#54b491" opacity=".74"/>
+        <rect width="206" height="206" fill="#427a65"/>
+        <path d="M0 159Q120 130 206 36v170H0Z" fill="#2b5b4a" opacity=".74"/>
         <g transform="translate(-31 -9) scale(1.27)">
           <use href="#id-subject"/>
         </g>
         <g class="id-alternate" visibility="hidden">
           <animate attributeName="visibility" dur="16s" repeatCount="indefinite" calcMode="discrete"
             keyTimes="0;.06;.35;1" values="hidden;visible;hidden;hidden"/>
-          <rect width="206" height="206" fill="#94bfaf"/>
-          <path d="M0 0h50l96 206H0Z" fill="#70a893"/>
-          <path d="m61 0 79 206h11L71 0Z" fill="#9cdcc4" opacity=".47"/>
+          <rect width="206" height="206" fill="#436c5d"/>
+          <path d="M0 0h50l96 206H0Z" fill="#335a4a"/>
+          <path d="m61 0 79 206h11L71 0Z" fill="#5e967e" opacity=".47"/>
           <g transform="matrix(-.79 -.065 -.065 .88 145 39)">
             <use href="#id-subject"/>
             <use href="#id-ochre-coat" clip-path="url(#id-shirt-clip)"/>
@@ -569,8 +569,8 @@
     <use href="#id-print-edge"/>
     <g transform="translate(5 5) scale(1.01)">
       <g clip-path="url(#id-picture)">
-        <rect width="206" height="206" fill="#67c09f"/>
-        <path d="M0 0h160Q109 13 67 73T0 118Z" fill="#a4d8c5"/>
+        <rect width="206" height="206" fill="#31654e"/>
+        <path d="M0 0h160Q109 13 67 73T0 118Z" fill="#51866f"/>
         <g transform="matrix(-.93 .105 .105 .93 192 13)">
           <use href="#id-subject"/>
           <use class="id-live" href="#id-jacket" clip-path="url(#id-shirt-clip)"/>
@@ -579,8 +579,8 @@
         <g class="id-alternate" visibility="hidden">
           <animate attributeName="visibility" dur="16s" repeatCount="indefinite" calcMode="discrete"
             keyTimes="0;.195;.49;1" values="hidden;visible;hidden;hidden"/>
-          <rect width="206" height="206" fill="#50aa89"/>
-          <path d="M0 0h206v30Q110 12 55 103Q32 142 0 146Z" fill="#95d1bb"/>
+          <rect width="206" height="206" fill="#2b5946"/>
+          <path d="M0 0h206v30Q110 12 55 103Q32 142 0 146Z" fill="#497e67"/>
           <g transform="matrix(1.10 -.17 .17 1.10 -4 13)">
             <use href="#id-subject"/>
             <use href="#id-knit" clip-path="url(#id-shirt-clip)"/>
